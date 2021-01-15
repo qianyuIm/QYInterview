@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4B134A25B192EA0055C4D2 /* KVOController.m */; };
+		EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */; };
+		EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5582BF25AFD6D4003E1347 /* BinaryTreeController.xib */; };
+		EF5582C625AFD9F3003E1347 /* CreatBinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582C525AFD9F3003E1347 /* CreatBinaryTreeController.swift */; };
+		EF5582CC25B02003003E1347 /* BalancedBinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582CB25B02003003E1347 /* BalancedBinaryTreeController.swift */; };
+		EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582CE25B023B7003E1347 /* BinarySearchController.swift */; };
+		EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5582DF25B02887003E1347 /* BlockChangeController.m */; };
 		EFFC476025AE7EFB007C5AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC475F25AE7EFB007C5AA4 /* AppDelegate.swift */; };
 		EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC476325AE7EFB007C5AA4 /* ViewController.swift */; };
 		EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFC476525AE7EFB007C5AA4 /* Main.storyboard */; };
@@ -21,10 +28,18 @@
 		EFFC479725AEC363007C5AA4 /* NumOfReverseArrayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC479625AEC363007C5AA4 /* NumOfReverseArrayController.swift */; };
 		EFFC479C25AECC4A007C5AA4 /* TCPUDPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC479B25AECC4A007C5AA4 /* TCPUDPController.swift */; };
 		EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC479F25AECCB2007C5AA4 /* HTTPSController.swift */; };
-		EFFC47B425AEF521007C5AA4 /* TTTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFC47B325AEF521007C5AA4 /* TTTTViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF4B134925B192EA0055C4D2 /* KVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOController.h; sourceTree = "<group>"; };
+		EF4B134A25B192EA0055C4D2 /* KVOController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOController.m; sourceTree = "<group>"; };
+		EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeController.swift; sourceTree = "<group>"; };
+		EF5582BF25AFD6D4003E1347 /* BinaryTreeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BinaryTreeController.xib; sourceTree = "<group>"; };
+		EF5582C525AFD9F3003E1347 /* CreatBinaryTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatBinaryTreeController.swift; sourceTree = "<group>"; };
+		EF5582CB25B02003003E1347 /* BalancedBinaryTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancedBinaryTreeController.swift; sourceTree = "<group>"; };
+		EF5582CE25B023B7003E1347 /* BinarySearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchController.swift; sourceTree = "<group>"; };
+		EF5582DE25B02887003E1347 /* BlockChangeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockChangeController.h; sourceTree = "<group>"; };
+		EF5582DF25B02887003E1347 /* BlockChangeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockChangeController.m; sourceTree = "<group>"; };
 		EFFC475C25AE7EFB007C5AA4 /* QYInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFC475F25AE7EFB007C5AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFFC476325AE7EFB007C5AA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,8 +57,6 @@
 		EFFC479625AEC363007C5AA4 /* NumOfReverseArrayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumOfReverseArrayController.swift; sourceTree = "<group>"; };
 		EFFC479B25AECC4A007C5AA4 /* TCPUDPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPUDPController.swift; sourceTree = "<group>"; };
 		EFFC479F25AECCB2007C5AA4 /* HTTPSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSController.swift; sourceTree = "<group>"; };
-		EFFC47B225AEF521007C5AA4 /* TTTTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTTTViewController.h; sourceTree = "<group>"; };
-		EFFC47B325AEF521007C5AA4 /* TTTTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTTTViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +70,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF5582BD25AFD6C3003E1347 /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
+				EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */,
+				EF5582BF25AFD6D4003E1347 /* BinaryTreeController.xib */,
+				EF5582C525AFD9F3003E1347 /* CreatBinaryTreeController.swift */,
+				EF5582CB25B02003003E1347 /* BalancedBinaryTreeController.swift */,
+			);
+			path = BinaryTree;
+			sourceTree = "<group>";
+		};
 		EFFC475325AE7EFB007C5AA4 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +123,8 @@
 				EFFC479025AEBF28007C5AA4 /* OrderedArrayMergeController.swift */,
 				EFFC479325AEC123007C5AA4 /* MedianUnorderedArrayController.swift */,
 				EFFC479625AEC363007C5AA4 /* NumOfReverseArrayController.swift */,
+				EF5582CE25B023B7003E1347 /* BinarySearchController.swift */,
+				EF5582BD25AFD6C3003E1347 /* BinaryTree */,
 			);
 			path = algorithm;
 			sourceTree = "<group>";
@@ -107,6 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				EFFC478125AE879E007C5AA4 /* ClassAndStructController.swift */,
+				EF5582DE25B02887003E1347 /* BlockChangeController.h */,
+				EF5582DF25B02887003E1347 /* BlockChangeController.m */,
+				EF4B134925B192EA0055C4D2 /* KVOController.h */,
+				EF4B134A25B192EA0055C4D2 /* KVOController.m */,
 			);
 			path = concept;
 			sourceTree = "<group>";
@@ -116,8 +146,6 @@
 			children = (
 				EFFC479B25AECC4A007C5AA4 /* TCPUDPController.swift */,
 				EFFC479F25AECCB2007C5AA4 /* HTTPSController.swift */,
-				EFFC47B225AEF521007C5AA4 /* TTTTViewController.h */,
-				EFFC47B325AEF521007C5AA4 /* TTTTViewController.m */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -182,6 +210,7 @@
 			files = (
 				EFFC476C25AE7EFC007C5AA4 /* LaunchScreen.storyboard in Resources */,
 				EFFC476925AE7EFC007C5AA4 /* Assets.xcassets in Resources */,
+				EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */,
 				EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,9 +222,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5582C625AFD9F3003E1347 /* CreatBinaryTreeController.swift in Sources */,
 				EFFC479425AEC123007C5AA4 /* MedianUnorderedArrayController.swift in Sources */,
+				EF5582CC25B02003003E1347 /* BalancedBinaryTreeController.swift in Sources */,
+				EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */,
 				EFFC477825AE8385007C5AA4 /* NearlyFatherController.swift in Sources */,
-				EFFC47B425AEF521007C5AA4 /* TTTTViewController.m in Sources */,
+				EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */,
+				EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */,
 				EFFC478E25AE9352007C5AA4 /* ReverseSingListController.swift in Sources */,
 				EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */,
 				EFFC479125AEBF28007C5AA4 /* OrderedArrayMergeController.swift in Sources */,
@@ -203,6 +236,7 @@
 				EFFC478225AE879E007C5AA4 /* ClassAndStructController.swift in Sources */,
 				EFFC479725AEC363007C5AA4 /* NumOfReverseArrayController.swift in Sources */,
 				EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */,
+				EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */,
 				EFFC478525AE888A007C5AA4 /* ReverseStringController.swift in Sources */,
 				EFFC479C25AECC4A007C5AA4 /* TCPUDPController.swift in Sources */,
 			);

@@ -9,7 +9,7 @@
 // 一个排列中逆序的总数就称为这个排列的逆序数
 import UIKit
 
-class NumOfReverseArrayController: UIViewController {
+class NumOfReverseArrayController: BaseViewController {
 
     // [1,3,2] 逆序数为 1
     let array = [2,6,5,9]

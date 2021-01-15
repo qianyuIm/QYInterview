@@ -6,8 +6,10 @@
 //
 
 import UIKit
-func logDebug(_ message: Any) {
-    print(message)
+func logDebug(_ message: Any,
+              separator: String = " ",
+              terminator: String = "\n") {
+    print(message, separator: separator, terminator: terminator)
 }
 class BaseViewController: UIViewController {
     override func viewDidLoad() {
@@ -50,9 +52,13 @@ class ViewController: UIViewController {
                 .init(with: "有序数组合并", subTitle: "有序数组合并", controllerName: "OrderedArrayMergeController"),
                 .init(with: "求无序数组中的中位数", subTitle: "求无序数组中的中位数", controllerName: "MedianUnorderedArrayController"),
                 .init(with: "求数组逆序数", subTitle: "求数组逆序数", controllerName: "NumOfReverseArrayController"),
-                .init(with: "判断平衡二叉树", subTitle: "判断平衡二叉树", controllerName: "")]),
+                .init(with: "二叉树相关", subTitle: "二叉树相关", controllerName: "BinaryTreeController"),
+                .init(with: "二分查找", subTitle: "二分查找", controllerName: "BinarySearchController")]),
         .init(with: "概念", items: [
-                .init(with: "Class和Struct", subTitle: "Class和Struct", controllerName: "TTTTViewController")]),
+                .init(with: "Class和Struct", subTitle: "Class和Struct", controllerName: "ClassAndStructController"),
+                .init(with: "Block修改内部值", subTitle: "Block修改内部值", controllerName: "BlockChangeController"),
+                .init(with: "KVO", subTitle: "KVO", controllerName: "KVOController"),
+                .init(with: "性能优化", subTitle: "性能优化", controllerName: "")]),
         .init(with: "网络相关", items: [
                 .init(with: "TCP协议跟UDP协议有什么区别", subTitle: "TCP协议跟UDP协议有什么区别", controllerName: "TCPUDPController"),
                 .init(with: "HTTPS协议原理", subTitle: "HTTPS协议原理", controllerName: "HTTPSController")])]
@@ -65,6 +71,9 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        logDebug(scrollView.bounds)
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = dataSource[indexPath.section].items[indexPath.row]
@@ -79,7 +88,7 @@ extension ViewController: UITableViewDelegate {
         self.navigationController?.pushViewController(target, animated: true)
     }
 }
-let kIdentifier = "kIdentifier"
+private let kIdentifier = "kIdentifier"
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return dataSource[section].sectionTitle
