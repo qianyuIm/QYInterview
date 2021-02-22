@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF456DAC25B5345A00566946 /* AttributeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF456DAB25B5345A00566946 /* AttributeController.swift */; };
+		EF456DAF25B5657400566946 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF456DAE25B5657400566946 /* MapController.swift */; };
 		EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4B134A25B192EA0055C4D2 /* KVOController.m */; };
 		EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */; };
 		EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5582BF25AFD6D4003E1347 /* BinaryTreeController.xib */; };
@@ -14,6 +16,11 @@
 		EF5582CC25B02003003E1347 /* BalancedBinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582CB25B02003003E1347 /* BalancedBinaryTreeController.swift */; };
 		EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582CE25B023B7003E1347 /* BinarySearchController.swift */; };
 		EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5582DF25B02887003E1347 /* BlockChangeController.m */; };
+		EFD0BA2C25C7FB2C00B572EB /* InitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0BA2B25C7FB2C00B572EB /* InitController.swift */; };
+		EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */; };
+		EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE1125E36283004B3ACC /* TouchController.swift */; };
+		EFEEEE5725E393CB004B3ACC /* SuperSelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */; };
+		EFEEEE5B25E3C6B3004B3ACC /* RunLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE5A25E3C6B3004B3ACC /* RunLoopController.m */; };
 		EFFC476025AE7EFB007C5AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC475F25AE7EFB007C5AA4 /* AppDelegate.swift */; };
 		EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC476325AE7EFB007C5AA4 /* ViewController.swift */; };
 		EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFC476525AE7EFB007C5AA4 /* Main.storyboard */; };
@@ -28,9 +35,15 @@
 		EFFC479725AEC363007C5AA4 /* NumOfReverseArrayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC479625AEC363007C5AA4 /* NumOfReverseArrayController.swift */; };
 		EFFC479C25AECC4A007C5AA4 /* TCPUDPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC479B25AECC4A007C5AA4 /* TCPUDPController.swift */; };
 		EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC479F25AECCB2007C5AA4 /* HTTPSController.swift */; };
+		F636CFA5E1CEFE326FF0478D /* Pods_QYInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE0DAC20A11569F4EF0DA2 /* Pods_QYInterview.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F9ADB41D06FFC2386B75876 /* Pods-QYInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYInterview.debug.xcconfig"; path = "Target Support Files/Pods-QYInterview/Pods-QYInterview.debug.xcconfig"; sourceTree = "<group>"; };
+		19006688363D8793123E7230 /* Pods-QYInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYInterview.release.xcconfig"; path = "Target Support Files/Pods-QYInterview/Pods-QYInterview.release.xcconfig"; sourceTree = "<group>"; };
+		B2BE0DAC20A11569F4EF0DA2 /* Pods_QYInterview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYInterview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF456DAB25B5345A00566946 /* AttributeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeController.swift; sourceTree = "<group>"; };
+		EF456DAE25B5657400566946 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		EF4B134925B192EA0055C4D2 /* KVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOController.h; sourceTree = "<group>"; };
 		EF4B134A25B192EA0055C4D2 /* KVOController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOController.m; sourceTree = "<group>"; };
 		EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeController.swift; sourceTree = "<group>"; };
@@ -40,6 +53,13 @@
 		EF5582CE25B023B7003E1347 /* BinarySearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchController.swift; sourceTree = "<group>"; };
 		EF5582DE25B02887003E1347 /* BlockChangeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockChangeController.h; sourceTree = "<group>"; };
 		EF5582DF25B02887003E1347 /* BlockChangeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockChangeController.m; sourceTree = "<group>"; };
+		EFD0BA2B25C7FB2C00B572EB /* InitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitController.swift; sourceTree = "<group>"; };
+		EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDLargerImageController.swift; sourceTree = "<group>"; };
+		EFEEEE1125E36283004B3ACC /* TouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchController.swift; sourceTree = "<group>"; };
+		EFEEEE5525E393CB004B3ACC /* SuperSelfController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperSelfController.h; sourceTree = "<group>"; };
+		EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperSelfController.m; sourceTree = "<group>"; };
+		EFEEEE5925E3C6B3004B3ACC /* RunLoopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopController.h; sourceTree = "<group>"; };
+		EFEEEE5A25E3C6B3004B3ACC /* RunLoopController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopController.m; sourceTree = "<group>"; };
 		EFFC475C25AE7EFB007C5AA4 /* QYInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFC475F25AE7EFB007C5AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFFC476325AE7EFB007C5AA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,12 +84,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F636CFA5E1CEFE326FF0478D /* Pods_QYInterview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4066FB4F5BF516ED333A2503 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F9ADB41D06FFC2386B75876 /* Pods-QYInterview.debug.xcconfig */,
+				19006688363D8793123E7230 /* Pods-QYInterview.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EF5582BD25AFD6C3003E1347 /* BinaryTree */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +111,21 @@
 			path = BinaryTree;
 			sourceTree = "<group>";
 		};
+		EFEEEE0825E34E52004B3ACC /* sourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */,
+			);
+			path = sourceCode;
+			sourceTree = "<group>";
+		};
 		EFFC475325AE7EFB007C5AA4 = {
 			isa = PBXGroup;
 			children = (
 				EFFC475E25AE7EFB007C5AA4 /* QYInterview */,
 				EFFC475D25AE7EFB007C5AA4 /* Products */,
+				4066FB4F5BF516ED333A2503 /* Pods */,
+				F97478388884EAAFBC60292C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +142,7 @@
 			children = (
 				EFFC475F25AE7EFB007C5AA4 /* AppDelegate.swift */,
 				EFFC476325AE7EFB007C5AA4 /* ViewController.swift */,
+				EFEEEE0825E34E52004B3ACC /* sourceCode */,
 				EFFC479925AECC25007C5AA4 /* network */,
 				EFFC478025AE8768007C5AA4 /* concept */,
 				EFFC477625AE829D007C5AA4 /* algorithm */,
@@ -137,6 +178,14 @@
 				EF5582DF25B02887003E1347 /* BlockChangeController.m */,
 				EF4B134925B192EA0055C4D2 /* KVOController.h */,
 				EF4B134A25B192EA0055C4D2 /* KVOController.m */,
+				EF456DAB25B5345A00566946 /* AttributeController.swift */,
+				EF456DAE25B5657400566946 /* MapController.swift */,
+				EFD0BA2B25C7FB2C00B572EB /* InitController.swift */,
+				EFEEEE1125E36283004B3ACC /* TouchController.swift */,
+				EFEEEE5525E393CB004B3ACC /* SuperSelfController.h */,
+				EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */,
+				EFEEEE5925E3C6B3004B3ACC /* RunLoopController.h */,
+				EFEEEE5A25E3C6B3004B3ACC /* RunLoopController.m */,
 			);
 			path = concept;
 			sourceTree = "<group>";
@@ -150,6 +199,14 @@
 			path = network;
 			sourceTree = "<group>";
 		};
+		F97478388884EAAFBC60292C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2BE0DAC20A11569F4EF0DA2 /* Pods_QYInterview.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFFC477025AE7EFC007C5AA4 /* Build configuration list for PBXNativeTarget "QYInterview" */;
 			buildPhases = (
+				2B4D5C47A3D55A1C75E65E29 /* [CP] Check Pods Manifest.lock */,
 				EFFC475825AE7EFB007C5AA4 /* Sources */,
 				EFFC475925AE7EFB007C5AA4 /* Frameworks */,
 				EFFC475A25AE7EFB007C5AA4 /* Resources */,
+				9DEDD904B418BC6ED2C134F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +276,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B4D5C47A3D55A1C75E65E29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QYInterview-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DEDD904B418BC6ED2C134F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYInterview/Pods-QYInterview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYInterview/Pods-QYInterview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QYInterview/Pods-QYInterview-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EFFC475825AE7EFB007C5AA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -229,11 +330,18 @@
 				EFFC477825AE8385007C5AA4 /* NearlyFatherController.swift in Sources */,
 				EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */,
 				EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */,
+				EFD0BA2C25C7FB2C00B572EB /* InitController.swift in Sources */,
 				EFFC478E25AE9352007C5AA4 /* ReverseSingListController.swift in Sources */,
+				EFEEEE5B25E3C6B3004B3ACC /* RunLoopController.m in Sources */,
+				EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */,
+				EF456DAF25B5657400566946 /* MapController.swift in Sources */,
+				EF456DAC25B5345A00566946 /* AttributeController.swift in Sources */,
 				EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */,
 				EFFC479125AEBF28007C5AA4 /* OrderedArrayMergeController.swift in Sources */,
 				EFFC476025AE7EFB007C5AA4 /* AppDelegate.swift in Sources */,
+				EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */,
 				EFFC478225AE879E007C5AA4 /* ClassAndStructController.swift in Sources */,
+				EFEEEE5725E393CB004B3ACC /* SuperSelfController.m in Sources */,
 				EFFC479725AEC363007C5AA4 /* NumOfReverseArrayController.swift in Sources */,
 				EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */,
 				EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */,
@@ -382,19 +490,23 @@
 		};
 		EFFC477125AE7EFC007C5AA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F9ADB41D06FFC2386B75876 /* Pods-QYInterview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9W33GSKZVH;
 				INFOPLIST_FILE = QYInterview/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.QianYu.QYInterview;
+				PRODUCT_BUNDLE_IDENTIFIER = com.QianYu123.QYInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = RGenericId_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "QYInterview/QYInterview-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -404,19 +516,23 @@
 		};
 		EFFC477225AE7EFC007C5AA4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19006688363D8793123E7230 /* Pods-QYInterview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9W33GSKZVH;
 				INFOPLIST_FILE = QYInterview/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.QianYu.QYInterview;
+				PRODUCT_BUNDLE_IDENTIFIER = com.QianYu123.QYInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = RGenericId_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "QYInterview/QYInterview-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

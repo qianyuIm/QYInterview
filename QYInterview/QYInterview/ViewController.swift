@@ -54,11 +54,18 @@ class ViewController: UIViewController {
                 .init(with: "求数组逆序数", subTitle: "求数组逆序数", controllerName: "NumOfReverseArrayController"),
                 .init(with: "二叉树相关", subTitle: "二叉树相关", controllerName: "BinaryTreeController"),
                 .init(with: "二分查找", subTitle: "二分查找", controllerName: "BinarySearchController")]),
+        .init(with: "源码相关", items: [.init(with: "SDWebImage下载大图", subTitle: "SDWebImage下载大图", controllerName: "SDLargerImageController")]),
         .init(with: "概念", items: [
                 .init(with: "Class和Struct", subTitle: "Class和Struct", controllerName: "ClassAndStructController"),
                 .init(with: "Block修改内部值", subTitle: "Block修改内部值", controllerName: "BlockChangeController"),
                 .init(with: "KVO", subTitle: "KVO", controllerName: "KVOController"),
-                .init(with: "性能优化", subTitle: "性能优化", controllerName: "")]),
+                .init(with: "性能优化", subTitle: "性能优化", controllerName: ""),
+                .init(with: "属性", subTitle: "属性", controllerName: "AttributeController"),
+                .init(with: "map,flatMap,compactMap", subTitle: "map,flatMap,compactMap", controllerName: "MapController"),
+                .init(with: "初始化方法", subTitle: "初始化方法", controllerName: "InitController"),
+                .init(with: "响应者链", subTitle: "响应者链", controllerName: "TouchController"),
+                .init(with: "Super和Self", subTitle: "Super和Self", controllerName: "SuperSelfController"),
+                .init(with: "RunLoop", subTitle: "RunLoop", controllerName: "RunLoopController")]),
         .init(with: "网络相关", items: [
                 .init(with: "TCP协议跟UDP协议有什么区别", subTitle: "TCP协议跟UDP协议有什么区别", controllerName: "TCPUDPController"),
                 .init(with: "HTTPS协议原理", subTitle: "HTTPS协议原理", controllerName: "HTTPSController")])]

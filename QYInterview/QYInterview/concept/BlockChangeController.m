@@ -11,9 +11,15 @@ static int global_static_value = 10;
 typedef void (^ChangeValueBlock) (void);
 @interface BlockPersion : NSObject
 @property (nonatomic, copy) NSString *name;
+- (void)eat;
 @end
 @implementation BlockPersion
-
+- (void)eat {
+    NSLog(@"吃东西");
+}
+- (void)dealloc {
+    NSLog(@"移除了");
+}
 @end
 
 @interface BlockChangeController ()
@@ -21,11 +27,22 @@ typedef void (^ChangeValueBlock) (void);
 @end
 
 @implementation BlockChangeController
+#ifndef dispatch_main_async_safe
+#define dispatch_main_async_safe(block)\
+    if (dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL) == dispatch_queue_get_label(dispatch_get_main_queue())) {\
+        block();\
+    } else {\
+        dispatch_async(dispatch_get_main_queue(), block);\
+    }
+#endif
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    NSLog(@"%s",dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL));
+    NSLog(@"%s",dispatch_queue_get_label(dispatch_get_main_queue()));
+
     BlockPersion *persion = [[BlockPersion alloc] init];
     persion.name = @"xiao ming";
     static int static_value = 10;
@@ -75,6 +92,31 @@ typedef void (^ChangeValueBlock) (void);
         NSLog(@"我是retain block%@",persion.name);
     };
     _retainBlock();
+    
+    NSString *str1 = @"123";
+    NSString *str2 = str1;
+    str2 = @"456";
+    NSLog(@"str1 = %@ -- str2 = %@", str1, str2);
+    NSLog(@"%p",&str1);
+    NSLog(@"%p",&str2);
+    
+    BlockPersion *obj1 = [BlockPersion alloc];
+    obj1.name = @"123";
+    BlockPersion *p1 = [obj1 init];
+    BlockPersion *p2 = [obj1 init];
+    NSLog(@"%@ - %@ - %@", obj1, p1, p2);
+    NSLog(@"%p - %p - %p", obj1, p1, p2);
+    NSLog(@"%p - %p - %p", &obj1, &p1, &p2);
+
+    
+//    __autoreleasing UIView* myView;
+//    @autoreleasepool {
+//        myView = [UIView new];
+//        NSLog(@"inside autoreleasepool myView:%@", myView);
+//    }
+//    NSLog(@"outside autoreleasepool myView:%@", myView);
+
+
 }
 /* 1. NSGlobalBlock: 类似函数，位于text段，未引用外部变量为 NSGlobalBlock
  * 2. NSStackBlock： 位于栈内存，函数返回后block无效
@@ -83,5 +125,8 @@ typedef void (^ChangeValueBlock) (void);
  *
  *
  */
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    NSLog(@"qwer");
+}
 @end

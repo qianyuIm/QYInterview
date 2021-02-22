@@ -6,9 +6,7 @@
 // - HTTPS协议原理
 
 import UIKit
-class Persion: NSObject {
-    var name: String?
-}
+
 class HTTPSController: BaseViewController {
 
     
