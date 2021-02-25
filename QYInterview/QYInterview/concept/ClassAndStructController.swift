@@ -13,6 +13,6 @@ class ClassAndStructController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        logDebug(Int.max)
     }
 }

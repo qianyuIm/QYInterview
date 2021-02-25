@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+// __IOHIDEventSystemClientQueueCallback
+// 查看事件的响应
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

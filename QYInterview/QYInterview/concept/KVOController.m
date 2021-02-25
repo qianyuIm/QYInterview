@@ -195,28 +195,38 @@ static void kvo_setter(id self, SEL _cmd, id newValue)
 
 @end
 
-@interface KVOPersion : NSObject {
-    @public NSString *_sex;
-}
-@property (nonatomic, copy) NSString *name;
+@interface KVOPersion : NSObject
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, copy) NSString *sex;
 @end
 
 @implementation KVOPersion
-- (void)setName:(NSString *)name {
-    _name = @"heheda";
-    NSLog(@"name = %@",name);
-}
+//- (void)setName:(NSString *)name {
+//    _name = name;
+//    NSLog(@"name = %@",name);
+//}
+
+@end
+@interface KVOSon : KVOPersion
+@end
+
+@implementation KVOSon
+
 @end
 
 @interface KVOController ()
 @property (nonatomic, strong) KVOPersion *persion;
+@property (nonatomic, strong) KVOSon *son;
 
+@property (nonatomic, strong) NSMutableArray *propertyArray;
 @end
 
 @implementation KVOController
 /* 实现原理:
- *
- *
+ * 当你观察一个对象时，一个新的类会动态被创建。这个类继承自该对象的原本的类，并重写了被观察属性的 setter 方法。自然，重写的 setter 方法会负责在调用原 setter方法之前和之后，通知所有观察对象值的更改。最后把这个对象的 isa 指针 ( isa 指针告诉 Runtime 系统这个对象的类是什么 ) 指向这个新创建的子类，对象就神奇的变成了新创建的子类的实例。
+ *  KVO 动态生成的类，重写Setter方法的前提是：原来的类中，要有对应的setter方法,即使readonly修饰，
+ * 只要在.m中手写对应的setter方法，都是可以的，
+ * 但是如果readonly修饰且没有手写对应Setter方法，KVO不起作用
  *
  */
 - (void)viewDidLoad {
@@ -224,20 +234,40 @@ static void kvo_setter(id self, SEL _cmd, id newValue)
     // Do any additional setup after loading the view.
     NSLog(@"自己实现KVO");
     self.view.backgroundColor = [UIColor whiteColor];
-    _persion = [[KVOPersion alloc] init];
-    [_persion qy_addObserver:self forKey:@"name" callBack:^(id observedObject, NSString *observedKey, id oldValue, id newValue) {
-        NSLog(@"observedObject = %@, observedKey = %@ ,oldValue = %@ ,newValue = %@",observedObject, observedKey, oldValue,newValue );
-    }];
-    _persion.name = @"123";
-    
-//    [_persion addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [self testReadonly];
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     NSLog(@"keyPath = %@, change = %@ ",keyPath, change);
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    _persion.name = @"xiao ming";
-}
+    _persion.sex = @"xiao ming";
 
+}
+- (void)testCustom {
+    _persion = [[KVOPersion alloc] init];
+    [_persion qy_addObserver:self forKey:@"sex" callBack:^(id observedObject, NSString *observedKey, id oldValue, id newValue) {
+        NSLog(@"observedObject = %@, observedKey = %@ ,oldValue = %@ ,newValue = %@",observedObject, observedKey, oldValue,newValue );
+    }];
+    [self log:"KVOPersion"];
+    [self log:"QYKVOClassPrefix_KVOPersion"];
+}
+- (void)testReadonly {
+    _persion = [[KVOPersion alloc] init];
+    [_persion addObserver:self forKeyPath:@"sex" options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [self log:"KVOPersion"];
+    [self log:"NSKVONotifying_KVOPersion"];
+}
+- (void)log:(const char *)className {
+    Class logClass = objc_getClass(className);
+    unsigned int methodCount =0;
+    Method* methodList = class_copyMethodList(logClass,&methodCount);
+    NSMutableArray *methodsArray = [NSMutableArray arrayWithCapacity:methodCount];
+    for(int i=0;i<methodCount;i++) {
+        Method temp = methodList[i];
+        const char* name_s =sel_getName(method_getName(temp));
+        [methodsArray addObject:[NSString stringWithUTF8String:name_s]];
+    }
+    NSLog(@"%@",methodsArray);
+}
 @end

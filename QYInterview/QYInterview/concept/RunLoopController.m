@@ -16,7 +16,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[NSRunLoop alloc] init];
+    self.view.backgroundColor = [UIColor whiteColor];
+    NSRunLoop *c;
+    [c run];
 }
 
 

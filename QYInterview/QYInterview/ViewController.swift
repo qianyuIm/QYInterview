@@ -65,10 +65,15 @@ class ViewController: UIViewController {
                 .init(with: "初始化方法", subTitle: "初始化方法", controllerName: "InitController"),
                 .init(with: "响应者链", subTitle: "响应者链", controllerName: "TouchController"),
                 .init(with: "Super和Self", subTitle: "Super和Self", controllerName: "SuperSelfController"),
-                .init(with: "RunLoop", subTitle: "RunLoop", controllerName: "RunLoopController")]),
+                .init(with: "RunLoop", subTitle: "RunLoop", controllerName: "RunLoopController"),
+                .init(with: "对象初始化相关", subTitle: "对象初始化相关", controllerName: "AllocInitController"),
+                .init(with: "GCD相关", subTitle: "GCD相关", controllerName: "GCDController"),
+                .init(with: "响应者链", subTitle: "响应者链", controllerName: "ResponderChainController")]),
         .init(with: "网络相关", items: [
                 .init(with: "TCP协议跟UDP协议有什么区别", subTitle: "TCP协议跟UDP协议有什么区别", controllerName: "TCPUDPController"),
-                .init(with: "HTTPS协议原理", subTitle: "HTTPS协议原理", controllerName: "HTTPSController")])]
+                .init(with: "HTTPS协议原理", subTitle: "HTTPS协议原理", controllerName: "HTTPSController")]),
+        .init(with: "项目优化", items: [
+                .init(with: "if else 多层判断优化", subTitle: "if else 多层判断优化", controllerName: "IfElseController")])]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -79,7 +84,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        logDebug(scrollView.bounds)
+//        logDebug(scrollView.bounds)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
