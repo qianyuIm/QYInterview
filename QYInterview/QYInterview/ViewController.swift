@@ -68,6 +68,7 @@ class ViewController: UIViewController {
                 .init(with: "RunLoop", subTitle: "RunLoop", controllerName: "RunLoopController"),
                 .init(with: "对象初始化相关", subTitle: "对象初始化相关", controllerName: "AllocInitController"),
                 .init(with: "GCD相关", subTitle: "GCD相关", controllerName: "GCDController"),
+                .init(with: "NSOperation相关", subTitle: "NSOperation相关", controllerName: "NSOperationController"),
                 .init(with: "响应者链", subTitle: "响应者链", controllerName: "ResponderChainController")]),
         .init(with: "网络相关", items: [
                 .init(with: "TCP协议跟UDP协议有什么区别", subTitle: "TCP协议跟UDP协议有什么区别", controllerName: "TCPUDPController"),
@@ -120,5 +121,4 @@ extension ViewController: UITableViewDataSource {
         cell?.textLabel?.text = "\(item.title) (\(item.controllerName))"
         return cell!
     }
-    
 }

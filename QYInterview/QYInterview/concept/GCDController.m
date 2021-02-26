@@ -198,7 +198,6 @@
             });
         });
     }
-    
     NSLog(@"%@ 执行任务结束",[NSThread currentThread]);
 }
 // 任务分组

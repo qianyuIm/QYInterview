@@ -17,15 +17,19 @@
 		EF5582CC25B02003003E1347 /* BalancedBinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582CB25B02003003E1347 /* BalancedBinaryTreeController.swift */; };
 		EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582CE25B023B7003E1347 /* BinarySearchController.swift */; };
 		EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5582DF25B02887003E1347 /* BlockChangeController.m */; };
+		EF6A5A1E25E754EA00965E1A /* RunLoopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A5A1C25E754EA00965E1A /* RunLoopController.swift */; };
+		EF6A5A1F25E754EA00965E1A /* RunLoopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6A5A1D25E754EA00965E1A /* RunLoopController.xib */; };
+		EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A5A2225E7559900965E1A /* ChildThreadLoopController.m */; };
+		EF6A5A2725E755DC00965E1A /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A5A2625E755DC00965E1A /* OCViewController.m */; };
 		EF96338125E48E200023D5C6 /* AllocInitController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338025E48E200023D5C6 /* AllocInitController.m */; };
 		EF96338725E4A4800023D5C6 /* GCDController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338625E4A4800023D5C6 /* GCDController.m */; };
 		EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338B25E52AD20023D5C6 /* IfElseController.m */; };
 		EF96338F25E532910023D5C6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF96338E25E532910023D5C6 /* JavaScriptCore.framework */; };
 		EFD0BA2C25C7FB2C00B572EB /* InitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0BA2B25C7FB2C00B572EB /* InitController.swift */; };
+		EFDC5B3225E8A58A0073F62F /* NSOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDC5B3125E8A58A0073F62F /* NSOperationController.m */; };
 		EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */; };
 		EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE1125E36283004B3ACC /* TouchController.swift */; };
 		EFEEEE5725E393CB004B3ACC /* SuperSelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */; };
-		EFEEEE5B25E3C6B3004B3ACC /* RunLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE5A25E3C6B3004B3ACC /* RunLoopController.m */; };
 		EFFC476025AE7EFB007C5AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC475F25AE7EFB007C5AA4 /* AppDelegate.swift */; };
 		EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC476325AE7EFB007C5AA4 /* ViewController.swift */; };
 		EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFC476525AE7EFB007C5AA4 /* Main.storyboard */; };
@@ -59,6 +63,12 @@
 		EF5582CE25B023B7003E1347 /* BinarySearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchController.swift; sourceTree = "<group>"; };
 		EF5582DE25B02887003E1347 /* BlockChangeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockChangeController.h; sourceTree = "<group>"; };
 		EF5582DF25B02887003E1347 /* BlockChangeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockChangeController.m; sourceTree = "<group>"; };
+		EF6A5A1C25E754EA00965E1A /* RunLoopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopController.swift; sourceTree = "<group>"; };
+		EF6A5A1D25E754EA00965E1A /* RunLoopController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunLoopController.xib; sourceTree = "<group>"; };
+		EF6A5A2125E7559900965E1A /* ChildThreadLoopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildThreadLoopController.h; sourceTree = "<group>"; };
+		EF6A5A2225E7559900965E1A /* ChildThreadLoopController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildThreadLoopController.m; sourceTree = "<group>"; };
+		EF6A5A2525E755DC00965E1A /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		EF6A5A2625E755DC00965E1A /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
 		EF96337F25E48E200023D5C6 /* AllocInitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllocInitController.h; sourceTree = "<group>"; };
 		EF96338025E48E200023D5C6 /* AllocInitController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllocInitController.m; sourceTree = "<group>"; };
 		EF96338525E4A4800023D5C6 /* GCDController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDController.h; sourceTree = "<group>"; };
@@ -67,12 +77,12 @@
 		EF96338B25E52AD20023D5C6 /* IfElseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IfElseController.m; sourceTree = "<group>"; };
 		EF96338E25E532910023D5C6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EFD0BA2B25C7FB2C00B572EB /* InitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitController.swift; sourceTree = "<group>"; };
+		EFDC5B3025E8A58A0073F62F /* NSOperationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationController.h; sourceTree = "<group>"; };
+		EFDC5B3125E8A58A0073F62F /* NSOperationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationController.m; sourceTree = "<group>"; };
 		EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDLargerImageController.swift; sourceTree = "<group>"; };
 		EFEEEE1125E36283004B3ACC /* TouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchController.swift; sourceTree = "<group>"; };
 		EFEEEE5525E393CB004B3ACC /* SuperSelfController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperSelfController.h; sourceTree = "<group>"; };
 		EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperSelfController.m; sourceTree = "<group>"; };
-		EFEEEE5925E3C6B3004B3ACC /* RunLoopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopController.h; sourceTree = "<group>"; };
-		EFEEEE5A25E3C6B3004B3ACC /* RunLoopController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopController.m; sourceTree = "<group>"; };
 		EFFC475C25AE7EFB007C5AA4 /* QYInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFC475F25AE7EFB007C5AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFFC476325AE7EFB007C5AA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +135,17 @@
 			path = BinaryTree;
 			sourceTree = "<group>";
 		};
+		EF6A5A1525E7546E00965E1A /* Runloop */ = {
+			isa = PBXGroup;
+			children = (
+				EF6A5A1C25E754EA00965E1A /* RunLoopController.swift */,
+				EF6A5A1D25E754EA00965E1A /* RunLoopController.xib */,
+				EF6A5A2125E7559900965E1A /* ChildThreadLoopController.h */,
+				EF6A5A2225E7559900965E1A /* ChildThreadLoopController.m */,
+			);
+			path = Runloop;
+			sourceTree = "<group>";
+		};
 		EF96338925E52AAF0023D5C6 /* ProjectOptimize */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +186,8 @@
 			children = (
 				EFFC475F25AE7EFB007C5AA4 /* AppDelegate.swift */,
 				EFFC476325AE7EFB007C5AA4 /* ViewController.swift */,
+				EF6A5A2525E755DC00965E1A /* OCViewController.h */,
+				EF6A5A2625E755DC00965E1A /* OCViewController.m */,
 				EF96338925E52AAF0023D5C6 /* ProjectOptimize */,
 				EFEEEE0825E34E52004B3ACC /* sourceCode */,
 				EFFC479925AECC25007C5AA4 /* network */,
@@ -197,6 +220,7 @@
 		EFFC478025AE8768007C5AA4 /* concept */ = {
 			isa = PBXGroup;
 			children = (
+				EF6A5A1525E7546E00965E1A /* Runloop */,
 				EFFC478125AE879E007C5AA4 /* ClassAndStructController.swift */,
 				EF5582DE25B02887003E1347 /* BlockChangeController.h */,
 				EF5582DF25B02887003E1347 /* BlockChangeController.m */,
@@ -208,12 +232,12 @@
 				EFEEEE1125E36283004B3ACC /* TouchController.swift */,
 				EFEEEE5525E393CB004B3ACC /* SuperSelfController.h */,
 				EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */,
-				EFEEEE5925E3C6B3004B3ACC /* RunLoopController.h */,
-				EFEEEE5A25E3C6B3004B3ACC /* RunLoopController.m */,
 				EF96337F25E48E200023D5C6 /* AllocInitController.h */,
 				EF96338025E48E200023D5C6 /* AllocInitController.m */,
 				EF96338525E4A4800023D5C6 /* GCDController.h */,
 				EF96338625E4A4800023D5C6 /* GCDController.m */,
+				EFDC5B3025E8A58A0073F62F /* NSOperationController.h */,
+				EFDC5B3125E8A58A0073F62F /* NSOperationController.m */,
 				EF3F835C25E62C1F009C217D /* ResponderChainController.swift */,
 			);
 			path = concept;
@@ -301,6 +325,7 @@
 				EFFC476925AE7EFC007C5AA4 /* Assets.xcassets in Resources */,
 				EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */,
 				EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */,
+				EF6A5A1F25E754EA00965E1A /* RunLoopController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,15 +387,16 @@
 				EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */,
 				EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */,
 				EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */,
+				EFDC5B3225E8A58A0073F62F /* NSOperationController.m in Sources */,
 				EFD0BA2C25C7FB2C00B572EB /* InitController.swift in Sources */,
 				EF3F835D25E62C1F009C217D /* ResponderChainController.swift in Sources */,
 				EFFC478E25AE9352007C5AA4 /* ReverseSingListController.swift in Sources */,
-				EFEEEE5B25E3C6B3004B3ACC /* RunLoopController.m in Sources */,
 				EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */,
 				EF456DAF25B5657400566946 /* MapController.swift in Sources */,
 				EF456DAC25B5345A00566946 /* AttributeController.swift in Sources */,
 				EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */,
 				EFFC479125AEBF28007C5AA4 /* OrderedArrayMergeController.swift in Sources */,
+				EF6A5A1E25E754EA00965E1A /* RunLoopController.swift in Sources */,
 				EFFC476025AE7EFB007C5AA4 /* AppDelegate.swift in Sources */,
 				EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */,
 				EFFC478225AE879E007C5AA4 /* ClassAndStructController.swift in Sources */,
@@ -379,6 +405,8 @@
 				EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */,
 				EF96338725E4A4800023D5C6 /* GCDController.m in Sources */,
 				EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */,
+				EF6A5A2725E755DC00965E1A /* OCViewController.m in Sources */,
+				EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */,
 				EFFC478525AE888A007C5AA4 /* ReverseStringController.swift in Sources */,
 				EFFC479C25AECC4A007C5AA4 /* TCPUDPController.swift in Sources */,
 			);

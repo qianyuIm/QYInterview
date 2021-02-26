@@ -7,4 +7,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'QYInterview' do
   pod 'SDWebImage', '~> 5.10.2'
   pod 'SnapKit'
+  pod 'Toaster'
+  pod 'AFNetworking'
+  pod 'PINRemoteImage'
 end

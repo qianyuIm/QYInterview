@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import Toaster
+
 fileprivate class RootView: UIView {
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let view = super.hitTest(point, with: event)
@@ -29,6 +31,7 @@ fileprivate class AView: UIView {
         super.touchesBegan(touches, with: event)
         let touche = touches.first!
         logDebug("AView touchesBegan \(touche.phase.rawValue)")
+        Toast(text: "123").show()
     }
 }
 fileprivate class BView: UIView {
@@ -101,5 +104,6 @@ class ResponderChainController: BaseViewController {
     }
     @objc func senderDidClick() {
         logDebug("按钮点击")
+        Toast(text: "123").show()
     }
 }
