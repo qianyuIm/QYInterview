@@ -30,7 +30,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    [self runMaxThreadCountWithGCD];
+    [self serialQueueAsyncTask];
 }
 // 串行队列同步任务
 - (void)serialQueueSyncTask {
@@ -48,9 +48,6 @@
     for (int i = 0; i < 10; i++) {
         dispatch_async(queue, ^{
             NSLog(@"线程 = %@ -- %d",[NSThread currentThread],i);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"回到主线程了");
-            });
         });
     }
     NSLog(@"我是主线程 %@",[NSThread currentThread]);
