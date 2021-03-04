@@ -24,6 +24,8 @@ typedef void (^ChangeValueBlock) (void);
 
 @interface BlockChangeController ()
 @property (nonatomic, retain) ChangeValueBlock retainBlock;
+@property (nonatomic, strong) NSArray *array;
+
 @end
 
 @implementation BlockChangeController
@@ -128,5 +130,14 @@ typedef void (^ChangeValueBlock) (void);
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     NSLog(@"qwer");
+//    NSArray *array1 = [NSArray new];
+//    void (^TestBlock)(void) = ^{
+////        [array1 addObject:@1];
+//        array1 = @[@1];
+//        NSLog(@"testArr :%@", array1);
+//    };
+//    TestBlock();
+//    NSLog(@"testArr :%@", array1);
+    
 }
 @end

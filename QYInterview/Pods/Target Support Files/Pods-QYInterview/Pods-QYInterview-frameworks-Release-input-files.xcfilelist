@@ -1,5 +1,12 @@
 ${PODS_ROOT}/Target Support Files/Pods-QYInterview/Pods-QYInterview-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework
+${BUILT_PRODUCTS_DIR}/EasySwiftHook/EasySwiftHook.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/PandaHook/PandaHook.framework
+${BUILT_PRODUCTS_DIR}/SDMagicHook/SDMagicHook.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework
+${BUILT_PRODUCTS_DIR}/fishhook/fishhook.framework
+${BUILT_PRODUCTS_DIR}/libffi-iOS/libffi_iOS.framework

@@ -9,5 +9,9 @@ target 'QYInterview' do
   pod 'SnapKit'
   pod 'Toaster'
   pod 'AFNetworking'
-  pod 'PINRemoteImage'
+  pod 'MJRefresh'
+  pod 'SDMagicHook'
+  pod 'PandaHook'
+  pod 'Aspects'
+  pod 'EasySwiftHook'
 end

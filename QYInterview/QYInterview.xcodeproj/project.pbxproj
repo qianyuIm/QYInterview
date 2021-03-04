@@ -25,6 +25,9 @@
 		EF96338725E4A4800023D5C6 /* GCDController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338625E4A4800023D5C6 /* GCDController.m */; };
 		EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338B25E52AD20023D5C6 /* IfElseController.m */; };
 		EF96338F25E532910023D5C6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF96338E25E532910023D5C6 /* JavaScriptCore.framework */; };
+		EFB4387625EE336B0077349C /* HookController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB4387425EE336B0077349C /* HookController.m */; };
+		EFB4387725EE336B0077349C /* HookController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB4387525EE336B0077349C /* HookController.xib */; };
+		EFD019F825F0A8E700AC94F1 /* QYInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD019F725F0A8E700AC94F1 /* QYInterviewTests.swift */; };
 		EFD0BA2C25C7FB2C00B572EB /* InitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0BA2B25C7FB2C00B572EB /* InitController.swift */; };
 		EFDC5B3225E8A58A0073F62F /* NSOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDC5B3125E8A58A0073F62F /* NSOperationController.m */; };
 		EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */; };
@@ -46,6 +49,16 @@
 		EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC479F25AECCB2007C5AA4 /* HTTPSController.swift */; };
 		F636CFA5E1CEFE326FF0478D /* Pods_QYInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE0DAC20A11569F4EF0DA2 /* Pods_QYInterview.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFD019FA25F0A8E700AC94F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFFC475425AE7EFB007C5AA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFFC475B25AE7EFB007C5AA4;
+			remoteInfo = QYInterview;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0F9ADB41D06FFC2386B75876 /* Pods-QYInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYInterview.debug.xcconfig"; path = "Target Support Files/Pods-QYInterview/Pods-QYInterview.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +89,12 @@
 		EF96338A25E52AD20023D5C6 /* IfElseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IfElseController.h; sourceTree = "<group>"; };
 		EF96338B25E52AD20023D5C6 /* IfElseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IfElseController.m; sourceTree = "<group>"; };
 		EF96338E25E532910023D5C6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EFB4387325EE336B0077349C /* HookController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookController.h; sourceTree = "<group>"; };
+		EFB4387425EE336B0077349C /* HookController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookController.m; sourceTree = "<group>"; };
+		EFB4387525EE336B0077349C /* HookController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HookController.xib; sourceTree = "<group>"; };
+		EFD019F525F0A8E700AC94F1 /* QYInterviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QYInterviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD019F725F0A8E700AC94F1 /* QYInterviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYInterviewTests.swift; sourceTree = "<group>"; };
+		EFD019F925F0A8E700AC94F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFD0BA2B25C7FB2C00B572EB /* InitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitController.swift; sourceTree = "<group>"; };
 		EFDC5B3025E8A58A0073F62F /* NSOperationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationController.h; sourceTree = "<group>"; };
 		EFDC5B3125E8A58A0073F62F /* NSOperationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationController.m; sourceTree = "<group>"; };
@@ -103,6 +122,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EFD019F225F0A8E700AC94F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFFC475925AE7EFB007C5AA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,6 +181,25 @@
 			path = ProjectOptimize;
 			sourceTree = "<group>";
 		};
+		EFB4387225EE33520077349C /* Hook */ = {
+			isa = PBXGroup;
+			children = (
+				EFB4387325EE336B0077349C /* HookController.h */,
+				EFB4387425EE336B0077349C /* HookController.m */,
+				EFB4387525EE336B0077349C /* HookController.xib */,
+			);
+			path = Hook;
+			sourceTree = "<group>";
+		};
+		EFD019F625F0A8E700AC94F1 /* QYInterviewTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFD019F725F0A8E700AC94F1 /* QYInterviewTests.swift */,
+				EFD019F925F0A8E700AC94F1 /* Info.plist */,
+			);
+			path = QYInterviewTests;
+			sourceTree = "<group>";
+		};
 		EFEEEE0825E34E52004B3ACC /* sourceCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				EFFC475E25AE7EFB007C5AA4 /* QYInterview */,
+				EFD019F625F0A8E700AC94F1 /* QYInterviewTests */,
 				EFFC475D25AE7EFB007C5AA4 /* Products */,
 				4066FB4F5BF516ED333A2503 /* Pods */,
 				F97478388884EAAFBC60292C /* Frameworks */,
@@ -177,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				EFFC475C25AE7EFB007C5AA4 /* QYInterview.app */,
+				EFD019F525F0A8E700AC94F1 /* QYInterviewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +235,7 @@
 				EFFC476325AE7EFB007C5AA4 /* ViewController.swift */,
 				EF6A5A2525E755DC00965E1A /* OCViewController.h */,
 				EF6A5A2625E755DC00965E1A /* OCViewController.m */,
+				EFB4387225EE33520077349C /* Hook */,
 				EF96338925E52AAF0023D5C6 /* ProjectOptimize */,
 				EFEEEE0825E34E52004B3ACC /* sourceCode */,
 				EFFC479925AECC25007C5AA4 /* network */,
@@ -264,6 +312,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EFD019F425F0A8E700AC94F1 /* QYInterviewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD019FC25F0A8E700AC94F1 /* Build configuration list for PBXNativeTarget "QYInterviewTests" */;
+			buildPhases = (
+				EFD019F125F0A8E700AC94F1 /* Sources */,
+				EFD019F225F0A8E700AC94F1 /* Frameworks */,
+				EFD019F325F0A8E700AC94F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFD019FB25F0A8E700AC94F1 /* PBXTargetDependency */,
+			);
+			name = QYInterviewTests;
+			productName = QYInterviewTests;
+			productReference = EFD019F525F0A8E700AC94F1 /* QYInterviewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EFFC475B25AE7EFB007C5AA4 /* QYInterview */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFFC477025AE7EFC007C5AA4 /* Build configuration list for PBXNativeTarget "QYInterview" */;
@@ -292,6 +358,10 @@
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
+					EFD019F425F0A8E700AC94F1 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = EFFC475B25AE7EFB007C5AA4;
+					};
 					EFFC475B25AE7EFB007C5AA4 = {
 						CreatedOnToolsVersion = 12.1;
 						LastSwiftMigration = 1210;
@@ -312,17 +382,26 @@
 			projectRoot = "";
 			targets = (
 				EFFC475B25AE7EFB007C5AA4 /* QYInterview */,
+				EFD019F425F0A8E700AC94F1 /* QYInterviewTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EFD019F325F0A8E700AC94F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFFC475A25AE7EFB007C5AA4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EFFC476C25AE7EFC007C5AA4 /* LaunchScreen.storyboard in Resources */,
 				EFFC476925AE7EFC007C5AA4 /* Assets.xcassets in Resources */,
+				EFB4387725EE336B0077349C /* HookController.xib in Resources */,
 				EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */,
 				EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */,
 				EF6A5A1F25E754EA00965E1A /* RunLoopController.xib in Resources */,
@@ -374,10 +453,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EFD019F125F0A8E700AC94F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD019F825F0A8E700AC94F1 /* QYInterviewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFFC475825AE7EFB007C5AA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB4387625EE336B0077349C /* HookController.m in Sources */,
 				EF96338125E48E200023D5C6 /* AllocInitController.m in Sources */,
 				EF5582C625AFD9F3003E1347 /* CreatBinaryTreeController.swift in Sources */,
 				EFFC479425AEC123007C5AA4 /* MedianUnorderedArrayController.swift in Sources */,
@@ -414,6 +502,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EFD019FB25F0A8E700AC94F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFFC475B25AE7EFB007C5AA4 /* QYInterview */;
+			targetProxy = EFD019FA25F0A8E700AC94F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		EFFC476525AE7EFB007C5AA4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -434,6 +530,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EFD019FD25F0A8E700AC94F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QYInterviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianyuIm.QYInterviewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QYInterview.app/QYInterview";
+			};
+			name = Debug;
+		};
+		EFD019FE25F0A8E700AC94F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QYInterviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianyuIm.QYInterviewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QYInterview.app/QYInterview";
+			};
+			name = Release;
+		};
 		EFFC476E25AE7EFC007C5AA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -604,6 +738,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EFD019FC25F0A8E700AC94F1 /* Build configuration list for PBXNativeTarget "QYInterviewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD019FD25F0A8E700AC94F1 /* Debug */,
+				EFD019FE25F0A8E700AC94F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EFFC475725AE7EFB007C5AA4 /* Build configuration list for PBXProject "QYInterview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

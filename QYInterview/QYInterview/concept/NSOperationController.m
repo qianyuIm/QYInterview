@@ -63,15 +63,76 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    QYOperation *op = [[QYOperation alloc] init];
+//    QYOperation *op = [[QYOperation alloc] init];
 //    [op start];
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+//    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
 //    queue.maxConcurrentOperationCount = 1;
-    [queue addOperation:op];
+//    [queue addOperation:op];
     
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self testDependency];
+}
 - (void)doSome {
-    
+}
+// 测试依赖： 任务里边不能执行异步耗时任务，否则也无效
+- (void)testDependency {
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    NSBlockOperation *op1 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"任务1");
+        [self loadDataPar:@"1" callBack:^(NSString *string) {
+            NSLog(@"%@",string);
+        }];
+    }];
+    NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"任务2");
+        [self loadDataPar:@"2" callBack:^(NSString *string) {
+            NSLog(@"%@",string);
+        }];
+    }];
+    NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"任务3");
+        [self loadDataPar:@"3" callBack:^(NSString *string) {
+            NSLog(@"%@",string);
+        }];
+    }];
+    [op2 addDependency:op1];
+    [op3 addDependency:op2];
+    [queue addOperation:op1];
+    [queue addOperation:op2];
+    [queue addOperation:op3];
+
+}
+- (void)loadDataPar:(NSString *)num callBack:(void(^)(NSString *string))block {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_async(queue, ^{
+        NSLog(@"%@",[NSThread currentThread]);
+        dispatch_async(mainQueue, ^{
+            block(num);
+        });
+    });
+}
+- (void)testBlockOperation1 {
+    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"%@",[NSThread currentThread]);
+    }];
+    [op start];
+}
+- (void)testBlockOperation2 {
+    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
+        [NSThread sleepForTimeInterval:2];
+        NSLog(@"主线程======%@",[NSThread currentThread]);
+    }];
+    for (int i = 0; i < 100; i++) {
+        [op addExecutionBlock:^{
+            [NSThread sleepForTimeInterval:2];
+            NSLog(@"%d======%@",i+1,[NSThread currentThread]);
+        }];
+    }
+    [op start];
+    [op cancel];
 }
 /*
 #pragma mark - Navigation

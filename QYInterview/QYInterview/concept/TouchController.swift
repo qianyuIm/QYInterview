@@ -45,29 +45,34 @@ class TouchController: BaseViewController {
         let view = OrangeView()
         return view
     }()
+    lazy var sender: UIButton = {
+        let sender = UIButton(type: .custom)
+        sender.backgroundColor = .green
+        sender.addTarget(self, action: #selector(senderDidClick), for: .touchUpInside)
+        return sender
+    }()
+    lazy var imageView: UIImageView = {
+        let imageV = UIImageView()
+        imageV.backgroundColor = .gray
+        imageV.isUserInteractionEnabled = true
+        return imageV
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.addSubview(redView)
-        redView.addSubview(orangeView)
-        redView.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-            make.size.equalTo(200)
-        }
-        orangeView.snp.makeConstraints { (make) in
+        view.addSubview(imageView)
+        imageView.addSubview(sender)
+        imageView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.size.equalTo(100)
         }
-        let sem = DispatchSemaphore(value: 5)
-        for _ in 0..<100 {
-            DispatchQueue.global().async {
-                sem.wait()
-                logDebug(Thread.current)
-                sleep(3)
-                sem.signal()
-            }
+        sender.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.size.equalTo(200)
         }
-        
+    }
+    @objc func senderDidClick() {
+        logDebug("按钮点击")
     }
 }

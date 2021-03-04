@@ -74,7 +74,8 @@ class ViewController: UIViewController {
                 .init(with: "TCP协议跟UDP协议有什么区别", subTitle: "TCP协议跟UDP协议有什么区别", controllerName: "TCPUDPController"),
                 .init(with: "HTTPS协议原理", subTitle: "HTTPS协议原理", controllerName: "HTTPSController")]),
         .init(with: "项目优化", items: [
-                .init(with: "if else 多层判断优化", subTitle: "if else 多层判断优化", controllerName: "IfElseController")])]
+                .init(with: "if else 多层判断优化", subTitle: "if else 多层判断优化", controllerName: "IfElseController")]),
+        .init(with: "Hook", items: [.init(with: "Hook", subTitle: "Hook", controllerName: "HookController")])]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

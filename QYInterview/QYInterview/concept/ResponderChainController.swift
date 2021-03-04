@@ -12,7 +12,7 @@ import Toaster
 fileprivate class RootView: UIView {
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let view = super.hitTest(point, with: event)
-        logDebug("RootView hitTest")
+//        logDebug("RootView hitTest")
         return view
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -24,26 +24,26 @@ fileprivate class RootView: UIView {
 fileprivate class AView: UIView {
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let view = super.hitTest(point, with: event)
-        logDebug("AView hitTest")
+//        logDebug("AView hitTest")
         return view
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         let touche = touches.first!
         logDebug("AView touchesBegan \(touche.phase.rawValue)")
-        Toast(text: "123").show()
     }
 }
 fileprivate class BView: UIView {
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let view = super.hitTest(point, with: event)
-        logDebug("BView hitTest")
+//        logDebug("BView hitTest")
         return view
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         let touche = touches.first!
-        logDebug("BView touchesBegan \(touche.phase.rawValue)")
+        logDebug("BView touchesBegan \(touche.phase.rawValue) \(String(describing: self.next ?? nil))")
+        
     }
 }
 fileprivate class Sender: UIButton {
@@ -72,6 +72,7 @@ class ResponderChainController: BaseViewController {
         let view = BView()
 //        view.isUserInteractionEnabled = false
         view.backgroundColor = .red
+//        view.alpha = 0
         return view
     }()
     override func loadView() {
@@ -83,19 +84,20 @@ class ResponderChainController: BaseViewController {
 
         // Do any additional setup after loading the view.
         view.addSubview(aView)
-        aView.addSubview(bView)
+        aView.addSubview(sender)
+        sender.addSubview(bView)
         aView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.size.equalTo(200)
+        }
+        sender.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.size.equalTo(100)
         }
         bView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.size.equalTo(50)
         }
-        view.setNeedsLayout()
-        logDebug(bView)
-        view.layoutIfNeeded()
-        logDebug(bView)
 
     }
     override func viewDidLayoutSubviews() {

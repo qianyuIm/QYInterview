@@ -30,7 +30,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    [self serialQueueAsyncTask];
+    [self testAsyncToSync];
 }
 // 串行队列同步任务
 - (void)serialQueueSyncTask {
@@ -93,6 +93,83 @@
         NSLog(@"我是主线程- %@",[NSThread currentThread]);
     }
 }
+- (void)testGroup1 {
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_enter(group);
+    [self loadDataPar:@"1" callBack:^(NSString *string) {
+        NSLog(@"%@", string);
+        dispatch_group_leave(group);
+    }];
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    dispatch_group_enter(group);
+    [self loadDataPar:@"2" callBack:^(NSString *string) {
+        NSLog(@"%@", string);
+        dispatch_group_leave(group);
+    }];
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    dispatch_group_enter(group);
+    [self loadDataPar:@"3" callBack:^(NSString *string) {
+        NSLog(@"%@", string);
+        dispatch_group_leave(group);
+    }];
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"任务完成");
+    });
+}
+///  异步任务变为同步任务
+- (void)testAsyncToSync {
+    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        [self loadDataPar:@"1" callBack:^(NSString *string) {
+            NSLog(@"%@", string);
+            dispatch_semaphore_signal(sema);
+        }];
+        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        [self loadDataPar:@"2" callBack:^(NSString *string) {
+            NSLog(@"%@", string);
+            dispatch_semaphore_signal(sema);
+        }];
+        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        [self loadDataPar:@"3" callBack:^(NSString *string) {
+            NSLog(@"%@", string);
+            dispatch_semaphore_signal(sema);
+        }];
+        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"全部搞完了 %@",[NSThread currentThread]);
+
+        });
+    });
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            for (int i = 0 ; i < 5; i++) {
+//                NSLog(@"开始%d",i);
+//                // 模拟请求 ↓
+//                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+////                    sleep(3);
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        NSLog(@"任务%d完成",i);
+//                        dispatch_semaphore_signal(sema);
+//                    });
+//                });
+//                // 模拟请求 上
+//               dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//            }
+//           NSLog(@"全部搞完了");
+//        });
+}
+- (void)loadDataPar:(NSString *)num callBack:(void(^)(NSString *string))block {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_async(queue, ^{
+        NSLog(@"%@",[NSThread currentThread]);
+        dispatch_async(mainQueue, ^{
+            block(num);
+        });
+    });
+}
+
 // 说明dispatch_barrier_async的顺序执行还是依赖queue的类型啊，
 // 必需要queue的类型为dispatch_queue_create创建的，
 // 而且attr参数值必需是DISPATCH_QUEUE_CONCURRENT类型，
@@ -178,18 +255,19 @@
 // 是使用信号量让并发队列中的任务并发数得到抑制；YYDispatchQueuePool是让一定数量的串行队列代替并发队列，避开了并发队列不好控制并发数的问题。
 - (void)runMaxThreadCountWithGCD
 {
-    dispatch_queue_t concurrentQueue = dispatch_queue_create("concurrentRunMaxThreadCountWithGCD", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t workConcurrentQueue = dispatch_queue_create("concurrentRunMaxThreadCountWithGCD", DISPATCH_QUEUE_CONCURRENT);
     dispatch_queue_t serialQueue = dispatch_queue_create("serialRunMaxThreadCountWithGCD", DISPATCH_QUEUE_SERIAL);
     // 创建一个semaphore,并设置最大信号量，最大信号量表示最大线程数量
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
     // 使用循环往串行队列 serialQueue 增加 10 个任务
     for (int i = 0; i < 100 ; i++) {
-        dispatch_async(dispatch_get_global_queue(0,0), ^{
+        dispatch_async(serialQueue, ^{
             // 只有当信号量大于 0 的时候，线程将信号量减 1，程序向下执行
             // 否则线程会阻塞并且一直等待，直到信号量大于 0
             dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-            dispatch_async(concurrentQueue, ^{
+            dispatch_async(workConcurrentQueue, ^{
                 NSLog(@"%@ 执行任务一次  i = %d",[NSThread currentThread],i);
+                sleep(1);
                 // 当线程任务执行完成之后，发送一个信号，增加信号量。
                 dispatch_semaphore_signal(semaphore);
             });

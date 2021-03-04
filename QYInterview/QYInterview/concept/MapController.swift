@@ -7,25 +7,70 @@
 
 import UIKit
 
+class MapPersion: NSObject {
+    @objc dynamic var name: String = ""
+    var age: Int = 0 {
+        willSet {
+            logDebug(newValue)
+        }
+        didSet {
+            logDebug(oldValue)
+        }
+    }
+    var sex: Int {
+        return 10
+    }
+    override init() {
+        super.init()
+        self.age = 100
+    }
+}
+class MyObjectToObserve: NSObject {
+    @objc dynamic var age = 24
+    func updateAge() {
+        age += 1
+    }
+}
+class MyObserver: NSObject {
+    @objc var objectToObserve: MyObjectToObserve
+    var observation: NSKeyValueObservation?
+    
+    init(object: MyObjectToObserve) {
+        objectToObserve = object
+        super.init()
+        
+        observation = observe(\.objectToObserve.age,
+                              options: [.old, .new],
+                              changeHandler: { (object, change) in
+            print("去年年龄: \(change.oldValue!), 今年年龄: \(change.newValue!)")
+        })
+    }
+}
 class MapController: BaseViewController {
 
     let array = [1,3,4,nil,6]
+    var persion: MapPersion?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let mapArray = array.map { $0 }
-        let flatMapArray = array.flatMap { $0 }
-        let compactMapArray  = array.compactMap { $0 }
-        logDebug("mapArray = \(mapArray)", separator: "", terminator: " ")
-        logDebug("")
-        logDebug("flatMapArray = \(flatMapArray)", separator: "", terminator: " ")
-        logDebug("")
-        logDebug("compactMapArray = \(compactMapArray)", separator: "", terminator: " ")
-        logDebug("")
-        let aaa = mapArray.dropFirst()
-        logDebug("aaa = \(aaa)", separator: "", terminator: " ")
-        let a = stride(from: 0, to: 70, by: 5)
+        persion = MapPersion()
+        persion?.addObserver(self, forKeyPath: "name", options: [.old,.new], context: nil)
+        
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        persion?.name = "你好吗"
+        persion?.age = 10
+        persion?.sex = 10
+//        persion?.setValue("哈哈", forKey: "name")
+//        let observerd = MyObjectToObserve()
+////        let observer = MyObserver(object: observerd)
+//        observerd.addObserver(self, forKeyPath: "age", options: [.new , .old], context: nil)
+//        observerd.age = 10// 触发属性值的变化
+    }
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        logDebug(change)
     }
     
 }

@@ -46,7 +46,54 @@ http://en.wikipedia.org/wiki/Event_loop),在iOS中被称之为Runloop。这中�
   <summary>第一种直接使用[[NSRunLoop currentRunLoop] run],但是这种方式不能退出</summary>
   ```
   [[NSRunLoop currentRunLoop] run]
-  ```		
+  ```	
+  </details>	
   
+  <details open>
+  <summary>第二种直接使用[[NSRunLoop currentRunLoop] runUntilDate:],但是这种方式不能手动退出，只能等到UntilDate</summary>
+  
+  ```swift
+  NSDate *date = [NSDate dateWithTimeInterval:10 sinceDate:[NSDate date]];
+  [[NSRunLoop currentRunLoop] runUntilDate:date];
+  ```	
+  </details>	
+  
+  <details open>
+  <summary>第三种直接使用[[NSRunLoop currentRunLoop] runMode:beforeDate:],但是这种方式可以手动退出</summary>
+  
+  ```swift
+  ChildThread *thread = [[ChildThread alloc] initWithBlock:^{
+        NSLog(@"123");
+        NSTimer *timer = [NSTimer timerWithTimeInterval:1 repeats:true block:^(NSTimer * _Nonnull timer) {
+            NSLog(@"timer");
+            CFRunLoopStop(CFRunLoopGetCurrent());
+        }];
+        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+//        NSDate *date = [NSDate dateWithTimeInterval:10 sinceDate:[NSDate date]];
+//        NSLog(@"%@",date);
+//        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate distantFuture]];
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+
+    }];
+    [thread start];
+  ```	
+  </details>	
+
+
+## AutoreleasePool
+AutoreleasePool自动释放池,每一个自动释放池都是由一系列的```AutoreleasePoolPage```以**双向链表**的形式连接起来的，每个**AutoreleasePoolPage**的大小都是**4096**字节。
+
+app启动后，苹果在主线程的Runloop里注册了两个Observer，其回调都是_wrapRunLoopWithAutoreleasePoolHandler()。
+
+第一个Observer监听的时间是**Entry（即将进入Loop）**,其回调内会调用```_objc_autoreleasePoolPush()```创建自动释放池。其Order为 **-2147483647**，优先级最高，保证创建释放池发生在其他回调之前.
+
+第二个Observer监听两个事件: **BeforeWaiting(准备进入休眠)**时调用```_objc_autoreleasePoolPop() ```和```_objc_autoreleasePoolPush()```释放旧的池并创建新池;**Exit(即将退出Loop)**时调用**_objc_autoreleasePoolPop()**来释放旧池。这个Observer的Order是**2147483647**，优先级最低，保证其释放池子发生在其所有回调之后。
+
 ## Runloop实际的应用
+1. 子线程中NSTimer的使用
+2. 后台常驻线程(后台下载的话)
+3. 延时执行 performSelector:withObject:afterDelay:inModes
+4. GCD Async Main Queue (GCD 中只有这个方法用到了Runloop)
+5. 自动释放池 autoreleasepool
+6. 处理App中的各种事件（比如触摸事件、定时器事件等）
 
