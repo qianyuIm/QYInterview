@@ -62,7 +62,6 @@ class MapController: BaseViewController {
         super.touchesBegan(touches, with: event)
         persion?.name = "你好吗"
         persion?.age = 10
-        persion?.sex = 10
 //        persion?.setValue("哈哈", forKey: "name")
 //        let observerd = MyObjectToObserve()
 ////        let observer = MyObserver(object: observerd)

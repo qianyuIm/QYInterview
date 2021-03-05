@@ -102,6 +102,7 @@
     [queue addOperation:op1];
     [queue addOperation:op2];
     [queue addOperation:op3];
+    queue.maxConcurrentOperationCount
 
 }
 - (void)loadDataPar:(NSString *)num callBack:(void(^)(NSString *string))block {
