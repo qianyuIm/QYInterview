@@ -194,6 +194,10 @@ for (int i = 0; i < 100; i++) {
 ```
 
 ## GCD与NSOperationQueue区别
+
+最直接的区别就是: GCD是底层的C语言构成的API，而NSOperationQueue及相关对象是Objc的对象。在GCD中，在队列中执行的是由block构成的任务，这是一个轻量级的数据结构；而Operation作为一个对象,我们能够对NSOperation进行继承，在这之上添加成员变量与成员方法，提高整个代码的复用度，这比简单地将block任务排入执行队列更有自由度，能够在其之上添加更多自定制的功能。NSOperationQueue可以支持KVO可以监听任务的状态属性;而GCD不可以
+
+
 1.  NSOperationk可以很方便的控制最大并发数： maxConcurrentOperationCount
 	<details open>
       <summary>GCD 控制最大并发数</summary>
@@ -248,5 +252,5 @@ for (int i = 0; i < 100; i++) {
       </details> 
      或者 定义局部变量，用于标记block是否需要取消
      
- 4.我们能够对NSOperation进行继承，在这之上添加成员变量与成员方法，提高整个代码的复用度，这比简单地将block任务排入执行队列更有自由度，能够在其之上添加更多自定制的功能。
+4.我们能够对NSOperation进行继承，在这之上添加成员变量与成员方法，提高整个代码的复用度，这比简单地将block任务排入执行队列更有自由度，能够在其之上添加更多自定制的功能。
  5. 我们能将KVO应用于NSOperation中，可以监听一个Operation 是否完成或者取消，这样能比GCD更加有效的掌控我们执行的后台任务。

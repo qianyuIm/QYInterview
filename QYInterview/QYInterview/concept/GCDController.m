@@ -30,7 +30,35 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    [self testAsyncToSync];
+    [self test];
+}
+- (void)test {
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        //任务1
+        dispatch_async(queue, ^{
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            NSLog(@"run task 1");
+            sleep(1);
+            dispatch_semaphore_signal(semaphore);
+            NSLog(@"complete task 1");
+        });
+        //任务2
+        dispatch_async(queue, ^{
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            NSLog(@"run task 2");
+            sleep(1);
+            dispatch_semaphore_signal(semaphore);
+            NSLog(@"complete task 2");
+        });
+        //任务3
+        dispatch_async(queue, ^{
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            NSLog(@"run task 3");
+            sleep(1);
+            NSLog(@"complete task 3");
+            dispatch_semaphore_signal(semaphore);
+        });
 }
 // 串行队列同步任务
 - (void)serialQueueSyncTask {

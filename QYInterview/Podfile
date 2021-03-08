@@ -14,4 +14,5 @@ target 'QYInterview' do
   pod 'PandaHook'
   pod 'Aspects'
   pod 'EasySwiftHook'
+  pod 'HandyJSON'
 end

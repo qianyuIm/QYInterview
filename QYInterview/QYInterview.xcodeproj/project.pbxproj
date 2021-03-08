@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E807B25F5D10C00723E4C /* CodableController.swift */; };
 		EF3F835D25E62C1F009C217D /* ResponderChainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F835C25E62C1F009C217D /* ResponderChainController.swift */; };
 		EF456DAC25B5345A00566946 /* AttributeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF456DAB25B5345A00566946 /* AttributeController.swift */; };
 		EF456DAF25B5657400566946 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF456DAE25B5657400566946 /* MapController.swift */; };
@@ -64,6 +65,7 @@
 		0F9ADB41D06FFC2386B75876 /* Pods-QYInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYInterview.debug.xcconfig"; path = "Target Support Files/Pods-QYInterview/Pods-QYInterview.debug.xcconfig"; sourceTree = "<group>"; };
 		19006688363D8793123E7230 /* Pods-QYInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYInterview.release.xcconfig"; path = "Target Support Files/Pods-QYInterview/Pods-QYInterview.release.xcconfig"; sourceTree = "<group>"; };
 		B2BE0DAC20A11569F4EF0DA2 /* Pods_QYInterview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYInterview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0E807B25F5D10C00723E4C /* CodableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableController.swift; sourceTree = "<group>"; };
 		EF3F835C25E62C1F009C217D /* ResponderChainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderChainController.swift; sourceTree = "<group>"; };
 		EF456DAB25B5345A00566946 /* AttributeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeController.swift; sourceTree = "<group>"; };
 		EF456DAE25B5657400566946 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				EFDC5B3025E8A58A0073F62F /* NSOperationController.h */,
 				EFDC5B3125E8A58A0073F62F /* NSOperationController.m */,
 				EF3F835C25E62C1F009C217D /* ResponderChainController.swift */,
+				EF0E807B25F5D10C00723E4C /* CodableController.swift */,
 			);
 			path = concept;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */,
 				EF96338725E4A4800023D5C6 /* GCDController.m in Sources */,
 				EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */,
+				EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */,
 				EF6A5A2725E755DC00965E1A /* OCViewController.m in Sources */,
 				EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */,
 				EFFC478525AE888A007C5AA4 /* ReverseStringController.swift in Sources */,

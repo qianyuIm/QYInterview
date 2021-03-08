@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wGE-8y-wvX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pfD-oN-kE8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wGE-8y-wvX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wrc-0k-KvL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lhh-ec-ODW" kind="relationship" relationship="rootViewController" id="yPA-ya-q9C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upM-md-aNW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="87.723214285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HQP-1B-43d">
+            <objects>
+                <viewController id="Lhh-ec-ODW" customClass="ViewController" customModule="FlutterIos" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ybz-bF-lsx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hug-PO-ocr">
+                                <rect key="frame" x="161" y="188" width="92" height="30"/>
+                                <state key="normal" title="跳转原生页面"/>
+                                <connections>
+                                    <action selector="jumpNavite:" destination="Lhh-ec-ODW" eventType="touchUpInside" id="tBn-UT-x31"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7r-Ca-S4H">
+                                <rect key="frame" x="154" y="263" width="106" height="30"/>
+                                <state key="normal" title="跳转Flutter页面"/>
+                                <connections>
+                                    <action selector="jumpFlutter:" destination="Lhh-ec-ODW" eventType="touchUpInside" id="Drf-gz-HWK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b9c-sT-WI5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hug-PO-ocr" firstAttribute="centerX" secondItem="b9c-sT-WI5" secondAttribute="centerX" id="25B-3U-bXm"/>
+                            <constraint firstItem="R7r-Ca-S4H" firstAttribute="centerX" secondItem="Hug-PO-ocr" secondAttribute="centerX" id="dld-iE-msO"/>
+                            <constraint firstItem="Hug-PO-ocr" firstAttribute="top" secondItem="b9c-sT-WI5" secondAttribute="top" constant="100" id="hUB-uQ-8N6"/>
+                            <constraint firstItem="R7r-Ca-S4H" firstAttribute="top" secondItem="Hug-PO-ocr" secondAttribute="bottom" constant="45" id="nti-zW-56Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jgR-dq-sR6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pqj-In-LHP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
