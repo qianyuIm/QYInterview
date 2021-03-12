@@ -52,6 +52,7 @@ typedef void (^ChangeValueBlock) (void);
     __block int block_value = 10;
     NSMutableArray *array = [NSMutableArray array];
     ChangeValueBlock block1 = ^{
+        
         // 改变
         persion.name = @"xiao hong";
         // 改变

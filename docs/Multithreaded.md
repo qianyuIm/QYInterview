@@ -1,4 +1,5 @@
 # 多线程
+
 NSThread	
 	
 GCD		
@@ -15,6 +16,47 @@ NSOperation
 - **[为什么要使用 NSOperation、NSOperationQueue?](为什么要使用NSOperation、NSOperationQueue?)**
 - **[NSOperation和NSOperationQueue基本使用](NSOperation和NSOperationQueue基本使用)**
 
+## 基本概念
+### 1.线程，进程与队列
+**1.进程的定义**
+
+	进程是指系统中正在运行的一个应用程序，比如微信，支付宝等app都是一个进程。
+	每个进程之间是独立的，每个进程均运行在其专用且受保护的内存空间内。
+
+**2.线程的定义**
+
+	线程是进程的基本执行单元，一个进程的所有任务都在线程中执行。
+	进程想要执行任务必须要有线程，进程至少有一个线程。
+	程序启动会默认开启一条线程，这条线程被叫做主线程或UI线程
+
+**3.进程和线程的关系和区别**
+
+* 地址空间: 同一**进程**的**线程**共享本进程的地址空间，而进程则是独立的地址空间。
+* 资源拥有: 同一**进程**内的**线程**共享本进程的资源，如内存，I/O，CPU等，但**进程**之间的资源是独立的。
+* 一个 **进程** 崩溃后，在保护模式下不会对其他的 **进程** 产生影响，但是一个 **线程** 崩溃，整个 **进程** 都会死掉，所以 **多进程** 比 **多线程** 健壮。
+* 执行过程: 每个独立 **进程** 都有一个程序运行入口，但 **线程** 不能独立执行，必须依存在应用程序中，由应用程序提供多个 **线程** 执行控制。
+* **线程是处理器调度的基本单位，但进程不是。**
+* 线程没有地址空间，线程包含在进程的地址空间中。
+* 两者之间的关系相当于 **工程和流水线的关系**，工厂与工厂之间相互独立，而工厂中的流水线是共享工厂资源的，即 **进程** 相当于工厂，**线程** 相当于工厂中的一条流水线。
+
+## 2.多线程
+### 1.多线程原理
+* 对于 **单核CPU** ,同一时间CPU只能处理一条线程，即只有一条线程在工作
+* iOS 中 多线程同时执行的本质 是 CPU 在多个任务之间进行快速的切换，由于CPU调度线程的时间足够快，就造成了多线程**“同时”**执行的效果。
+
+### 2.多线程意义
+**优点:**		
+
+* 能适当提高程序的执行效率
+* 能适当提高资源利用率(CPU,内存等)
+* 线程上的任务执行完成后，线程自动销毁
+
+**缺点:**
+
+* 开启线程占用一定内存空间，(默认情况下: 每一条线程占 512KB，创建线程大约需要 90毫秒时间)
+* 如果开启大量的线程，会占用大量的内存空间，降低程序性能
+* 线程越多，CPU在调用上的开销越大
+* 程序设计更加复杂，比如线程间的通信，多线程的数据共享
 
 ## 1.NSThread
 
@@ -100,6 +142,8 @@ GCD 两个核心概念: **『任务』** 和 **『队列』**。
   </details>      
   	
  2.```dispatch_semaphore```
+ 
+	```dispatch_semaphore``` 信号量基于计数器的一种多线程同步机制。解决: 在多个线程访问共有资源时候，会因为多线程的特性而引发数据出错的问题。
 	<details open>
       <summary>dispatch_semaphore 模拟网络请求同步执行，注意堵塞线程的问题</summary>
   
@@ -146,11 +190,13 @@ NSOperation、NSOperationQueue 是苹果提供给我们的一套多线程解决�
 5. 使用 KVO 观察对操作执行状态的更改：isExecuteing、isFinished、isCancelled。
 
 ### NSOperation和NSOperationQueue基本使用
-1.```NSInvocationOperation```   
-在没有使用 NSOperationQueue、在主线程中单独使用使用子类 NSInvocationOperation 执行一个操作的情况下，操作是在当前线程执行的，并没有开启新线程。   
-在其他线程中单独使用子类 NSInvocationOperation，操作是在当前调用的其他线程执行的，并没有开启新线程。	
+
+1. ```NSInvocationOperation```   
+在没有使用 NSOperationQueue、在主线程中单独使用使用子类 NSInvocationOperation 执行一个操作的情况下，操作是在当前线程同步执行的，并没有开启新线程。   
+在其他线程中单独使用子类 NSInvocationOperation，操作是在当前调用的其他线程同步执行的，并没有开启新线程。		
+
 2. ```NSBlockOperation```	
-	2.1. 	 使用```blockOperationWithBlock```初始化的话，操作在当前线程中执行，不开启新的线程
+	2.1. 	 使用```blockOperationWithBlock```初始化的话，操作在当前线程中同步执行，不开启新的线程
 
 ```swift
 NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
@@ -163,7 +209,7 @@ NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
    [op start];
 ```
 
-2.2. 通过```addExecutionBlock``` 添加额外的操作，这些操作包括```blockOperationWithBlock ```中的操作可以再不同的线程中同时(并发)执行，如果添加的操作多的话，```blockOperationWithBlock:``` 中的操作也可能会在其他线程（非当前线程）中执行，这是由系统决定的，并不是说添加到 ```blockOperationWithBlock:``` 中的操作一定会在当前线程中执行。（可以使用 ```addExecutionBlock:``` 多添加几个操作试试）
+2.2. 通过```addExecutionBlock``` 添加额外的操作，这些操作包括```blockOperationWithBlock ```中的操作可以在不同的线程中同时(并发)执行，如果添加的操作多的话，```blockOperationWithBlock:``` 中的操作也可能会在其他线程（非当前线程）中执行，这是由系统决定的，并不是说添加到 ```blockOperationWithBlock:``` 中的操作一定会在当前线程中执行。（可以使用 ```addExecutionBlock:``` 多添加几个操作试试）
 
 ```swift
 NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
@@ -181,6 +227,9 @@ for (int i = 0; i < 100; i++) {
 
 一般情况下，如果一个 NSBlockOperation 对象封装了多个操作。NSBlockOperation 是否开启新线程，取决于操作的个数。如果添加的操作的个数多，就会自动开启新线程。当然开启的线程数是由系统来决定的。
 
+## Operation的同步与异步
+1. Operation直接调用start方法，不与OperationQueue混合使用的时候是同步调用。区别在于BlockOperation 使用 ```addExecutionBlock:``` 添加的任务会开启子线程并发执行,如果 通过```addExecutionBlock:```添加的任务过多的话 BlockOperation 初始化方法```blockOperationWithBlock:```中添加的任务也可能在子线程中执行。
+2. Operation 配合OperationQueue 使用是异步执行
 
 
 * 重写的方法
@@ -195,7 +244,7 @@ for (int i = 0; i < 100; i++) {
 
 ## GCD与NSOperationQueue区别
 
-最直接的区别就是: GCD是底层的C语言构成的API，而NSOperationQueue及相关对象是Objc的对象。在GCD中，在队列中执行的是由block构成的任务，这是一个轻量级的数据结构；而Operation作为一个对象,我们能够对NSOperation进行继承，在这之上添加成员变量与成员方法，提高整个代码的复用度，这比简单地将block任务排入执行队列更有自由度，能够在其之上添加更多自定制的功能。NSOperationQueue可以支持KVO可以监听任务的状态属性;而GCD不可以
+最直接的区别就是: GCD是底层的C语言构成的API，而NSOperationQueue及相关对象是Objc的对象。在GCD中，在队列中执行的是由block构成的任务，这是一个轻量级的数据结构；而Operation作为一个对象,我们能够对NSOperation进行继承，在这之上添加成员变量与成员方法，提高整个代码的复用度，这比简单地将block任务排入执行队列更有自由度，能够在其之上添加更多自定制的功能。NSOperation支持KVO可以监听任务的状态属性;而GCD不可以，NSOpration甚至可以跨队列设置依赖关系，但是GCD只能通过设置串行队列，或者在队列中设置barrier任务才能控制执行顺序，较为复杂。
 
 
 1.  NSOperationk可以很方便的控制最大并发数： maxConcurrentOperationCount

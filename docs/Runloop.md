@@ -37,6 +37,14 @@ http://en.wikipedia.org/wiki/Event_loop),在iOS中被称之为Runloop。这中�
 3. 主线程的Runloop系统默认启动，子线程的Runloop需要主动开启
 4. Runloop 存储在一个全局的可变字典里，线程是 key ，Runloop 是 value 
 
+> runloop 和线程是一一对应的，一个runloop对应一个核心的线程，为什么说是核心的，是因为runloop可以被嵌套，但是核心的只能有一个，他们的关系保存在一个全局的字典中。	
+> runloop用来管理线程，当线程的runloop被开启后，线程会在执行完任务后进入休眠状态，有了任务就会被唤醒去执行任务。	
+> runloop在第一次获取时被创建，在线程结束时被销毁	
+	对主线程来说，runloop在程序一启动就默认创建好了。	
+	对子线程来说，runloop是懒加载的，只有当我们使用的时候才会被创建，所以在子线程中使用定时器要注意：确保子线程的runloop被创建，不然定时器不会回调。		
+
+
+
 ## PerformSelector的实现原理
 * 当调用 NSObject 的 performSelecter:afterDelay: 后，实际上其内部会创建一个 Timer 并添加到当前线程的 RunLoop 中。所以如果当前线程没有 RunLoop，则这个方法会失效。		
 * 当调用 performSelector:onThread: 时，实际上其会创建一个 Timer 加到对应的线程去，同样的，如果对应线程没有 RunLoop 该方法也会失效。

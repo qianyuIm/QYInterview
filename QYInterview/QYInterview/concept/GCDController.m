@@ -17,6 +17,19 @@
  * 2. 使用信号量
  *
  */
+
+@interface GCDPersion : NSObject
+- (void)eat;
+@end
+
+@implementation GCDPersion
+
+- (void)eat {
+   
+}
+
+@end
+
 @interface GCDController ()
 
 @end

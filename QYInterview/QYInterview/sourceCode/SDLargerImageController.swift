@@ -22,8 +22,10 @@ class SDLargerImageController: BaseViewController {
         imageView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-        let imageUrl = URL(string: "http://www.onegreen.net/maps/Upload_maps/201412/2014120107280906.jpg")
-        imageView.sd_setImage(with: imageUrl, placeholderImage: nil, options: [.retryFailed])
+//        let imageString = "http://www.onegreen.net/maps/Upload_maps/201412/2014120107280906.jpg"
+        let imageString = "http://img3.imgtn.bdimg.com/it/u=965183317,1784857244&fm=27&gp=0.jpg"
+        let imageUrl = URL(string: imageString)
+        imageView.sd_setImage(with: imageUrl, placeholderImage: nil, options: [])
     }
 
 }

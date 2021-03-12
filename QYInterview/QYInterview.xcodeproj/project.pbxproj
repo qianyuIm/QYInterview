@@ -7,10 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF08451725F767E7003FE450 /* RuntimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08451525F767E7003FE450 /* RuntimeController.swift */; };
+		EF08451825F767E7003FE450 /* RuntimeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF08451625F767E7003FE450 /* RuntimeController.xib */; };
+		EF08452025F76800003FE450 /* SwizzlingController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08451E25F76800003FE450 /* SwizzlingController.m */; };
+		EF08452125F76800003FE450 /* SwizzlingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF08451F25F76800003FE450 /* SwizzlingController.xib */; };
+		EF08452725F76956003FE450 /* RuntimePersion.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08452625F76956003FE450 /* RuntimePersion.m */; };
+		EF08452E25F7696A003FE450 /* RuntimeStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08452D25F7696A003FE450 /* RuntimeStudent.m */; };
+		EF08453325F76A1E003FE450 /* RuntimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08453225F76A1E003FE450 /* RuntimeTool.m */; };
+		EF08453825F76B6C003FE450 /* RuntimeStudent+QY.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08453725F76B6C003FE450 /* RuntimeStudent+QY.m */; };
 		EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E807B25F5D10C00723E4C /* CodableController.swift */; };
+		EF3E2B2925F8C082000F5F78 /* MultithreadedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3E2B2725F8C082000F5F78 /* MultithreadedController.swift */; };
+		EF3E2B2A25F8C082000F5F78 /* MultithreadedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3E2B2825F8C082000F5F78 /* MultithreadedController.xib */; };
+		EF3E2B3025F8C0A7000F5F78 /* GCDBarrierController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E2B2E25F8C0A7000F5F78 /* GCDBarrierController.m */; };
+		EF3E2B3125F8C0A7000F5F78 /* GCDBarrierController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3E2B2F25F8C0A7000F5F78 /* GCDBarrierController.xib */; };
+		EF3E2B3A25F8DF51000F5F78 /* KindOfController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E2B3925F8DF51000F5F78 /* KindOfController.m */; };
 		EF3F835D25E62C1F009C217D /* ResponderChainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F835C25E62C1F009C217D /* ResponderChainController.swift */; };
 		EF456DAC25B5345A00566946 /* AttributeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF456DAB25B5345A00566946 /* AttributeController.swift */; };
 		EF456DAF25B5657400566946 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF456DAE25B5657400566946 /* MapController.swift */; };
+		EF470AC725F9B10B0053D1F6 /* OperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF470AC525F9B10B0053D1F6 /* OperationController.m */; };
+		EF470AC825F9B10B0053D1F6 /* OperationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF470AC625F9B10B0053D1F6 /* OperationController.xib */; };
+		EF470ACE25F9CAA90053D1F6 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF470ACC25F9CAA90053D1F6 /* MemoryController.swift */; };
+		EF470ACF25F9CAA90053D1F6 /* MemoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF470ACD25F9CAA90053D1F6 /* MemoryController.xib */; };
+		EF470AD525F9CB1A0053D1F6 /* AutoreleaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF470AD325F9CB1A0053D1F6 /* AutoreleaseController.mm */; };
+		EF470AD625F9CB1A0053D1F6 /* AutoreleaseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF470AD425F9CB1A0053D1F6 /* AutoreleaseController.xib */; };
 		EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4B134A25B192EA0055C4D2 /* KVOController.m */; };
 		EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */; };
 		EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5582BF25AFD6D4003E1347 /* BinaryTreeController.xib */; };
@@ -65,10 +84,38 @@
 		0F9ADB41D06FFC2386B75876 /* Pods-QYInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYInterview.debug.xcconfig"; path = "Target Support Files/Pods-QYInterview/Pods-QYInterview.debug.xcconfig"; sourceTree = "<group>"; };
 		19006688363D8793123E7230 /* Pods-QYInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYInterview.release.xcconfig"; path = "Target Support Files/Pods-QYInterview/Pods-QYInterview.release.xcconfig"; sourceTree = "<group>"; };
 		B2BE0DAC20A11569F4EF0DA2 /* Pods_QYInterview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYInterview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF08451525F767E7003FE450 /* RuntimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeController.swift; sourceTree = "<group>"; };
+		EF08451625F767E7003FE450 /* RuntimeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuntimeController.xib; sourceTree = "<group>"; };
+		EF08451D25F76800003FE450 /* SwizzlingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwizzlingController.h; sourceTree = "<group>"; };
+		EF08451E25F76800003FE450 /* SwizzlingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwizzlingController.m; sourceTree = "<group>"; };
+		EF08451F25F76800003FE450 /* SwizzlingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwizzlingController.xib; sourceTree = "<group>"; };
+		EF08452525F76956003FE450 /* RuntimePersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimePersion.h; sourceTree = "<group>"; };
+		EF08452625F76956003FE450 /* RuntimePersion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimePersion.m; sourceTree = "<group>"; };
+		EF08452C25F7696A003FE450 /* RuntimeStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeStudent.h; sourceTree = "<group>"; };
+		EF08452D25F7696A003FE450 /* RuntimeStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeStudent.m; sourceTree = "<group>"; };
+		EF08453125F76A1E003FE450 /* RuntimeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTool.h; sourceTree = "<group>"; };
+		EF08453225F76A1E003FE450 /* RuntimeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTool.m; sourceTree = "<group>"; };
+		EF08453625F76B6C003FE450 /* RuntimeStudent+QY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RuntimeStudent+QY.h"; sourceTree = "<group>"; };
+		EF08453725F76B6C003FE450 /* RuntimeStudent+QY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RuntimeStudent+QY.m"; sourceTree = "<group>"; };
 		EF0E807B25F5D10C00723E4C /* CodableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableController.swift; sourceTree = "<group>"; };
+		EF3E2B2725F8C082000F5F78 /* MultithreadedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultithreadedController.swift; sourceTree = "<group>"; };
+		EF3E2B2825F8C082000F5F78 /* MultithreadedController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultithreadedController.xib; sourceTree = "<group>"; };
+		EF3E2B2D25F8C0A7000F5F78 /* GCDBarrierController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDBarrierController.h; sourceTree = "<group>"; };
+		EF3E2B2E25F8C0A7000F5F78 /* GCDBarrierController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDBarrierController.m; sourceTree = "<group>"; };
+		EF3E2B2F25F8C0A7000F5F78 /* GCDBarrierController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GCDBarrierController.xib; sourceTree = "<group>"; };
+		EF3E2B3825F8DF51000F5F78 /* KindOfController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KindOfController.h; sourceTree = "<group>"; };
+		EF3E2B3925F8DF51000F5F78 /* KindOfController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KindOfController.m; sourceTree = "<group>"; };
 		EF3F835C25E62C1F009C217D /* ResponderChainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderChainController.swift; sourceTree = "<group>"; };
 		EF456DAB25B5345A00566946 /* AttributeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeController.swift; sourceTree = "<group>"; };
 		EF456DAE25B5657400566946 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		EF470AC425F9B10B0053D1F6 /* OperationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationController.h; sourceTree = "<group>"; };
+		EF470AC525F9B10B0053D1F6 /* OperationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationController.m; sourceTree = "<group>"; };
+		EF470AC625F9B10B0053D1F6 /* OperationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationController.xib; sourceTree = "<group>"; };
+		EF470ACC25F9CAA90053D1F6 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
+		EF470ACD25F9CAA90053D1F6 /* MemoryController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoryController.xib; sourceTree = "<group>"; };
+		EF470AD225F9CB1A0053D1F6 /* AutoreleaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoreleaseController.h; sourceTree = "<group>"; };
+		EF470AD325F9CB1A0053D1F6 /* AutoreleaseController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AutoreleaseController.mm; sourceTree = "<group>"; };
+		EF470AD425F9CB1A0053D1F6 /* AutoreleaseController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoreleaseController.xib; sourceTree = "<group>"; };
 		EF4B134925B192EA0055C4D2 /* KVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOController.h; sourceTree = "<group>"; };
 		EF4B134A25B192EA0055C4D2 /* KVOController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOController.m; sourceTree = "<group>"; };
 		EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeController.swift; sourceTree = "<group>"; };
@@ -150,6 +197,63 @@
 				19006688363D8793123E7230 /* Pods-QYInterview.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF08451425F767CE003FE450 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				EF08452425F76943003FE450 /* Obj */,
+				EF08451525F767E7003FE450 /* RuntimeController.swift */,
+				EF08451625F767E7003FE450 /* RuntimeController.xib */,
+				EF08451D25F76800003FE450 /* SwizzlingController.h */,
+				EF08451E25F76800003FE450 /* SwizzlingController.m */,
+				EF08451F25F76800003FE450 /* SwizzlingController.xib */,
+				EF3E2B3825F8DF51000F5F78 /* KindOfController.h */,
+				EF3E2B3925F8DF51000F5F78 /* KindOfController.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		EF08452425F76943003FE450 /* Obj */ = {
+			isa = PBXGroup;
+			children = (
+				EF08452525F76956003FE450 /* RuntimePersion.h */,
+				EF08452625F76956003FE450 /* RuntimePersion.m */,
+				EF08452C25F7696A003FE450 /* RuntimeStudent.h */,
+				EF08452D25F7696A003FE450 /* RuntimeStudent.m */,
+				EF08453625F76B6C003FE450 /* RuntimeStudent+QY.h */,
+				EF08453725F76B6C003FE450 /* RuntimeStudent+QY.m */,
+				EF08453125F76A1E003FE450 /* RuntimeTool.h */,
+				EF08453225F76A1E003FE450 /* RuntimeTool.m */,
+			);
+			path = Obj;
+			sourceTree = "<group>";
+		};
+		EF3E2B2425F8C06B000F5F78 /* Multithreaded */ = {
+			isa = PBXGroup;
+			children = (
+				EF3E2B2725F8C082000F5F78 /* MultithreadedController.swift */,
+				EF3E2B2825F8C082000F5F78 /* MultithreadedController.xib */,
+				EF3E2B2D25F8C0A7000F5F78 /* GCDBarrierController.h */,
+				EF3E2B2E25F8C0A7000F5F78 /* GCDBarrierController.m */,
+				EF3E2B2F25F8C0A7000F5F78 /* GCDBarrierController.xib */,
+				EF470AC425F9B10B0053D1F6 /* OperationController.h */,
+				EF470AC525F9B10B0053D1F6 /* OperationController.m */,
+				EF470AC625F9B10B0053D1F6 /* OperationController.xib */,
+			);
+			path = Multithreaded;
+			sourceTree = "<group>";
+		};
+		EF470ACB25F9CA960053D1F6 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				EF470ACC25F9CAA90053D1F6 /* MemoryController.swift */,
+				EF470ACD25F9CAA90053D1F6 /* MemoryController.xib */,
+				EF470AD225F9CB1A0053D1F6 /* AutoreleaseController.h */,
+				EF470AD325F9CB1A0053D1F6 /* AutoreleaseController.mm */,
+				EF470AD425F9CB1A0053D1F6 /* AutoreleaseController.xib */,
+			);
+			path = Memory;
 			sourceTree = "<group>";
 		};
 		EF5582BD25AFD6C3003E1347 /* BinaryTree */ = {
@@ -270,6 +374,9 @@
 		EFFC478025AE8768007C5AA4 /* concept */ = {
 			isa = PBXGroup;
 			children = (
+				EF470ACB25F9CA960053D1F6 /* Memory */,
+				EF3E2B2425F8C06B000F5F78 /* Multithreaded */,
+				EF08451425F767CE003FE450 /* Runtime */,
 				EF6A5A1525E7546E00965E1A /* Runloop */,
 				EFFC478125AE879E007C5AA4 /* ClassAndStructController.swift */,
 				EF5582DE25B02887003E1347 /* BlockChangeController.h */,
@@ -404,9 +511,16 @@
 			files = (
 				EFFC476C25AE7EFC007C5AA4 /* LaunchScreen.storyboard in Resources */,
 				EFFC476925AE7EFC007C5AA4 /* Assets.xcassets in Resources */,
+				EF470ACF25F9CAA90053D1F6 /* MemoryController.xib in Resources */,
+				EF470AD625F9CB1A0053D1F6 /* AutoreleaseController.xib in Resources */,
 				EFB4387725EE336B0077349C /* HookController.xib in Resources */,
+				EF08451825F767E7003FE450 /* RuntimeController.xib in Resources */,
 				EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */,
+				EF470AC825F9B10B0053D1F6 /* OperationController.xib in Resources */,
+				EF08452125F76800003FE450 /* SwizzlingController.xib in Resources */,
+				EF3E2B2A25F8C082000F5F78 /* MultithreadedController.xib in Resources */,
 				EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */,
+				EF3E2B3125F8C0A7000F5F78 /* GCDBarrierController.xib in Resources */,
 				EF6A5A1F25E754EA00965E1A /* RunLoopController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,27 +584,39 @@
 			files = (
 				EFB4387625EE336B0077349C /* HookController.m in Sources */,
 				EF96338125E48E200023D5C6 /* AllocInitController.m in Sources */,
+				EF08452025F76800003FE450 /* SwizzlingController.m in Sources */,
 				EF5582C625AFD9F3003E1347 /* CreatBinaryTreeController.swift in Sources */,
 				EFFC479425AEC123007C5AA4 /* MedianUnorderedArrayController.swift in Sources */,
 				EF5582CC25B02003003E1347 /* BalancedBinaryTreeController.swift in Sources */,
+				EF470AD525F9CB1A0053D1F6 /* AutoreleaseController.mm in Sources */,
 				EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */,
 				EFFC477825AE8385007C5AA4 /* NearlyFatherController.swift in Sources */,
+				EF3E2B3A25F8DF51000F5F78 /* KindOfController.m in Sources */,
 				EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */,
+				EF08451725F767E7003FE450 /* RuntimeController.swift in Sources */,
 				EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */,
 				EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */,
 				EFDC5B3225E8A58A0073F62F /* NSOperationController.m in Sources */,
+				EF470ACE25F9CAA90053D1F6 /* MemoryController.swift in Sources */,
+				EF470AC725F9B10B0053D1F6 /* OperationController.m in Sources */,
 				EFD0BA2C25C7FB2C00B572EB /* InitController.swift in Sources */,
 				EF3F835D25E62C1F009C217D /* ResponderChainController.swift in Sources */,
 				EFFC478E25AE9352007C5AA4 /* ReverseSingListController.swift in Sources */,
 				EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */,
 				EF456DAF25B5657400566946 /* MapController.swift in Sources */,
 				EF456DAC25B5345A00566946 /* AttributeController.swift in Sources */,
+				EF08452725F76956003FE450 /* RuntimePersion.m in Sources */,
 				EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */,
+				EF08452E25F7696A003FE450 /* RuntimeStudent.m in Sources */,
+				EF3E2B3025F8C0A7000F5F78 /* GCDBarrierController.m in Sources */,
 				EFFC479125AEBF28007C5AA4 /* OrderedArrayMergeController.swift in Sources */,
 				EF6A5A1E25E754EA00965E1A /* RunLoopController.swift in Sources */,
+				EF3E2B2925F8C082000F5F78 /* MultithreadedController.swift in Sources */,
+				EF08453325F76A1E003FE450 /* RuntimeTool.m in Sources */,
 				EFFC476025AE7EFB007C5AA4 /* AppDelegate.swift in Sources */,
 				EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */,
 				EFFC478225AE879E007C5AA4 /* ClassAndStructController.swift in Sources */,
+				EF08453825F76B6C003FE450 /* RuntimeStudent+QY.m in Sources */,
 				EFEEEE5725E393CB004B3ACC /* SuperSelfController.m in Sources */,
 				EFFC479725AEC363007C5AA4 /* NumOfReverseArrayController.swift in Sources */,
 				EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */,

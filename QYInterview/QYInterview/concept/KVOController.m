@@ -207,7 +207,13 @@ static void kvo_setter(id self, SEL _cmd, id newValue)
 //}
 
 @end
+struct ThreeFloats {
+    CGFloat one;
+    CGFloat two;
+    CGFloat three;
+};
 @interface KVOSon : KVOPersion
+@property (nonatomic, assign) struct ThreeFloats floats;
 @end
 
 @implementation KVOSon
@@ -235,6 +241,12 @@ static void kvo_setter(id self, SEL _cmd, id newValue)
     NSLog(@"自己实现KVO");
     self.view.backgroundColor = [UIColor whiteColor];
     [self testReadonly];
+    struct ThreeFloats flo = {1,2,3};
+    NSValue *value = [NSValue valueWithBytes:&flo objCType:@encode(struct ThreeFloats)];
+    KVOSon *son = [[KVOSon alloc] init];
+    [son setValue:value forKey:@"floats"];
+    NSLog(@"%@-%@", [son valueForKey:@"floats"], [[son valueForKey:@"floats"] class]);
+
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     NSLog(@"keyPath = %@, change = %@ ",keyPath, change);

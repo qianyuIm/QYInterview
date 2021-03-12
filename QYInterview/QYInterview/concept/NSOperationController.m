@@ -7,6 +7,7 @@
 
 #import "NSOperationController.h"
 #import <objc/runtime.h>
+#import <SDWebImage/SDWebImage.h>
 @interface QYOperation : NSInvocation
 @property (assign, nonatomic, getter = isExecuting) BOOL executing;
 @property (assign, nonatomic, getter = isFinished) BOOL finished;
@@ -55,7 +56,7 @@
 
 @end
 @interface NSOperationController ()
-
+@property (nonatomic, assign) int identifier;
 @end
 
 @implementation NSOperationController
@@ -68,50 +69,134 @@
 //    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
 //    queue.maxConcurrentOperationCount = 1;
 //    [queue addOperation:op];
-    
+    _identifier = 1;
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    [self testDependency];
+    [self testGCDGroupDependency];
 }
 - (void)doSome {
 }
 // 测试依赖： 任务里边不能执行异步耗时任务，否则也无效
 - (void)testDependency {
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    NSOperationQueue *queue1 = [[NSOperationQueue alloc] init];
     NSBlockOperation *op1 = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"任务1");
-        [self loadDataPar:@"1" callBack:^(NSString *string) {
-            NSLog(@"%@",string);
+        [self loadDataPar:1 callBack:^(int string) {
+            self.identifier = string;
         }];
     }];
     NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"任务2");
-        [self loadDataPar:@"2" callBack:^(NSString *string) {
-            NSLog(@"%@",string);
+        [self loadDataPar:2 callBack:^(int string) {
+            NSLog(@"%d",string);
         }];
     }];
     NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"任务3");
-        [self loadDataPar:@"3" callBack:^(NSString *string) {
-            NSLog(@"%@",string);
+        [self loadDataPar:3 callBack:^(int string) {
+            NSLog(@"%d",string);
         }];
     }];
-    [op2 addDependency:op1];
-    [op3 addDependency:op2];
-    [queue addOperation:op1];
-    [queue addOperation:op2];
+    [op2 addDependency:op3];
+    [op1 addDependency:op2];
     [queue addOperation:op3];
-//    queue.maxConcurrentOperationCount
-
+    [queue addOperation:op2];
+    [queue1 addOperation:op1];
 }
-- (void)loadDataPar:(NSString *)num callBack:(void(^)(NSString *string))block {
+- (void)testGCDGroupDependency {
+    dispatch_queue_t globalQueue = dispatch_get_global_queue(0, 0);
+    dispatch_group_t dispatchGroup = dispatch_group_create();
+    dispatch_async(globalQueue, ^{
+        dispatch_group_enter(dispatchGroup);
+        NSLog(@"任务1 - %d",self.identifier);
+        [self loadDataPar:self.identifier callBack:^(int string) {
+            self.identifier = string;
+            NSLog(@"%d",string);
+            dispatch_group_leave(dispatchGroup);
+        }];
+        dispatch_group_wait(dispatchGroup, DISPATCH_TIME_FOREVER);
+        
+        dispatch_group_enter(dispatchGroup);
+        NSLog(@"任务2 - %d",self.identifier);
+        [self loadDataPar:self.identifier callBack:^(int string) {
+            self.identifier = string;
+            NSLog(@"%d",string);
+            dispatch_group_leave(dispatchGroup);
+        }];
+        dispatch_group_wait(dispatchGroup, DISPATCH_TIME_FOREVER);
+        
+        dispatch_group_enter(dispatchGroup);
+        NSLog(@"任务3 - %d",self.identifier);
+        [self loadDataPar:self.identifier callBack:^(int string) {
+            self.identifier = string;
+            NSLog(@"%d",string);
+            dispatch_group_leave(dispatchGroup);
+        }];
+        dispatch_group_wait(dispatchGroup, DISPATCH_TIME_FOREVER);
+        
+        dispatch_group_enter(dispatchGroup);
+        NSLog(@"任务4 - %d",self.identifier);
+        [self loadDataPar:self.identifier callBack:^(int string) {
+            self.identifier = string;
+            NSLog(@"%d",string);
+            dispatch_group_leave(dispatchGroup);
+        }];
+        dispatch_group_wait(dispatchGroup, DISPATCH_TIME_FOREVER);
+        
+        dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^(){
+            NSLog(@"notify：任务都完成了");
+        });
+    });
+    
+}
+- (void)testGCDSemaphoreDependency {
+    dispatch_queue_t globalQueue = dispatch_get_global_queue(0, 0);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    dispatch_async(globalQueue, ^{
+        NSLog(@"任务1 - %d",self.identifier);
+        [self loadDataPar:self.identifier callBack:^(int string) {
+            self.identifier = string;
+            NSLog(@"%d",string);
+            dispatch_semaphore_signal(semaphore);
+        }];
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"任务2 - %d",self.identifier);
+        [self loadDataPar:self.identifier callBack:^(int string) {
+            self.identifier = string;
+            NSLog(@"%d",string);
+            dispatch_semaphore_signal(semaphore);
+        }];
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"任务3 - %d",self.identifier);
+        [self loadDataPar:self.identifier callBack:^(int string) {
+            self.identifier = string;
+            NSLog(@"%d",string);
+            dispatch_semaphore_signal(semaphore);
+        }];
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"任务4 - %d",self.identifier);
+        [self loadDataPar:self.identifier callBack:^(int string) {
+            self.identifier = string;
+            NSLog(@"%d",string);
+            dispatch_semaphore_signal(semaphore);
+        }];
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"notify：任务都完成了");
+        });
+    });
+    
+    
+}
+- (void)loadDataPar:(int)num callBack:(void(^)(int))block {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_queue_t mainQueue = dispatch_get_main_queue();
     dispatch_async(queue, ^{
-        NSLog(@"%@",[NSThread currentThread]);
+        [NSThread sleepForTimeInterval:3];
         dispatch_async(mainQueue, ^{
-            block(num);
+            block(num + 1);
         });
     });
 }

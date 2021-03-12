@@ -66,9 +66,10 @@ class ViewController: UIViewController {
                 .init(with: "响应者链", subTitle: "响应者链", controllerName: "TouchController"),
                 .init(with: "Super和Self", subTitle: "Super和Self", controllerName: "SuperSelfController"),
                 .init(with: "RunLoop", subTitle: "RunLoop", controllerName: "RunLoopController"),
+                .init(with: "Runtime", subTitle: "Runtime", controllerName: "RuntimeController"),
                 .init(with: "对象初始化相关", subTitle: "对象初始化相关", controllerName: "AllocInitController"),
-                .init(with: "GCD相关", subTitle: "GCD相关", controllerName: "GCDController"),
-                .init(with: "NSOperation相关", subTitle: "NSOperation相关", controllerName: "NSOperationController"),
+                .init(with: "多线程", subTitle: "多线程", controllerName: "MultithreadedController"),
+                .init(with: "内存管理", subTitle: "内存管理", controllerName: "MemoryController"),
                 .init(with: "响应者链", subTitle: "响应者链", controllerName: "ResponderChainController"),
                 .init(with: "Codable", subTitle: "Codable", controllerName: "CodableController")]),
         .init(with: "网络相关", items: [

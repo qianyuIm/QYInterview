@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GCDBarrierController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQr-qV-Jwh">
+                    <rect key="frame" x="30" y="144" width="92" height="30"/>
+                    <state key="normal" title="普通栅栏函数"/>
+                    <connections>
+                        <action selector="normalAction:" destination="-1" eventType="touchUpInside" id="Fse-pU-fGh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMl-G0-ZMB">
+                    <rect key="frame" x="30" y="194" width="62" height="30"/>
+                    <state key="normal" title="多读单写"/>
+                    <connections>
+                        <action selector="multiReadSingleWriteAction:" destination="-1" eventType="touchUpInside" id="IcF-l8-yLb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68N-zY-VRi">
+                    <rect key="frame" x="30" y="244" width="62" height="30"/>
+                    <state key="normal" title="单读单写"/>
+                    <connections>
+                        <action selector="singleReadSingleWriteAction:" destination="-1" eventType="touchUpInside" id="eVz-Xs-QwU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="68N-zY-VRi" firstAttribute="top" secondItem="cMl-G0-ZMB" secondAttribute="bottom" constant="20" id="7TW-s6-Vgr"/>
+                <constraint firstItem="cMl-G0-ZMB" firstAttribute="leading" secondItem="EQr-qV-Jwh" secondAttribute="leading" id="Gb5-B0-NDm"/>
+                <constraint firstItem="68N-zY-VRi" firstAttribute="leading" secondItem="cMl-G0-ZMB" secondAttribute="leading" id="Ty7-j0-3Dq"/>
+                <constraint firstItem="cMl-G0-ZMB" firstAttribute="top" secondItem="EQr-qV-Jwh" secondAttribute="bottom" constant="20" id="Zc1-p5-GVi"/>
+                <constraint firstItem="EQr-qV-Jwh" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="ghn-54-zDr"/>
+                <constraint firstItem="EQr-qV-Jwh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="uRg-CP-Uny"/>
+            </constraints>
+            <point key="canvasLocation" x="119" y="70"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
