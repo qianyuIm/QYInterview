@@ -143,6 +143,65 @@ struct objc_super {
 	5. 实例方法中直接调用实例方法
 	6. 实例方法中也可以调用类方法(通过类名)
 
+### weak的实现原理
+weak，此特质表明该属性定义了一种"非拥有关系"，为这种属性设置新值时，设置方法即不保留新值，也不会释放旧值，然而在属性所指的对象遭到摧毁时，属性值也会清空置为nil。
+
+Runtime维护了一个weak表，用于存储指向某个对象的所有weak指针。weak表其实是一个hash(哈希)表,key是所指对象的地址，value是weak指针的地址(weak指针的地址 = 所指对象指针的地址 )数组。
+
+1. 初始化时： runtime 会调用 ```objc_initWeak```函数，初始化一个新的weak指针指向对象的地址。
+2. 添加引用时： ```objc_initWeak``` 函数会调用```objc_storeWeak```函数，```objc_storeWeak```的作用是更新指针指向，创建对应的弱引用表。
+3. 释放时，调用```clearDeallocating```函数，```clearDeallocating```函数首先根据对象的地址找到所有weak指针地址的数组，然后遍历这个数组把其中的数据置为nil,最后把这个entry从weak表中删除，最后清理对象的记录。调用函数流程为 :
+
+	1. 首先调用 objc_release
+	2. 因为对象的引用计数为0，所以执行dealloc
+	3. 在dealloc 中调用 ```_objc_rootDealloc```
+	4. 在 ```_objc_rootDealloc```中调用 ```object_dispose```函数
+	5. 调用 ```objc_destructInstance```
+	6. 最后调用 ```objc_clear_deallocating```
+	
+### Runtime Asssociate方法关联的对象，需要我们手动释放吗?
+不需要，因为当我们对象释放时会调用dealloc ，dealloc内部调用 ```_objc_rootDealloc``` 方法 -> `rootDealloc` 会判断是否有关联对象，有的话会执行`object_dispose `内部调用`objc_destructInstance`再次判断是否有关联对象，有的话执行`_object_remove_assocations`移除关联对象
+
+```
+inline void
+objc_object::rootDealloc()
+{
+    if (isTaggedPointer()) return;  // fixme necessary?
+
+    if (fastpath(isa.nonpointer                     &&
+                 !isa.weakly_referenced             &&
+                 !isa.has_assoc                     &&
+#if ISA_HAS_CXX_DTOR_BIT
+                 !isa.has_cxx_dtor                  &&
+#else
+                 !isa.getClass(false)->hasCxxDtor() &&
+#endif
+                 !isa.has_sidetable_rc))
+    {
+        assert(!sidetable_present());
+        free(this);
+    } 
+    else {
+        object_dispose((id)this);
+    }
+}
+```
+会判断是否需要调用object_dispose ->  objc_destructInstance 内部 _object_remove_assocations
+
+### 方法的本质，sel是什么？IMP是什么？两者之间的关系又是什么？
+方法的本质: 发送消息，发送消息会有以下几个流程:
+ 
+ 1. 快速查找流程 - 通过汇编`objc_msgSend `查找缓存`cache_t `是否有`imp`实现。
+ 2. 慢查找流程 - 通过`C++`中`lookUpImpOrForward`递归查找当`前类和父类的rw`中`methodlist`的方法
+ 3. 查找不到消息： 动态方法解析 - 通过调用`resolveInstanceMethod `或者`resolveClassMethod `来动态方法决议-实现消息动态处理。
+ 4. 快速转发流程 - 通过`forwardingTargetForSelector `实现快速转发，由其他对象来实现处理方法。
+ 5. 慢转发流程- 先调用`methodSignatureForSelector `获取方法的签名，生成对应的`invocation`，再通过`forwardInvocation `来进行处理。
+
+`SEL`是方法编号，也是方法名，`imp`是`函数实现指针`。`SEL`在`dyld`加载镜像到内存时，通过`_read_image`方法加载到内存的表中。
+
+`SEL`和`IMP`的关系我们可以理解为: `sel`相当于书本的`目录标题`，`imp`相当于书本的`页码`，`具体的函数`就是具体页面对应的内容。
+
+
 ### Runtime 在项目中的使用
 * 关联对象: 给分类添加属性，AssociatedObject
 * 遍历类的所有成员变量: 字典转模型，自动归档解档
