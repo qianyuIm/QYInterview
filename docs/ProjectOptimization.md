@@ -13,8 +13,8 @@
 	
 	优化方案:  减少非系统库的依赖，尽量使用静态库而不是动态库，额外动态库加载系统要求最好控制在6个以内, 使用appCode查找并删除无用的类。如果使用了Objective-C的 +load 方法，看看能否将其替换为 +initialize 方法.尽量不要在load方法中做耗时任务
 2. main函数阶段优化:
-	主要是值didFinishLaunching 方法到首页展示出来这一阶段，所以首页的页面可以考虑使用代码编写，不使用xib或者SB。
-	
+
+	main函数调用之后 主要是didFinishLaunchingWithOptions 方法中初始化必要的服务，显示首页内容等操作，这时我们可以: 1.	
 
 ### 1.项目结构与应用包瘦身
 1. 代码瘦身 推荐使用 **[LinkMap](https://github.com/huanxsd/LinkMap)**,可以获取到项目中各个文件的大小,以权衡是否有替换方案
