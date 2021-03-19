@@ -9,5 +9,6 @@ ${BUILT_PRODUCTS_DIR}/SDMagicHook/SDMagicHook.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework
+${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework
 ${BUILT_PRODUCTS_DIR}/fishhook/fishhook.framework
 ${BUILT_PRODUCTS_DIR}/libffi-iOS/libffi_iOS.framework

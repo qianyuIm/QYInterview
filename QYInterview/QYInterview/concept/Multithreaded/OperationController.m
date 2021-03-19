@@ -102,6 +102,18 @@
 }
 #pragma mark - 网络请求依赖 单纯设置依赖达不到效果，因为网络请求是异步耗时操作
 - (IBAction)loadDependencyAction:(id)sender {
+    dispatch_queue_t queuee = dispatch_queue_create("123", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t queueee = dispatch_get_global_queue(0, 0);
+
+    __block int a = 0;
+    while (a < 5) {
+        dispatch_async(queueee, ^{
+            a++;
+            NSLog(@"里边a = %d",a);
+        });
+    }
+    NSLog(@"外边a = %d",a);
+    return;
     NSLog(@"任务开始");
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
 //    queue.maxConcurrentOperationCount = 1;

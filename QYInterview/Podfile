@@ -15,4 +15,5 @@ target 'QYInterview' do
   pod 'Aspects'
   pod 'EasySwiftHook'
   pod 'HandyJSON'
+  pod 'YYCache'
 end

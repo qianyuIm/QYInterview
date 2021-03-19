@@ -37,6 +37,8 @@
 		EF5582CC25B02003003E1347 /* BalancedBinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582CB25B02003003E1347 /* BalancedBinaryTreeController.swift */; };
 		EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582CE25B023B7003E1347 /* BinarySearchController.swift */; };
 		EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5582DF25B02887003E1347 /* BlockChangeController.m */; };
+		EF60E06D26043FA2001D78FE /* LockController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF60E06B26043FA2001D78FE /* LockController.m */; };
+		EF60E06E26043FA2001D78FE /* LockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF60E06C26043FA2001D78FE /* LockController.xib */; };
 		EF6A5A1E25E754EA00965E1A /* RunLoopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A5A1C25E754EA00965E1A /* RunLoopController.swift */; };
 		EF6A5A1F25E754EA00965E1A /* RunLoopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6A5A1D25E754EA00965E1A /* RunLoopController.xib */; };
 		EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A5A2225E7559900965E1A /* ChildThreadLoopController.m */; };
@@ -126,6 +128,9 @@
 		EF5582CE25B023B7003E1347 /* BinarySearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchController.swift; sourceTree = "<group>"; };
 		EF5582DE25B02887003E1347 /* BlockChangeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockChangeController.h; sourceTree = "<group>"; };
 		EF5582DF25B02887003E1347 /* BlockChangeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockChangeController.m; sourceTree = "<group>"; };
+		EF60E06A26043FA2001D78FE /* LockController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockController.h; sourceTree = "<group>"; };
+		EF60E06B26043FA2001D78FE /* LockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockController.m; sourceTree = "<group>"; };
+		EF60E06C26043FA2001D78FE /* LockController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockController.xib; sourceTree = "<group>"; };
 		EF6A5A1C25E754EA00965E1A /* RunLoopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopController.swift; sourceTree = "<group>"; };
 		EF6A5A1D25E754EA00965E1A /* RunLoopController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunLoopController.xib; sourceTree = "<group>"; };
 		EF6A5A2125E7559900965E1A /* ChildThreadLoopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildThreadLoopController.h; sourceTree = "<group>"; };
@@ -402,6 +407,9 @@
 				EF0E807B25F5D10C00723E4C /* CodableController.swift */,
 				EF7904EF25FF72FA0055D153 /* MemoryMigrationController.h */,
 				EF7904F025FF72FA0055D153 /* MemoryMigrationController.m */,
+				EF60E06A26043FA2001D78FE /* LockController.h */,
+				EF60E06B26043FA2001D78FE /* LockController.m */,
+				EF60E06C26043FA2001D78FE /* LockController.xib */,
 			);
 			path = concept;
 			sourceTree = "<group>";
@@ -516,6 +524,7 @@
 			files = (
 				EFFC476C25AE7EFC007C5AA4 /* LaunchScreen.storyboard in Resources */,
 				EFFC476925AE7EFC007C5AA4 /* Assets.xcassets in Resources */,
+				EF60E06E26043FA2001D78FE /* LockController.xib in Resources */,
 				EF470ACF25F9CAA90053D1F6 /* MemoryController.xib in Resources */,
 				EF470AD625F9CB1A0053D1F6 /* AutoreleaseController.xib in Resources */,
 				EFB4387725EE336B0077349C /* HookController.xib in Resources */,
@@ -600,6 +609,7 @@
 				EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */,
 				EF08451725F767E7003FE450 /* RuntimeController.swift in Sources */,
 				EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */,
+				EF60E06D26043FA2001D78FE /* LockController.m in Sources */,
 				EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */,
 				EFDC5B3225E8A58A0073F62F /* NSOperationController.m in Sources */,
 				EF470ACE25F9CAA90053D1F6 /* MemoryController.swift in Sources */,
