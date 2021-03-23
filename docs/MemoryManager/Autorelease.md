@@ -1,4 +1,7 @@
 # AutoreleasePool
+全局异常断点 
+> objc_autoreleasePoolPop
+
 ```自动释放池```是OC中的一种```内存自动回收机制```,在`MRC`中可以用`AutoReleasePool 来延迟内存的释放`,在`ARC`中可以`用AutoReleasePool将对象添加到最近的自动释放池`,`不会立即释放`,会等到 `runloop休眠`或者超出`autoReleasepool作用域`之后才会`被释放`。
 
 在程序启动的时候系统在主线程的`runloop`中注册了两个`Observer `，回调都是 `_wrapRunLoopWithAutoreleasePoolHandler(iOS 14之下),_runLoopObserverCallout(iOS 14以上)`(可以打断点` po [NSRunLoop currentRunLoop]`)查看。
@@ -62,5 +65,39 @@ struct QYTest {
 	* 当`page不存在`时，调用`autoreleaseNoPage`创建一个`hotPage`,然后调用`add方法`将`对象添加至page栈中`。		
 * 6.当执行`pop操作`时,会`传入一个值`，这个值就是`push操作的返回值`，即`POOL_BOUNDARY的内存地址token`,所以`pop内部`操作的实现就是`根据token找到哨兵对象所处的page`中，然后使用`objc_release `释放`token `之前的对象，并将`next指针到正确位置`。
 
+# 子线程中的AutoreleasePool
 
+# 未开启子线程RunLoop
+在子线程中执行程序默认是不开启RunLoop的。
+在子线程你创建了 Pool 的话，产生的 Autorelease 对象就会交给 pool 去管理。如果你没有创建 Pool ，但是产生了 Autorelease 对象，就会调用 autoreleaseNoPage 方法。在这个方法中，会自动帮你创建一个 hotpage（hotPage 可以理解为当前正在使用的 AutoreleasePoolPage，如果你还是不理解，可以先看看 Autoreleasepool 的源代码，再来看这个问题 ），并调用page->add(obj)将对象添加到 AutoreleasePoolPage 的栈中，也就是说你不进行手动的内存管理，也不会内存泄漏啦！
 
+如果当前线程没有AutorelesepoolPage的话，代码执行顺序为autorelease -> autoreleaseFast -> autoreleaseNoPage。
+
+在autoreleaseNoPage方法中，会创建一个hotPage，然后调用page->add(obj)。也就是说即使这个线程没有AutorelesepoolPage，使用了autorelease对象时也会new一个AutoreleasepoolPage出来管理autorelese对象，不用担心内存泄漏。
+
+## 何时释放
+
+```
+__weak id obj;
+[NSThread detachNewThreadSelector:@selector(createAndConfigObserverInSecondaryThread) toTarget:self withObject:nil];
+```
+> watchpoint set variable obj
+
+```
+- (void)createAndConfigObserverInSecondaryThread{
+    __autoreleasing id test = [NSObject new];
+    NSLog(@"obj = %@", test);
+    obj = test;
+    [[NSThread currentThread] setName:@"test runloop thread"];
+    NSLog(@"thread ending");
+}
+```
+
+通过这个调用栈可以看到释放的时机在`_pthread_exit`。然后执行到`AutorelepoolPage`的`tls_dealloc`方法。也就是说`thread`在退出时会释放自身资源，这个操作就包含了销毁`autoreleasepool`，在`tls_delloc`中，执行了`pop`操作。
+
+## 总结
+1.子线程在使用autorelease对象时，如果没有autoreleasepool会在autoreleaseNoPage中懒加载一个出来。
+
+2.在runloop的run:beforeDate，以及一些source的callback中，有autoreleasepool的push和pop操作，总结就是系统在很多地方都差不多autorelease的管理操作。
+
+3.就算插入没有pop也没关系，在线程exit的时候会释放资源，执行AutoreleasePoolPage::tls_dealloc，在这里面会清空autoreleasepool。

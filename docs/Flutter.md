@@ -1,4 +1,10 @@
 # Flutter
+
+[官方示例](https://github.com/flutter/samples)
+
+[非官方学习教程](https://book.flutterchina.club/chapter1/dart.html#_1-4-1-%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E)
+
+[官方教程](https://flutter.cn/docs/cookbook)
 ## 1.安装Flutter
 
 1.安装镜像: 由于在国内访问Flutter有时可能会受到限制，Flutter官方为中国开发者搭建了临时镜像，大家可以将如下环境变量加入到用户环境变量中(打开终端执行下面命令)：
@@ -49,10 +55,15 @@ cd 到当前安装flutter的安装目录eg: 我的安装到了 FlutterSDK目录�
 	* 选择 ‘OK’ 重新启动 VS Code
 	* 运行 doctor 配置vscode
 
+## Flutter 查看
+稳定性排序：master < dev < beta < stable 。
+> flutter channel  查看当前Flutte渠道
 
+>  flutter channel  stable
+
+> flutter doctor -v 查看具体版本信息
 
 ## 3.创建你的第一个Flutter项目：
-[官方示例](https://github.com/flutter/samples)
 
 下载下来的flutter项目如果没有 .ios 等文件
 > flutter pub get 
@@ -61,7 +72,7 @@ cd 到当前安装flutter的安装目录eg: 我的安装到了 FlutterSDK目录�
 
 命令行: 
 
-	flutter create startup_namer
+	flutter create startup_namer(名称必须为小写)
 	cd startup_namer
 	flutter run
 

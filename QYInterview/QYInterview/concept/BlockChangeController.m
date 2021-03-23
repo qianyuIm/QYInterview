@@ -6,6 +6,7 @@
 //  https://blog.csdn.net/li15809284891/article/details/62896569?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-8.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-8.control
 
 #import "BlockChangeController.h"
+
 int global_value = 10;
 static int global_static_value = 10;
 typedef void (^ChangeValueBlock) (void);

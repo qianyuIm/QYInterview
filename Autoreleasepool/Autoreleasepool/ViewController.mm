@@ -17,7 +17,20 @@ struct QYTest {
     }
     int index;
 };
+@interface AutoreleasePersion : NSObject
++ (instancetype)persion;
+@end
+
+@implementation AutoreleasePersion
++ (instancetype)persion {
+    return [[self alloc] init];
+}
+- (void)dealloc {
+    NSLog(@"被释放了");
+}
+@end
 @interface ViewController ()
+@property (nonatomic, strong) NSThread *thread;
 
 @end
 
@@ -34,9 +47,34 @@ struct QYTest {
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    @autoreleasepool {
-        NSLog(@"自动释放池");
+    [self createThread];
+//    for (int index = 0; index < 1000000; index++) {
+//        AutoreleasePersion *string = [AutoreleasePersion persion];
+//
+//    }
+}
+- (void)createThread {
+    _thread = [[NSThread alloc] initWithTarget:self selector:@selector(threadRun) object:nil];
+    [_thread start];
+}
+__weak id weakObjc;
+- (void)threadRun {
+//    [self timeAction];
+//    NSTimer *time = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timeAction) userInfo:nil repeats:YES];
+//    [[NSRunLoop currentRunLoop] addTimer:time forMode:NSDefaultRunLoopMode];
+//    [[NSRunLoop currentRunLoop] run];
+    __autoreleasing id test = [NSObject new];
+    NSLog(@"%@",test);
+    NSInvocation
+    // watchpoint set variable weakObjc
+    weakObjc = test;
+    [[NSThread currentThread] setName:@"test runloop thread"];
+    NSLog(@"thread ending");
+}
+- (void)timeAction {
+    for (int index = 0; index < 100; index++) {
+        AutoreleasePersion *string = [AutoreleasePersion persion];
+        
     }
 }
-
 @end

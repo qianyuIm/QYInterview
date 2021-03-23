@@ -3,7 +3,7 @@
 ## app启动优化
 1. pre-main阶段的优化: 
 
-	> 针对main函数之前的启动时间，苹果内建了测量方法: Edit Scheme -> Run -> Arguments -> Environment Variables 点击+添加环境变量  DYLD_PRINT_STATISTICS 设为 1
+	> 针对main函数之前的启动时间，苹果内建了测量方法: Edit Scheme -> Run -> Arguments -> Environment Variables 点击+添加环境变量  DYLD_PRINT_STATISTICS 设为 1，需要详细信息的话添加 DYLD_PRINT_STATISTICS_DETAILS 设为 1
 
 	pre-main阶段主要包括: 
 	1. dylib loading time(动态库加载耗时) 。

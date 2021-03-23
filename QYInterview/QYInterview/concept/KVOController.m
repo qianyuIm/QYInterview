@@ -205,7 +205,9 @@ static void kvo_setter(id self, SEL _cmd, id newValue)
 //    _name = name;
 //    NSLog(@"name = %@",name);
 //}
-
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    NSLog(@"keyPath = %@, change = %@ ",keyPath, change);
+}
 @end
 struct ThreeFloats {
     CGFloat one;
@@ -246,15 +248,24 @@ struct ThreeFloats {
     KVOSon *son = [[KVOSon alloc] init];
     [son setValue:value forKey:@"floats"];
     NSLog(@"%@-%@", [son valueForKey:@"floats"], [[son valueForKey:@"floats"] class]);
-
+    [self testSuper];
 }
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     NSLog(@"keyPath = %@, change = %@ ",keyPath, change);
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    _persion.sex = @"xiao ming";
+//    _persion.sex = @"xiao ming";
+    _son.sex = @"xiao ming";
 
+}
+- (void)testSuper {
+    _son = [[KVOSon alloc] init];
+    [_son addObserver:self forKeyPath:@"sex" options:(NSKeyValueObservingOptionNew) context:NULL];
+    [_son addObserver:_persion forKeyPath:@"sex" options:(NSKeyValueObservingOptionNew) context:NULL];
+
+    
 }
 - (void)testCustom {
     _persion = [[KVOPersion alloc] init];
