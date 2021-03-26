@@ -7,28 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF63933A25FB18C400063929 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF63933925FB18C400063929 /* main.m */; };
+		EF1A88C8260C18E50037CAF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1A88C7260C18E50037CAF5 /* AppDelegate.m */; };
+		EF1A88CB260C18E50037CAF5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1A88CA260C18E50037CAF5 /* SceneDelegate.m */; };
+		EF1A88CE260C18E50037CAF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1A88CD260C18E50037CAF5 /* ViewController.m */; };
+		EF1A88D1260C18E50037CAF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1A88CF260C18E50037CAF5 /* Main.storyboard */; };
+		EF1A88D3260C18E60037CAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1A88D2260C18E60037CAF5 /* Assets.xcassets */; };
+		EF1A88D6260C18E60037CAF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1A88D4260C18E60037CAF5 /* LaunchScreen.storyboard */; };
+		EF1A88D9260C18E60037CAF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1A88D8260C18E60037CAF5 /* main.m */; };
+		EF1A88E2260C1A0D0037CAF5 /* MRCController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1A88E1260C1A0D0037CAF5 /* MRCController.m */; };
+		EF1A88E6260C1A210037CAF5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1A88E5260C1A210037CAF5 /* BaseViewController.m */; };
+		EF1A88E9260C1C9D0037CAF5 /* MRCController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF1A88E8260C1C9D0037CAF5 /* MRCController.xib */; };
+		EF1A88F3260C2C450037CAF5 /* CycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1A88F1260C2C450037CAF5 /* CycleController.m */; };
+		EF1A88F4260C2C450037CAF5 /* CycleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF1A88F2260C2C450037CAF5 /* CycleController.xib */; };
+		EF1A88FA260C39000037CAF5 /* Block.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1A88F9260C39000037CAF5 /* Block.c */; };
+		EF1A8912260C5BAD0037CAF5 /* ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8911260C5BAD0037CAF5 /* ViewController.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		EF63933425FB18C400063929 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		EF63933625FB18C400063929 /* Block */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Block; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF63933925FB18C400063929 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF1A88C3260C18E50037CAF5 /* Block.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Block.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1A88C6260C18E50037CAF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF1A88C7260C18E50037CAF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF1A88C9260C18E50037CAF5 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		EF1A88CA260C18E50037CAF5 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		EF1A88CC260C18E50037CAF5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF1A88CD260C18E50037CAF5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF1A88D0260C18E50037CAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF1A88D2260C18E60037CAF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF1A88D5260C18E60037CAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF1A88D7260C18E60037CAF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF1A88D8260C18E60037CAF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF1A88E0260C1A0D0037CAF5 /* MRCController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRCController.h; sourceTree = "<group>"; };
+		EF1A88E1260C1A0D0037CAF5 /* MRCController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRCController.m; sourceTree = "<group>"; };
+		EF1A88E4260C1A210037CAF5 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		EF1A88E5260C1A210037CAF5 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		EF1A88E8260C1C9D0037CAF5 /* MRCController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MRCController.xib; sourceTree = "<group>"; };
+		EF1A88F0260C2C450037CAF5 /* CycleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CycleController.h; sourceTree = "<group>"; };
+		EF1A88F1260C2C450037CAF5 /* CycleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CycleController.m; sourceTree = "<group>"; };
+		EF1A88F2260C2C450037CAF5 /* CycleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CycleController.xib; sourceTree = "<group>"; };
+		EF1A88F8260C39000037CAF5 /* Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		EF1A88F9260C39000037CAF5 /* Block.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Block.c; sourceTree = "<group>"; };
+		EF1A8911260C5BAD0037CAF5 /* ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewController.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EF63933325FB18C400063929 /* Frameworks */ = {
+		EF1A88C0260C18E50037CAF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,26 +60,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF63932D25FB18C400063929 = {
+		EF1A88BA260C18E50037CAF5 = {
 			isa = PBXGroup;
 			children = (
-				EF63933825FB18C400063929 /* Block */,
-				EF63933725FB18C400063929 /* Products */,
+				EF1A88C5260C18E50037CAF5 /* Block */,
+				EF1A88C4260C18E50037CAF5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EF63933725FB18C400063929 /* Products */ = {
+		EF1A88C4260C18E50037CAF5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF63933625FB18C400063929 /* Block */,
+				EF1A88C3260C18E50037CAF5 /* Block.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EF63933825FB18C400063929 /* Block */ = {
+		EF1A88C5260C18E50037CAF5 /* Block */ = {
 			isa = PBXGroup;
 			children = (
-				EF63933925FB18C400063929 /* main.m */,
+				EF1A88C6260C18E50037CAF5 /* AppDelegate.h */,
+				EF1A88C7260C18E50037CAF5 /* AppDelegate.m */,
+				EF1A88F8260C39000037CAF5 /* Block.h */,
+				EF1A88F9260C39000037CAF5 /* Block.c */,
+				EF1A88C9260C18E50037CAF5 /* SceneDelegate.h */,
+				EF1A88CA260C18E50037CAF5 /* SceneDelegate.m */,
+				EF1A88CC260C18E50037CAF5 /* ViewController.h */,
+				EF1A88CD260C18E50037CAF5 /* ViewController.m */,
+				EF1A8911260C5BAD0037CAF5 /* ViewController.cpp */,
+				EF1A88E4260C1A210037CAF5 /* BaseViewController.h */,
+				EF1A88E5260C1A210037CAF5 /* BaseViewController.m */,
+				EF1A88E0260C1A0D0037CAF5 /* MRCController.h */,
+				EF1A88E1260C1A0D0037CAF5 /* MRCController.m */,
+				EF1A88E8260C1C9D0037CAF5 /* MRCController.xib */,
+				EF1A88F0260C2C450037CAF5 /* CycleController.h */,
+				EF1A88F1260C2C450037CAF5 /* CycleController.m */,
+				EF1A88F2260C2C450037CAF5 /* CycleController.xib */,
+				EF1A88CF260C18E50037CAF5 /* Main.storyboard */,
+				EF1A88D2260C18E60037CAF5 /* Assets.xcassets */,
+				EF1A88D4260C18E60037CAF5 /* LaunchScreen.storyboard */,
+				EF1A88D7260C18E60037CAF5 /* Info.plist */,
+				EF1A88D8260C18E60037CAF5 /* main.m */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -65,13 +108,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EF63933525FB18C400063929 /* Block */ = {
+		EF1A88C2260C18E50037CAF5 /* Block */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF63933D25FB18C400063929 /* Build configuration list for PBXNativeTarget "Block" */;
+			buildConfigurationList = EF1A88DC260C18E60037CAF5 /* Build configuration list for PBXNativeTarget "Block" */;
 			buildPhases = (
-				EF63933225FB18C400063929 /* Sources */,
-				EF63933325FB18C400063929 /* Frameworks */,
-				EF63933425FB18C400063929 /* CopyFiles */,
+				EF1A88BF260C18E50037CAF5 /* Sources */,
+				EF1A88C0260C18E50037CAF5 /* Frameworks */,
+				EF1A88C1260C18E50037CAF5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -79,23 +122,23 @@
 			);
 			name = Block;
 			productName = Block;
-			productReference = EF63933625FB18C400063929 /* Block */;
-			productType = "com.apple.product-type.tool";
+			productReference = EF1A88C3260C18E50037CAF5 /* Block.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EF63932E25FB18C400063929 /* Project object */ = {
+		EF1A88BB260C18E50037CAF5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					EF63933525FB18C400063929 = {
+					EF1A88C2260C18E50037CAF5 = {
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
 			};
-			buildConfigurationList = EF63933125FB18C400063929 /* Build configuration list for PBXProject "Block" */;
+			buildConfigurationList = EF1A88BE260C18E50037CAF5 /* Build configuration list for PBXProject "Block" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -103,29 +146,71 @@
 				en,
 				Base,
 			);
-			mainGroup = EF63932D25FB18C400063929;
-			productRefGroup = EF63933725FB18C400063929 /* Products */;
+			mainGroup = EF1A88BA260C18E50037CAF5;
+			productRefGroup = EF1A88C4260C18E50037CAF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EF63933525FB18C400063929 /* Block */,
+				EF1A88C2260C18E50037CAF5 /* Block */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		EF1A88C1260C18E50037CAF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1A88F4260C2C450037CAF5 /* CycleController.xib in Resources */,
+				EF1A88E9260C1C9D0037CAF5 /* MRCController.xib in Resources */,
+				EF1A88D6260C18E60037CAF5 /* LaunchScreen.storyboard in Resources */,
+				EF1A88D3260C18E60037CAF5 /* Assets.xcassets in Resources */,
+				EF1A88D1260C18E50037CAF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		EF63933225FB18C400063929 /* Sources */ = {
+		EF1A88BF260C18E50037CAF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF63933A25FB18C400063929 /* main.m in Sources */,
+				EF1A88CE260C18E50037CAF5 /* ViewController.m in Sources */,
+				EF1A88E6260C1A210037CAF5 /* BaseViewController.m in Sources */,
+				EF1A88C8260C18E50037CAF5 /* AppDelegate.m in Sources */,
+				EF1A8912260C5BAD0037CAF5 /* ViewController.cpp in Sources */,
+				EF1A88FA260C39000037CAF5 /* Block.c in Sources */,
+				EF1A88F3260C2C450037CAF5 /* CycleController.m in Sources */,
+				EF1A88D9260C18E60037CAF5 /* main.m in Sources */,
+				EF1A88CB260C18E50037CAF5 /* SceneDelegate.m in Sources */,
+				EF1A88E2260C1A0D0037CAF5 /* MRCController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		EF1A88CF260C18E50037CAF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF1A88D0260C18E50037CAF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF1A88D4260C18E60037CAF5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF1A88D5260C18E60037CAF5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		EF63933B25FB18C400063929 /* Debug */ = {
+		EF1A88DA260C18E60037CAF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -176,15 +261,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		EF63933C25FB18C400063929 /* Release */ = {
+		EF1A88DB260C18E60037CAF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -229,51 +314,70 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		EF63933E25FB18C400063929 /* Debug */ = {
+		EF1A88DD260C18E60037CAF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Block/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianyuIm.Block;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		EF63933F25FB18C400063929 /* Release */ = {
+		EF1A88DE260C18E60037CAF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Block/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianyuIm.Block;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EF63933125FB18C400063929 /* Build configuration list for PBXProject "Block" */ = {
+		EF1A88BE260C18E50037CAF5 /* Build configuration list for PBXProject "Block" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF63933B25FB18C400063929 /* Debug */,
-				EF63933C25FB18C400063929 /* Release */,
+				EF1A88DA260C18E60037CAF5 /* Debug */,
+				EF1A88DB260C18E60037CAF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF63933D25FB18C400063929 /* Build configuration list for PBXNativeTarget "Block" */ = {
+		EF1A88DC260C18E60037CAF5 /* Build configuration list for PBXNativeTarget "Block" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF63933E25FB18C400063929 /* Debug */,
-				EF63933F25FB18C400063929 /* Release */,
+				EF1A88DD260C18E60037CAF5 /* Debug */,
+				EF1A88DE260C18E60037CAF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EF63932E25FB18C400063929 /* Project object */;
+	rootObject = EF1A88BB260C18E50037CAF5 /* Project object */;
 }

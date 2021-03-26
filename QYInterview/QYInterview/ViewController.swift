@@ -56,11 +56,13 @@ class ViewController: UIViewController {
                 .init(with: "二分查找", subTitle: "二分查找", controllerName: "BinarySearchController")]),
         .init(with: "源码相关", items: [.init(with: "SDWebImage下载大图", subTitle: "SDWebImage下载大图", controllerName: "SDLargerImageController")]),
         .init(with: "概念", items: [
+                .init(with: "copy修饰", subTitle: "copy修饰", controllerName: "CopyController"),
                 .init(with: "iOS中的几种锁", subTitle: "锁的使用场景", controllerName: "LockController"),
                 .init(with: "内存偏移", subTitle: "内存偏移", controllerName: "MemoryMigrationController"),
                 .init(with: "Class和Struct", subTitle: "Class和Struct", controllerName: "ClassAndStructController"),
                 .init(with: "Block修改内部值", subTitle: "Block修改内部值", controllerName: "BlockChangeController"),
                 .init(with: "KVO", subTitle: "KVO", controllerName: "KVOController"),
+                .init(with: "KVC", subTitle: "KVC", controllerName: "KVCController"),
                 .init(with: "性能优化", subTitle: "性能优化", controllerName: ""),
                 .init(with: "属性", subTitle: "属性", controllerName: "AttributeController"),
                 .init(with: "map,flatMap,compactMap", subTitle: "map,flatMap,compactMap", controllerName: "MapController"),
@@ -102,6 +104,8 @@ extension ViewController: UITableViewDelegate {
             targetClass = NSClassFromString(item.controllerName) as? UIViewController.Type
         }
         let target = targetClass!.init()
+        // 16
+//        NSLog(@"stu --- %zd", malloc_size((__bridge const void *)stu));
         target.navigationItem.title = item.subTitle
         self.navigationController?.pushViewController(target, animated: true)
     }

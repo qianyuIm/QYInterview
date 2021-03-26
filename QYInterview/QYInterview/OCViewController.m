@@ -6,7 +6,9 @@
 //
 
 #import "OCViewController.h"
-
+NSString * const aaaaa = @"com.alamofire.networking.task.resume";
+//const CGFloat aaaaaaaa = @"123";
+#define heheda @"123"
 @interface OCViewController ()
 
 @end
@@ -17,6 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    NSString *abc = heheda;
     
 }
 

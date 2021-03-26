@@ -175,6 +175,53 @@ GCD 两个核心概念: **『任务』** 和 **『队列』**。
   </details> 
 
 
+###dispatch_once 
+
+```
+DISPATCH_NOINLINE
+void
+dispatch_once_f(dispatch_once_t *val, void *ctxt, dispatch_function_t func)
+{
+	dispatch_once_gate_t l = (dispatch_once_gate_t)val;
+
+#if !DISPATCH_ONCE_INLINE_FASTPATH || DISPATCH_ONCE_USE_QUIESCENT_COUNTER
+	// 加锁
+	uintptr_t v = os_atomic_load(&l->dgo_once, acquire);
+	if (likely(v == DLOCK_ONCE_DONE)) { //已经执行过了，直接返回
+		return;
+	}
+#if DISPATCH_ONCE_USE_QUIESCENT_COUNTER
+	if (likely(DISPATCH_ONCE_IS_GEN(v))) {
+		return _dispatch_once_mark_done_if_quiesced(l, v);
+	}
+#endif
+#endif
+	if (_dispatch_once_gate_tryenter(l)) { //尝试进入 解锁
+		return _dispatch_once_callout(l, ctxt, func);
+	}
+	return _dispatch_once_wait(l); //无限次等待
+}
+```
+
+进入`dispatch_once_f`源码，其中的`val`是外界传入的`onceToken`静态变量，而`func`是`_dispatch_Block_invoke(block)`，其中单例的底层主要分为以下几步
+
+将`val`，也就是静态变量转换为`dispatch_once_gate_t`类型的变量`l`
+通过`os_atomic_load`获取此时的任务的标识符`v`
+
+如果`v`等于`DLOCK_ONCE_DONE`，表示任务已经执行过了，直接`return`
+如果 任务执行后，加锁失败了，则走到`_dispatch_once_mark_done_if_quiesced`函数，再次进行存储，将标识符置为`DLOCK_ONCE_DONE`
+反之，则通过`_dispatch_once_gate_tryenter`尝试进入任务，即解锁，然后执行`_dispatch_once_callout`执行`block`回调
+
+
+如果此时有任务正在执行，再次进来一个任务2，则通过`_dispatch_once_wait`函数让任务2进入无限次等待
+
+单例只执行一次的原理：GCD单例中，有两个重要参数，`onceToken` 和 `block`，其中`onceToken`是静态变量，具有唯一性，在底层被封装成了`dispatch_once_gate_t`类型的变量`l`，l主要是用来获取底层原子封装性的关联，即变量`v`，通过v来查询任务的状态，如果此时v等于`DLOCK_ONCE_DONE`，说明任务已经处理过一次了，直接`return`
+
+
+`block`调用时机：如果此时任务没有执行过，则会在底层通过C++函数的比较，将任务进行加锁，即任务状态置为`DLOCK_ONCE_UNLOCK`，目的是为了保证当前任务执行的唯一性，防止在其他地方有多次定义.加锁之后进行block回调函数的执行，执行完成后，将当前任务解锁，将当前的任务状态置为DLOCK_ONCE_DONE，在下次进来时，就不会在执行，会直接返回
+
+
+多线程影响：如果在当前任务执行期间，有其他任务进来，会进入无限次等待，原因是当前任务已经获取了锁，进行了加锁，其他任务是无法获取锁的
 
 
 ## 3. NSOperation

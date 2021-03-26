@@ -216,10 +216,13 @@ struct ThreeFloats {
 };
 @interface KVOSon : KVOPersion
 @property (nonatomic, assign) struct ThreeFloats floats;
+@property (nonatomic, copy) NSString *hahaah;
 @end
 
 @implementation KVOSon
-
++ (BOOL)accessInstanceVariablesDirectly {
+    return  YES;
+}
 @end
 
 @interface KVOController ()
@@ -257,13 +260,15 @@ struct ThreeFloats {
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
 //    _persion.sex = @"xiao ming";
-    _son.sex = @"xiao ming";
+//    _son.sex = @"xiao ming";
 
+    [_son setValue:@"xiaoming" forKey:@"isSex"];
+    NSLog(@"%@",_son.sex);
 }
 - (void)testSuper {
     _son = [[KVOSon alloc] init];
-    [_son addObserver:self forKeyPath:@"sex" options:(NSKeyValueObservingOptionNew) context:NULL];
-    [_son addObserver:_persion forKeyPath:@"sex" options:(NSKeyValueObservingOptionNew) context:NULL];
+//    [_son addObserver:self forKeyPath:@"isSex" options:(NSKeyValueObservingOptionNew) context:NULL];
+//    [_son addObserver:_persion forKeyPath:@"isSex" options:(NSKeyValueObservingOptionNew) context:NULL];
 
     
 }

@@ -52,6 +52,8 @@
 		EFB4387725EE336B0077349C /* HookController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB4387525EE336B0077349C /* HookController.xib */; };
 		EFD019F825F0A8E700AC94F1 /* QYInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD019F725F0A8E700AC94F1 /* QYInterviewTests.swift */; };
 		EFD0BA2C25C7FB2C00B572EB /* InitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0BA2B25C7FB2C00B572EB /* InitController.swift */; };
+		EFD27749260D82860083DA05 /* KVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD27748260D82860083DA05 /* KVCController.m */; };
+		EFD27761260DC3C20083DA05 /* CopyController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD27760260DC3C20083DA05 /* CopyController.m */; };
 		EFDC5B3225E8A58A0073F62F /* NSOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDC5B3125E8A58A0073F62F /* NSOperationController.m */; };
 		EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */; };
 		EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE1125E36283004B3ACC /* TouchController.swift */; };
@@ -153,6 +155,10 @@
 		EFD019F725F0A8E700AC94F1 /* QYInterviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYInterviewTests.swift; sourceTree = "<group>"; };
 		EFD019F925F0A8E700AC94F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFD0BA2B25C7FB2C00B572EB /* InitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitController.swift; sourceTree = "<group>"; };
+		EFD27747260D82860083DA05 /* KVCController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCController.h; sourceTree = "<group>"; };
+		EFD27748260D82860083DA05 /* KVCController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCController.m; sourceTree = "<group>"; };
+		EFD2775F260DC3C20083DA05 /* CopyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyController.h; sourceTree = "<group>"; };
+		EFD27760260DC3C20083DA05 /* CopyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyController.m; sourceTree = "<group>"; };
 		EFDC5B3025E8A58A0073F62F /* NSOperationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationController.h; sourceTree = "<group>"; };
 		EFDC5B3125E8A58A0073F62F /* NSOperationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationController.m; sourceTree = "<group>"; };
 		EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDLargerImageController.swift; sourceTree = "<group>"; };
@@ -391,6 +397,8 @@
 				EF5582DF25B02887003E1347 /* BlockChangeController.m */,
 				EF4B134925B192EA0055C4D2 /* KVOController.h */,
 				EF4B134A25B192EA0055C4D2 /* KVOController.m */,
+				EFD27747260D82860083DA05 /* KVCController.h */,
+				EFD27748260D82860083DA05 /* KVCController.m */,
 				EF456DAB25B5345A00566946 /* AttributeController.swift */,
 				EF456DAE25B5657400566946 /* MapController.swift */,
 				EFD0BA2B25C7FB2C00B572EB /* InitController.swift */,
@@ -407,6 +415,8 @@
 				EF0E807B25F5D10C00723E4C /* CodableController.swift */,
 				EF7904EF25FF72FA0055D153 /* MemoryMigrationController.h */,
 				EF7904F025FF72FA0055D153 /* MemoryMigrationController.m */,
+				EFD2775F260DC3C20083DA05 /* CopyController.h */,
+				EFD27760260DC3C20083DA05 /* CopyController.m */,
 				EF60E06A26043FA2001D78FE /* LockController.h */,
 				EF60E06B26043FA2001D78FE /* LockController.m */,
 				EF60E06C26043FA2001D78FE /* LockController.xib */,
@@ -598,6 +608,7 @@
 			files = (
 				EFB4387625EE336B0077349C /* HookController.m in Sources */,
 				EF96338125E48E200023D5C6 /* AllocInitController.m in Sources */,
+				EFD27749260D82860083DA05 /* KVCController.m in Sources */,
 				EF08452025F76800003FE450 /* SwizzlingController.m in Sources */,
 				EF5582C625AFD9F3003E1347 /* CreatBinaryTreeController.swift in Sources */,
 				EFFC479425AEC123007C5AA4 /* MedianUnorderedArrayController.swift in Sources */,
@@ -625,6 +636,7 @@
 				EF08452E25F7696A003FE450 /* RuntimeStudent.m in Sources */,
 				EF3E2B3025F8C0A7000F5F78 /* GCDBarrierController.m in Sources */,
 				EFFC479125AEBF28007C5AA4 /* OrderedArrayMergeController.swift in Sources */,
+				EFD27761260DC3C20083DA05 /* CopyController.m in Sources */,
 				EF6A5A1E25E754EA00965E1A /* RunLoopController.swift in Sources */,
 				EF7904F125FF72FA0055D153 /* MemoryMigrationController.m in Sources */,
 				EF3E2B2925F8C082000F5F78 /* MultithreadedController.swift in Sources */,
