@@ -31,6 +31,7 @@
 		EF470AD525F9CB1A0053D1F6 /* AutoreleaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF470AD325F9CB1A0053D1F6 /* AutoreleaseController.mm */; };
 		EF470AD625F9CB1A0053D1F6 /* AutoreleaseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF470AD425F9CB1A0053D1F6 /* AutoreleaseController.xib */; };
 		EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4B134A25B192EA0055C4D2 /* KVOController.m */; };
+		EF4B69EA261C059B00A77B47 /* TaggedPointerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4B69E9261C059B00A77B47 /* TaggedPointerController.m */; };
 		EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */; };
 		EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5582BF25AFD6D4003E1347 /* BinaryTreeController.xib */; };
 		EF5582C625AFD9F3003E1347 /* CreatBinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582C525AFD9F3003E1347 /* CreatBinaryTreeController.swift */; };
@@ -123,6 +124,8 @@
 		EF470AD425F9CB1A0053D1F6 /* AutoreleaseController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoreleaseController.xib; sourceTree = "<group>"; };
 		EF4B134925B192EA0055C4D2 /* KVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOController.h; sourceTree = "<group>"; };
 		EF4B134A25B192EA0055C4D2 /* KVOController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOController.m; sourceTree = "<group>"; };
+		EF4B69E8261C059B00A77B47 /* TaggedPointerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaggedPointerController.h; sourceTree = "<group>"; };
+		EF4B69E9261C059B00A77B47 /* TaggedPointerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaggedPointerController.m; sourceTree = "<group>"; };
 		EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeController.swift; sourceTree = "<group>"; };
 		EF5582BF25AFD6D4003E1347 /* BinaryTreeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BinaryTreeController.xib; sourceTree = "<group>"; };
 		EF5582C525AFD9F3003E1347 /* CreatBinaryTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatBinaryTreeController.swift; sourceTree = "<group>"; };
@@ -420,6 +423,8 @@
 				EF60E06A26043FA2001D78FE /* LockController.h */,
 				EF60E06B26043FA2001D78FE /* LockController.m */,
 				EF60E06C26043FA2001D78FE /* LockController.xib */,
+				EF4B69E8261C059B00A77B47 /* TaggedPointerController.h */,
+				EF4B69E9261C059B00A77B47 /* TaggedPointerController.m */,
 			);
 			path = concept;
 			sourceTree = "<group>";
@@ -615,6 +620,7 @@
 				EF5582CC25B02003003E1347 /* BalancedBinaryTreeController.swift in Sources */,
 				EF470AD525F9CB1A0053D1F6 /* AutoreleaseController.mm in Sources */,
 				EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */,
+				EF4B69EA261C059B00A77B47 /* TaggedPointerController.m in Sources */,
 				EFFC477825AE8385007C5AA4 /* NearlyFatherController.swift in Sources */,
 				EF3E2B3A25F8DF51000F5F78 /* KindOfController.m in Sources */,
 				EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */,

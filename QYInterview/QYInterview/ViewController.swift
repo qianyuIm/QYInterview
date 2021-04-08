@@ -56,6 +56,7 @@ class ViewController: UIViewController {
                 .init(with: "二分查找", subTitle: "二分查找", controllerName: "BinarySearchController")]),
         .init(with: "源码相关", items: [.init(with: "SDWebImage下载大图", subTitle: "SDWebImage下载大图", controllerName: "SDLargerImageController")]),
         .init(with: "概念", items: [
+                .init(with: "Tagged Pointer", subTitle: "Tagged Pointer", controllerName: "TaggedPointerController"),
                 .init(with: "copy修饰", subTitle: "copy修饰", controllerName: "CopyController"),
                 .init(with: "iOS中的几种锁", subTitle: "锁的使用场景", controllerName: "LockController"),
                 .init(with: "内存偏移", subTitle: "内存偏移", controllerName: "MemoryMigrationController"),

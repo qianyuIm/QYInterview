@@ -1,23 +1,22 @@
 //
-//  OCViewController.m
-//  QYInterview
+//  BaseViewController.m
+//  Crash
 //
-//  Created by cyd on 2021/2/25.
+//  Created by cyd on 2021/3/30.
 //
 
-#import "OCViewController.h"
+#import "BaseViewController.h"
 
-@interface OCViewController ()
+@interface BaseViewController ()
 
 @end
 
-@implementation OCViewController
+@implementation BaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
 }
 
 /*

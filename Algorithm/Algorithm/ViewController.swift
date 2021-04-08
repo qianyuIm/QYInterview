@@ -44,7 +44,13 @@ class ViewController: UIViewController {
                 .init(with: "删除排序链表中的重复元素 II", subTitle: "删除排序链表中的重复元素 II", controllerName: "DeleteDuplicates2Controller"),
                 .init(with: "合并两个有序数组", subTitle: "合并两个有序数组", controllerName: "MergesTwoOrderedArraysController"),
                 .init(with: "部分排序", subTitle: "部分排序", controllerName: "PartSortController"),
-                .init(with: "颜色分类", subTitle: "颜色分类", controllerName: "SortColorsController")])]
+                .init(with: "颜色分类", subTitle: "颜色分类", controllerName: "SortColorsController"),
+                .init(with: "跳水板", subTitle: "跳水板", controllerName: "DivingBoardController"),
+                .init(with: "斐波那契数", subTitle: "斐波那契数", controllerName: "FibController"),
+                .init(with: "种花问题", subTitle: "种花问题", controllerName: "PlaceFlowersController"),
+                .init(with: "打印从1到最大的n位数", subTitle: "打印从1到最大的n位数", controllerName: "PrintNumbersController"),
+                .init(with: "一维数组的动态和", subTitle: "一维数组的动态和", controllerName: "DynamicSumOfOneDimensionalArrayController"),.init(with: "第一个只出现一次的字符", subTitle: "第一个只出现一次的字符", controllerName: "FirstUniqCharController"),
+                .init(with: "翻转单词顺序", subTitle: "翻转单词顺序", controllerName: "ReverseWordsController")])]
     
     override func viewDidLoad() {
         super.viewDidLoad()

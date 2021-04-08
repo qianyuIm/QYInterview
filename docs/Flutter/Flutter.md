@@ -46,6 +46,9 @@ cd 到当前安装flutter的安装目录eg: 我的安装到了 FlutterSDK目录�
 
 > source ~/.bash_profile
 
+## 打开模拟器
+> open -a Simulator
+
 ## 2.配置编辑器
 1. [VS Code配置安装1.20.1或更高版本.](https://flutterchina.club/get-started/editor/#vscode)
 	* 启动 VS Code
