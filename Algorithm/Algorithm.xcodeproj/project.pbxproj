@@ -19,6 +19,7 @@
 		EF1A8950260C79E40037CAF5 /* FindRepeatNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A894F260C79E40037CAF5 /* FindRepeatNumberController.swift */; };
 		EF1A8953260C81280037CAF5 /* RepeatedSubstringPatternController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8952260C81280037CAF5 /* RepeatedSubstringPatternController.swift */; };
 		EF1A8956260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8955260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift */; };
+		EF7AFABA262001FE0008E2DD /* KthFromEndController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AFAB9262001FE0008E2DD /* KthFromEndController.swift */; };
 		EF8CDA79261DB79F005590F2 /* DivingBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8CDA78261DB79F005590F2 /* DivingBoardController.swift */; };
 		EFB48F09261E9663001379EE /* FibController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB48F08261E9663001379EE /* FibController.swift */; };
 		EFB48F0C261EA2D5001379EE /* PlaceFlowersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB48F0B261EA2D5001379EE /* PlaceFlowersController.swift */; };
@@ -46,6 +47,7 @@
 		EF1A894F260C79E40037CAF5 /* FindRepeatNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRepeatNumberController.swift; sourceTree = "<group>"; };
 		EF1A8952260C81280037CAF5 /* RepeatedSubstringPatternController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatedSubstringPatternController.swift; sourceTree = "<group>"; };
 		EF1A8955260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDuplicates2Controller.swift; sourceTree = "<group>"; };
+		EF7AFAB9262001FE0008E2DD /* KthFromEndController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KthFromEndController.swift; sourceTree = "<group>"; };
 		EF8CDA78261DB79F005590F2 /* DivingBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivingBoardController.swift; sourceTree = "<group>"; };
 		EFB48F08261E9663001379EE /* FibController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibController.swift; sourceTree = "<group>"; };
 		EFB48F0B261EA2D5001379EE /* PlaceFlowersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFlowersController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				EFB48F12261ED6CF001379EE /* DynamicSumOfOneDimensionalArrayController.swift */,
 				EFB48F15261EDE9E001379EE /* FirstUniqCharController.swift */,
 				EFB48F18261EE386001379EE /* ReverseWordsController.swift */,
+				EF7AFAB9262001FE0008E2DD /* KthFromEndController.swift */,
 			);
 			path = Interview;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				EF1A8953260C81280037CAF5 /* RepeatedSubstringPatternController.swift in Sources */,
 				EFD27765260DCA2C0083DA05 /* MergesTwoOrderedArraysController.swift in Sources */,
 				EF1A893B260C64A30037CAF5 /* BubbleSortController.swift in Sources */,
+				EF7AFABA262001FE0008E2DD /* KthFromEndController.swift in Sources */,
 				EF1A894C260C6D740037CAF5 /* FindDuplicateStringsController.swift in Sources */,
 				EFB48F13261ED6CF001379EE /* DynamicSumOfOneDimensionalArrayController.swift in Sources */,
 				EFB48F10261ED462001379EE /* PrintNumbersController.swift in Sources */,

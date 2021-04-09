@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         .init(with: "排序算法", items: [
                 .init(with: "冒泡排序", subTitle: "冒泡排序", controllerName: "BubbleSortController")]),
         .init(with: "面试", items: [
+                .init(with: "表中倒数第k个节点", subTitle: "表中倒数第k个节点", controllerName: "KthFromEndController"),
                 .init(with: "找字符串里重复次数最多的字符", subTitle: "找字符串里重复次数最多的字符", controllerName: "FindDuplicateStringsController"),
                 .init(with: "查找数组中重复的数字", subTitle: "查找数组中重复的数字", controllerName: "FindRepeatNumberController"),
                 .init(with: "重复的子字符串", subTitle: "重复的子字符串", controllerName: "RepeatedSubstringPatternController"),
