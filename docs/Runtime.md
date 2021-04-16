@@ -36,14 +36,25 @@ union isa_t
 #   define ISA_MAGIC_MASK  0x000003f000000001ULL
 #   define ISA_MAGIC_VALUE 0x000001a000000001ULL
     struct {
+    	// 0 代表普通指针，存储这Class，Meta-Class对象的内存地址
+    		// 1 代表优化过，使用位域存储更多信息
         uintptr_t nonpointer        : 1;
+        // 是否设置过关联队形，如果没有，释放会更快
         uintptr_t has_assoc         : 1;
+        // 是否有C++的析构函数(.cxx_destruct)，如果没有，释放会更快
         uintptr_t has_cxx_dtor      : 1;
+        // 存储着Class，Meta-Class对象的内存地址信息
         uintptr_t shiftcls          : 33; // MACH_VM_MAX_ADDRESS 0x1000000000
+        // 用于在调试时分辨对象是否初始化完成
         uintptr_t magic             : 6;
+        // 是否有被弱引用指向过，如果没有，释放会更快
         uintptr_t weakly_referenced : 1;
+        // 对象是否正在释放
         uintptr_t deallocating      : 1;
+        // 引用计数是否过大无法存储在isa中
+        	// 若果为1 那么引用计数会存储在一个叫SideTable的类的属性中
         uintptr_t has_sidetable_rc  : 1;
+        // 里面存储的值是引用计数 减1
         uintptr_t extra_rc          : 19;
 #       define RC_ONE   (1ULL<<45)
 #       define RC_HALF  (1ULL<<18)

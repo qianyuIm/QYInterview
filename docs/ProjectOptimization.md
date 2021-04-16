@@ -157,4 +157,40 @@ void __sanitizer_cov_trace_pc_guard(uint32_t *guard) {
 	
 ### 3.项目性能优化
 
+**1. CPU优化**
+
+1. 尽量使用基本数据类型这种轻量级的类型，避免使用对象类型，比如使用int而不是NSNumber。	
+2. 避免UIView属性的频繁调整或设置，频繁冗余的设置属性frame, bounds, transform会频繁的浪费CPU的计算能力,会导致额外的CPU开销。因为CPU需要先计算好UIView的这些属性, 然后才会交由GPU渲染。
+**这里特别说一下 CALayer：CALayer 内部并没有属性，当调用属性方法时，它内部是通过运行时resolveInstanceMethod  为对象临时添加一个方法，并把对应属性值保存到内部的一个 Dictionary 里， 同时还会通知 delegate、创建动画等等，非常消耗资源。UIView 的关于显示相关的属性（比如 frame/bounds/transform）等实际上都是 CALayer 属性映射来的， 所以对 UIView 的这些属性进行调整时，消耗的资源要远大于一般的属性。对此你在应用中，应该尽量减少不必要的属性修改,可以手动添加在分类中添加属性测试**	。当视图层次调整时，UIView、CALayer 之间会出现很多方法调用与通知，所以在优化性能时，应该尽量避免调整视图层次、添加和移除视图
+
+3. 视图无交互时尽量使用CALayer，比如使用CALayer代替UIView\UILabel\UIImageView。
 	
+4. 尽量提前计算好布局，一次性设置给UIView，避免多次设置。
+		
+* 复杂的页面推荐使用frame布局，尽量不要使用autolayout。
+		autolayout会比frame布局消耗更多的CPU资源。
+*  尽量把耗时的操作放到子线程。比如文本处理（包括尺寸计算和文本绘制）、
+		图片处理（包括解码和绘制）。
+		
+		1. 尽量在子线程计算文本尺寸，比如boundingRect方法的调用，可以放到子线程。
+		2. 尽量在子线程对图片进行解码（UIImage只有在显示的时候才会解码，
+		而这个操作一般是在主线程，所以容易造成卡顿）
+		3. 图片的size最好刚好和UIImageView的size一致。尽量避免图片尺寸伸缩。
+		4. 如果确定子视图大小和位置是固定的，那么避免在cell的layoutSubViews中设置子视图的
+		位置和大小。因为tableView滚动时候会调用cell的layoutSubView方法。
+		cell的layoutSubViews方法中布局代码太多比较耗时。
+		5. 使用多线程的话  控制线程的最大并发数量 线程间切换也是会消耗CPU的
+
+**2. GPU优化**
+
+1. 尽量减少视图数量和层次。
+2. GPU能处理的最大文理尺寸是4096*4096，一旦超过这个尺寸，就会占用CPU资源进行处理。
+3. 尽量避免离屏渲染,圆角等
+	* 光栅化 layer.shouldRasterize = YES 会触发离屏渲染
+	* 遮罩 layer.mask = xxx 也会触发离屏渲染
+	* 圆角 同时设置了layer.masksToBounds = YES、layer.cornerRadius大于0会触发离屏渲染。只设置layer.masksToBounds = YES或者layer.cornerRadius大于0不会触发离屏渲染 （如果需要圆角，可以使用CoreGraphics绘制裁剪圆角或者让UI提供圆角图片）
+	* 阴影 layer.shadowXXX 比如layer.shadowColor、layer.shadowOffset 都会触发离屏渲染,如果设置了layer.shadowPath就不会触发离屏渲染
+	* 开启光栅化 shouldRasterize=true 
+  
+
+

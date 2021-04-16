@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF1824B326291D3C0004F417 /* QuickSortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1824B226291D3C0004F417 /* QuickSortController.swift */; };
+		EF1824B6262924090004F417 /* InsertSortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1824B5262924090004F417 /* InsertSortController.swift */; };
+		EF1824B9262935590004F417 /* MaxSubArrayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1824B8262935590004F417 /* MaxSubArrayController.swift */; };
+		EF1824BC2629615E0004F417 /* ReplaceSpaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1824BB2629615E0004F417 /* ReplaceSpaceController.swift */; };
 		EF1A8921260C63510037CAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8920260C63510037CAF5 /* AppDelegate.swift */; };
 		EF1A8923260C63510037CAF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8922260C63510037CAF5 /* SceneDelegate.swift */; };
 		EF1A8925260C63510037CAF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8924260C63510037CAF5 /* ViewController.swift */; };
@@ -19,7 +23,17 @@
 		EF1A8950260C79E40037CAF5 /* FindRepeatNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A894F260C79E40037CAF5 /* FindRepeatNumberController.swift */; };
 		EF1A8953260C81280037CAF5 /* RepeatedSubstringPatternController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8952260C81280037CAF5 /* RepeatedSubstringPatternController.swift */; };
 		EF1A8956260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8955260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift */; };
+		EF62454D26267EF300940CA7 /* CompressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62454C26267EF200940CA7 /* CompressController.swift */; };
 		EF7AFABA262001FE0008E2DD /* KthFromEndController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AFAB9262001FE0008E2DD /* KthFromEndController.swift */; };
+		EF8B47DE2625264C0090C77A /* ReverseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B47DD2625264C0090C77A /* ReverseListController.swift */; };
+		EF8B47E12625336A0090C77A /* ReverseBetweenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B47E02625336A0090C77A /* ReverseBetweenController.swift */; };
+		EF8B47E42625660C0090C77A /* DeleteNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B47E32625660C0090C77A /* DeleteNodeController.swift */; };
+		EF8B48082625767A0090C77A /* LengthOfLongestSubstringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B48072625767A0090C77A /* LengthOfLongestSubstringController.swift */; };
+		EF8B480B26257E450090C77A /* TwoSumController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B480A26257E450090C77A /* TwoSumController1.swift */; };
+		EF8B4810262592130090C77A /* TwoSumController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B480F262592130090C77A /* TwoSumController2.swift */; };
+		EF8B481326259BD70090C77A /* ThreeSumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B481226259BD70090C77A /* ThreeSumController.swift */; };
+		EF8B48162625BCC30090C77A /* FourSumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B48152625BCC30090C77A /* FourSumController.swift */; };
+		EF8B481B2625C2D70090C77A /* ReversePrintController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B481A2625C2D70090C77A /* ReversePrintController.swift */; };
 		EF8CDA79261DB79F005590F2 /* DivingBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8CDA78261DB79F005590F2 /* DivingBoardController.swift */; };
 		EFB48F09261E9663001379EE /* FibController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB48F08261E9663001379EE /* FibController.swift */; };
 		EFB48F0C261EA2D5001379EE /* PlaceFlowersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB48F0B261EA2D5001379EE /* PlaceFlowersController.swift */; };
@@ -30,9 +44,16 @@
 		EFD27765260DCA2C0083DA05 /* MergesTwoOrderedArraysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD27764260DCA2C0083DA05 /* MergesTwoOrderedArraysController.swift */; };
 		EFD27768260DD73C0083DA05 /* PartSortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD27767260DD73C0083DA05 /* PartSortController.swift */; };
 		EFD2776B260DDCE20083DA05 /* SortColorsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2776A260DDCE20083DA05 /* SortColorsController.swift */; };
+		EFEB889726283D3D005CD74A /* IntersectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB889626283D3D005CD74A /* IntersectionNodeController.swift */; };
+		EFEB889B262856A1005CD74A /* KthGrammarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB889A262856A1005CD74A /* KthGrammarController.swift */; };
+		EFEB889F26285C7E005CD74A /* SelectSortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB889E26285C7D005CD74A /* SelectSortController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF1824B226291D3C0004F417 /* QuickSortController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSortController.swift; sourceTree = "<group>"; };
+		EF1824B5262924090004F417 /* InsertSortController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSortController.swift; sourceTree = "<group>"; };
+		EF1824B8262935590004F417 /* MaxSubArrayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxSubArrayController.swift; sourceTree = "<group>"; };
+		EF1824BB2629615E0004F417 /* ReplaceSpaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceSpaceController.swift; sourceTree = "<group>"; };
 		EF1A891D260C63510037CAF5 /* Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1A8920260C63510037CAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF1A8922260C63510037CAF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +68,17 @@
 		EF1A894F260C79E40037CAF5 /* FindRepeatNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRepeatNumberController.swift; sourceTree = "<group>"; };
 		EF1A8952260C81280037CAF5 /* RepeatedSubstringPatternController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatedSubstringPatternController.swift; sourceTree = "<group>"; };
 		EF1A8955260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDuplicates2Controller.swift; sourceTree = "<group>"; };
+		EF62454C26267EF200940CA7 /* CompressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressController.swift; sourceTree = "<group>"; };
 		EF7AFAB9262001FE0008E2DD /* KthFromEndController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KthFromEndController.swift; sourceTree = "<group>"; };
+		EF8B47DD2625264C0090C77A /* ReverseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseListController.swift; sourceTree = "<group>"; };
+		EF8B47E02625336A0090C77A /* ReverseBetweenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseBetweenController.swift; sourceTree = "<group>"; };
+		EF8B47E32625660C0090C77A /* DeleteNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteNodeController.swift; sourceTree = "<group>"; };
+		EF8B48072625767A0090C77A /* LengthOfLongestSubstringController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthOfLongestSubstringController.swift; sourceTree = "<group>"; };
+		EF8B480A26257E450090C77A /* TwoSumController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSumController1.swift; sourceTree = "<group>"; };
+		EF8B480F262592130090C77A /* TwoSumController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSumController2.swift; sourceTree = "<group>"; };
+		EF8B481226259BD70090C77A /* ThreeSumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSumController.swift; sourceTree = "<group>"; };
+		EF8B48152625BCC30090C77A /* FourSumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSumController.swift; sourceTree = "<group>"; };
+		EF8B481A2625C2D70090C77A /* ReversePrintController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversePrintController.swift; sourceTree = "<group>"; };
 		EF8CDA78261DB79F005590F2 /* DivingBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivingBoardController.swift; sourceTree = "<group>"; };
 		EFB48F08261E9663001379EE /* FibController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibController.swift; sourceTree = "<group>"; };
 		EFB48F0B261EA2D5001379EE /* PlaceFlowersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFlowersController.swift; sourceTree = "<group>"; };
@@ -58,6 +89,9 @@
 		EFD27764260DCA2C0083DA05 /* MergesTwoOrderedArraysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergesTwoOrderedArraysController.swift; sourceTree = "<group>"; };
 		EFD27767260DD73C0083DA05 /* PartSortController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartSortController.swift; sourceTree = "<group>"; };
 		EFD2776A260DDCE20083DA05 /* SortColorsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortColorsController.swift; sourceTree = "<group>"; };
+		EFEB889626283D3D005CD74A /* IntersectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionNodeController.swift; sourceTree = "<group>"; };
+		EFEB889A262856A1005CD74A /* KthGrammarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KthGrammarController.swift; sourceTree = "<group>"; };
+		EFEB889E26285C7D005CD74A /* SelectSortController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSortController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +128,10 @@
 				EF1A8922260C63510037CAF5 /* SceneDelegate.swift */,
 				EF1A8924260C63510037CAF5 /* ViewController.swift */,
 				EF1A8936260C64740037CAF5 /* BaseViewController.swift */,
+				EFEB889926285652005CD74A /* Dynamic */,
+				EF62454B26267EE000940CA7 /* String */,
+				EF8B48192625C2C90090C77A /* NodeList */,
+				EF8B480D262591F10090C77A /* Sum */,
 				EF1A894A260C6D1D0037CAF5 /* Interview */,
 				EF1A8935260C64490037CAF5 /* Sort */,
 				EF1A8926260C63510037CAF5 /* Main.storyboard */,
@@ -108,6 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				EF1A893A260C64A30037CAF5 /* BubbleSortController.swift */,
+				EFEB889E26285C7D005CD74A /* SelectSortController.swift */,
+				EF1824B226291D3C0004F417 /* QuickSortController.swift */,
+				EF1824B5262924090004F417 /* InsertSortController.swift */,
 			);
 			path = Sort;
 			sourceTree = "<group>";
@@ -130,8 +171,50 @@
 				EFB48F15261EDE9E001379EE /* FirstUniqCharController.swift */,
 				EFB48F18261EE386001379EE /* ReverseWordsController.swift */,
 				EF7AFAB9262001FE0008E2DD /* KthFromEndController.swift */,
+				EF8B47DD2625264C0090C77A /* ReverseListController.swift */,
+				EF8B47E02625336A0090C77A /* ReverseBetweenController.swift */,
+				EF8B47E32625660C0090C77A /* DeleteNodeController.swift */,
+				EF8B48072625767A0090C77A /* LengthOfLongestSubstringController.swift */,
 			);
 			path = Interview;
+			sourceTree = "<group>";
+		};
+		EF62454B26267EE000940CA7 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				EF62454C26267EF200940CA7 /* CompressController.swift */,
+				EF1824BB2629615E0004F417 /* ReplaceSpaceController.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		EF8B480D262591F10090C77A /* Sum */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B480A26257E450090C77A /* TwoSumController1.swift */,
+				EF8B480F262592130090C77A /* TwoSumController2.swift */,
+				EF8B481226259BD70090C77A /* ThreeSumController.swift */,
+				EF8B48152625BCC30090C77A /* FourSumController.swift */,
+				EF1824B8262935590004F417 /* MaxSubArrayController.swift */,
+			);
+			path = Sum;
+			sourceTree = "<group>";
+		};
+		EF8B48192625C2C90090C77A /* NodeList */ = {
+			isa = PBXGroup;
+			children = (
+				EF8B481A2625C2D70090C77A /* ReversePrintController.swift */,
+				EFEB889626283D3D005CD74A /* IntersectionNodeController.swift */,
+			);
+			path = NodeList;
+			sourceTree = "<group>";
+		};
+		EFEB889926285652005CD74A /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				EFEB889A262856A1005CD74A /* KthGrammarController.swift */,
+			);
+			path = Dynamic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,24 +287,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1824B6262924090004F417 /* InsertSortController.swift in Sources */,
 				EF1A8953260C81280037CAF5 /* RepeatedSubstringPatternController.swift in Sources */,
+				EF8B481326259BD70090C77A /* ThreeSumController.swift in Sources */,
+				EF8B4810262592130090C77A /* TwoSumController2.swift in Sources */,
+				EF8B48162625BCC30090C77A /* FourSumController.swift in Sources */,
 				EFD27765260DCA2C0083DA05 /* MergesTwoOrderedArraysController.swift in Sources */,
 				EF1A893B260C64A30037CAF5 /* BubbleSortController.swift in Sources */,
 				EF7AFABA262001FE0008E2DD /* KthFromEndController.swift in Sources */,
+				EFEB889B262856A1005CD74A /* KthGrammarController.swift in Sources */,
 				EF1A894C260C6D740037CAF5 /* FindDuplicateStringsController.swift in Sources */,
 				EFB48F13261ED6CF001379EE /* DynamicSumOfOneDimensionalArrayController.swift in Sources */,
+				EF8B480B26257E450090C77A /* TwoSumController1.swift in Sources */,
 				EFB48F10261ED462001379EE /* PrintNumbersController.swift in Sources */,
 				EFB48F19261EE386001379EE /* ReverseWordsController.swift in Sources */,
 				EF1A8925260C63510037CAF5 /* ViewController.swift in Sources */,
+				EF8B47DE2625264C0090C77A /* ReverseListController.swift in Sources */,
 				EFB48F09261E9663001379EE /* FibController.swift in Sources */,
+				EF8B48082625767A0090C77A /* LengthOfLongestSubstringController.swift in Sources */,
+				EF8B481B2625C2D70090C77A /* ReversePrintController.swift in Sources */,
+				EF62454D26267EF300940CA7 /* CompressController.swift in Sources */,
 				EF1A8937260C64740037CAF5 /* BaseViewController.swift in Sources */,
+				EF8B47E42625660C0090C77A /* DeleteNodeController.swift in Sources */,
+				EFEB889F26285C7E005CD74A /* SelectSortController.swift in Sources */,
 				EFD27768260DD73C0083DA05 /* PartSortController.swift in Sources */,
 				EF1A8921260C63510037CAF5 /* AppDelegate.swift in Sources */,
 				EFB48F0C261EA2D5001379EE /* PlaceFlowersController.swift in Sources */,
 				EF1A8923260C63510037CAF5 /* SceneDelegate.swift in Sources */,
 				EF1A8950260C79E40037CAF5 /* FindRepeatNumberController.swift in Sources */,
+				EF8B47E12625336A0090C77A /* ReverseBetweenController.swift in Sources */,
 				EF1A8956260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift in Sources */,
+				EF1824BC2629615E0004F417 /* ReplaceSpaceController.swift in Sources */,
 				EFB48F16261EDE9E001379EE /* FirstUniqCharController.swift in Sources */,
+				EFEB889726283D3D005CD74A /* IntersectionNodeController.swift in Sources */,
+				EF1824B326291D3C0004F417 /* QuickSortController.swift in Sources */,
+				EF1824B9262935590004F417 /* MaxSubArrayController.swift in Sources */,
 				EFD2776B260DDCE20083DA05 /* SortColorsController.swift in Sources */,
 				EF8CDA79261DB79F005590F2 /* DivingBoardController.swift in Sources */,
 			);

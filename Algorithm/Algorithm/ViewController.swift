@@ -36,8 +36,29 @@ class ViewController: UIViewController {
 
     var dataSource: [QTTableSectionItem] = [
         .init(with: "排序算法", items: [
-                .init(with: "冒泡排序", subTitle: "冒泡排序", controllerName: "BubbleSortController")]),
+                .init(with: "冒泡排序", subTitle: "冒泡排序", controllerName: "BubbleSortController"),
+                .init(with: "选择排序", subTitle: "选择排序", controllerName: "SelectSortController"),
+                .init(with: "快速排序", subTitle: "快速排序", controllerName: "QuickSortController"),
+                .init(with: "插入排序", subTitle: "插入排序", controllerName: "InsertSortController")]),
+        .init(with: "找规律动态规划", items: [
+                .init(with: "779.第K个语法符号", subTitle: "779.第K个语法符号", controllerName: "KthGrammarController")]),
+        .init(with: "N数之和", items: [
+                .init(with: "1.两数之和", subTitle: "两数之和", controllerName: "TwoSumController1"),
+                .init(with: "167.两数之和 II - 输入有序数组", subTitle: "167.两数之和 II - 输入有序数组", controllerName: "TwoSumController2"),
+                .init(with: "15.三数之和", subTitle: "15.三数之和", controllerName: "ThreeSumController"),
+                .init(with: "18.四数之和", subTitle: "18.四数之和", controllerName: "FourSumController"),
+                .init(with: "53. 最大子序和", subTitle: "53. 最大子序和", controllerName: "MaxSubArrayController")]),
+        .init(with: "链表", items: [
+                .init(with: "06.从尾到头打印链表", subTitle: "06.从尾到头打印链表", controllerName: "ReversePrintController"),
+                .init(with: " 52. 两个链表的第一个公共节点", subTitle: " 52. 两个链表的第一个公共节点", controllerName: "IntersectionNodeController")]),
+        .init(with: "字符串", items: [
+                .init(with: "06.字符串压缩", subTitle: "06.字符串压缩", controllerName: "CompressController"),
+                .init(with: "05. 替换空格", subTitle: "05. 替换空格", controllerName: "ReplaceSpaceController")]),
         .init(with: "面试", items: [
+                .init(with: "最长不含重复字符的子字符串", subTitle: "最长不含重复字符的子字符串", controllerName: "LengthOfLongestSubstringController"),
+                .init(with: "删除链表的节点", subTitle: "删除链表的节点", controllerName: "DeleteNodeController"),
+                .init(with: "反转单链表", subTitle: "反转单链表", controllerName: "ReverseListController"),
+                .init(with: "反转指定位置的链表", subTitle: "反转指定位置的链表", controllerName: "ReverseBetweenController"),
                 .init(with: "表中倒数第k个节点", subTitle: "表中倒数第k个节点", controllerName: "KthFromEndController"),
                 .init(with: "找字符串里重复次数最多的字符", subTitle: "找字符串里重复次数最多的字符", controllerName: "FindDuplicateStringsController"),
                 .init(with: "查找数组中重复的数字", subTitle: "查找数组中重复的数字", controllerName: "FindRepeatNumberController"),
@@ -56,6 +77,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        logDebug("https://www.jianshu.com/p/e7c702e6f7d8")
+        let a = 0
+        let b = 1
+        let c = a ^ b
+        logDebug(c)
+        
+        
     }
 
 

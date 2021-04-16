@@ -36,7 +36,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hq8-pk-V93"/>
                     <connections>
-                        <outlet property="tableView" destination="3Gm-Bu-Fc0" id="pXp-yv-AuR"/>
+                        <outlet property="tableView" destination="3Gm-Bu-Fc0" id="oPM-vT-Sgm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -76,8 +76,21 @@ typedef void(^QYBlockP)(CycleController *);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self test];
 }
 - (void)test {
+    NSNotificationCenter *__weak center = [NSNotificationCenter defaultCenter];
+    id __block token = [center addObserverForName:UIApplicationDidEnterBackgroundNotification
+                                               object:nil
+                                                queue:[NSOperationQueue mainQueue]
+                                           usingBlock:^(NSNotification * _Nonnull note) {
+            [self doSomething];
+            [center removeObserver:token];
+            token = nil;
+        }];
+
+}
+- (void)doSomething {
     
 }
 // 属于自动释放

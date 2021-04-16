@@ -19,7 +19,7 @@
 @end
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
-//@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) Persion *persion;
 @property (nonatomic, copy) NSString *name;
@@ -37,19 +37,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    int num = 10;
-    self.name = @"123";
-    _persion = [[Persion alloc] init];
-    void (^MyBlock)(void) = ^{
-        NSLog(@"%d",num);
-        NSLog(@"%@",self.name);
-        NSLog(@"%@",_persion.name);
-    };
-    num = 456;
-    self.name = @"456";
-    self.persion.name = @"xiaohong";
-    MyBlock();
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

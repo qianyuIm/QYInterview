@@ -20,7 +20,6 @@
 		EF1A88F3260C2C450037CAF5 /* CycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1A88F1260C2C450037CAF5 /* CycleController.m */; };
 		EF1A88F4260C2C450037CAF5 /* CycleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF1A88F2260C2C450037CAF5 /* CycleController.xib */; };
 		EF1A88FA260C39000037CAF5 /* Block.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1A88F9260C39000037CAF5 /* Block.c */; };
-		EF1A8912260C5BAD0037CAF5 /* ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8911260C5BAD0037CAF5 /* ViewController.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +45,6 @@
 		EF1A88F2260C2C450037CAF5 /* CycleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CycleController.xib; sourceTree = "<group>"; };
 		EF1A88F8260C39000037CAF5 /* Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		EF1A88F9260C39000037CAF5 /* Block.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Block.c; sourceTree = "<group>"; };
-		EF1A8911260C5BAD0037CAF5 /* ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewController.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +85,6 @@
 				EF1A88CA260C18E50037CAF5 /* SceneDelegate.m */,
 				EF1A88CC260C18E50037CAF5 /* ViewController.h */,
 				EF1A88CD260C18E50037CAF5 /* ViewController.m */,
-				EF1A8911260C5BAD0037CAF5 /* ViewController.cpp */,
 				EF1A88E4260C1A210037CAF5 /* BaseViewController.h */,
 				EF1A88E5260C1A210037CAF5 /* BaseViewController.m */,
 				EF1A88E0260C1A0D0037CAF5 /* MRCController.h */,
@@ -179,7 +176,6 @@
 				EF1A88CE260C18E50037CAF5 /* ViewController.m in Sources */,
 				EF1A88E6260C1A210037CAF5 /* BaseViewController.m in Sources */,
 				EF1A88C8260C18E50037CAF5 /* AppDelegate.m in Sources */,
-				EF1A8912260C5BAD0037CAF5 /* ViewController.cpp in Sources */,
 				EF1A88FA260C39000037CAF5 /* Block.c in Sources */,
 				EF1A88F3260C2C450037CAF5 /* CycleController.m in Sources */,
 				EF1A88D9260C18E60037CAF5 /* main.m in Sources */,

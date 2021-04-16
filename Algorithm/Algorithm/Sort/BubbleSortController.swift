@@ -17,7 +17,6 @@ class BubbleSortController: BaseViewController {
         touchesBeganBlock = { [weak self] in
             self?.bubbleSort(self!.sortArray)
             self?.bubbleOptimizerSort(self!.sortArray)
-
         }
     }
     
