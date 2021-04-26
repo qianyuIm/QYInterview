@@ -16,4 +16,5 @@ target 'QYInterview' do
   pod 'EasySwiftHook'
   pod 'HandyJSON'
   pod 'YYCache'
+  pod 'ZFPlayer'
 end

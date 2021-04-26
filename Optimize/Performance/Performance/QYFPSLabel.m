@@ -30,7 +30,7 @@
     self.clipsToBounds = YES;
     self.textAlignment = NSTextAlignmentCenter;
     self.userInteractionEnabled = NO;
-    self.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.700];
+    self.backgroundColor = [UIColor colorWithWhite:0.000 alpha:1.700];
     
     _font = [UIFont fontWithName:@"Menlo" size:14];
     if (_font) {

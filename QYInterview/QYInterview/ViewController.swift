@@ -12,10 +12,21 @@ func logDebug(_ message: Any,
     print(message, separator: separator, terminator: terminator)
 }
 class BaseViewController: UIViewController {
+    var touchesBeganBlock: (() -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
+        let label = UILabel(frame: .zero)
+        label.text = "点击屏幕查看输出"
+        label.textColor = .red
+        label.sizeToFit()
+        label.center = view.center
+        view.addSubview(label)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        touchesBeganBlock?()
     }
     deinit {
         logDebug("\(self) 移除了")
@@ -54,8 +65,12 @@ class ViewController: UIViewController {
                 .init(with: "求数组逆序数", subTitle: "求数组逆序数", controllerName: "NumOfReverseArrayController"),
                 .init(with: "二叉树相关", subTitle: "二叉树相关", controllerName: "BinaryTreeController"),
                 .init(with: "二分查找", subTitle: "二分查找", controllerName: "BinarySearchController")]),
+        .init(with: "Swift", items: [
+                .init(with: "自动闭包@autoclosure", subTitle: "自动闭包@autoclosure", controllerName: "AutoclosureController")]),
         .init(with: "源码相关", items: [.init(with: "SDWebImage下载大图", subTitle: "SDWebImage下载大图", controllerName: "SDLargerImageController")]),
         .init(with: "概念", items: [
+                .init(with: "load", subTitle: "load", controllerName: "LoadController"),
+                .init(with: "通知是同步的", subTitle: "通知是同步的", controllerName: "NotificationSyncController"),
                 .init(with: "Tagged Pointer", subTitle: "Tagged Pointer", controllerName: "TaggedPointerController"),
                 .init(with: "copy修饰", subTitle: "copy修饰", controllerName: "CopyController"),
                 .init(with: "iOS中的几种锁", subTitle: "锁的使用场景", controllerName: "LockController"),

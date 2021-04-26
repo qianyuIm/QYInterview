@@ -39,7 +39,10 @@ class ViewController: UIViewController {
                 .init(with: "冒泡排序", subTitle: "冒泡排序", controllerName: "BubbleSortController"),
                 .init(with: "选择排序", subTitle: "选择排序", controllerName: "SelectSortController"),
                 .init(with: "快速排序", subTitle: "快速排序", controllerName: "QuickSortController"),
+                .init(with: "希尔排序", subTitle: "希尔排序", controllerName: "ShellSortController"),
                 .init(with: "插入排序", subTitle: "插入排序", controllerName: "InsertSortController")]),
+        .init(with: "查找算法", items: [
+                .init(with: "二分查找法", subTitle: "二分查找法", controllerName: "BinarySearchController")]),
         .init(with: "找规律动态规划", items: [
                 .init(with: "779.第K个语法符号", subTitle: "779.第K个语法符号", controllerName: "KthGrammarController")]),
         .init(with: "N数之和", items: [
@@ -53,7 +56,10 @@ class ViewController: UIViewController {
                 .init(with: " 52. 两个链表的第一个公共节点", subTitle: " 52. 两个链表的第一个公共节点", controllerName: "IntersectionNodeController")]),
         .init(with: "字符串", items: [
                 .init(with: "06.字符串压缩", subTitle: "06.字符串压缩", controllerName: "CompressController"),
-                .init(with: "05. 替换空格", subTitle: "05. 替换空格", controllerName: "ReplaceSpaceController")]),
+                .init(with: "05. 替换空格", subTitle: "05. 替换空格", controllerName: "ReplaceSpaceController"),
+                .init(with: "344.反转字符串", subTitle: "344.反转字符串", controllerName: "ReverseStringController"),
+                .init(with: "345. 反转字符串中的元音字母", subTitle: "345. 反转字符串中的元音字母", controllerName: "ReverseVowelsController"),
+                .init(with: "541. 反转字符串 II", subTitle: "541. 反转字符串 II", controllerName: "ReverseString2Controler")]),
         .init(with: "面试", items: [
                 .init(with: "最长不含重复字符的子字符串", subTitle: "最长不含重复字符的子字符串", controllerName: "LengthOfLongestSubstringController"),
                 .init(with: "删除链表的节点", subTitle: "删除链表的节点", controllerName: "DeleteNodeController"),

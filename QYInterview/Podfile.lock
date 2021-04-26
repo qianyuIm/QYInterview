@@ -37,6 +37,9 @@ PODS:
   - SnapKit (5.0.1)
   - Toaster (2.3.0)
   - YYCache (1.0.4)
+  - ZFPlayer (4.0.1):
+    - ZFPlayer/Core (= 4.0.1)
+  - ZFPlayer/Core (4.0.1)
 
 DEPENDENCIES:
   - AFNetworking
@@ -50,6 +53,7 @@ DEPENDENCIES:
   - SnapKit
   - Toaster
   - YYCache
+  - ZFPlayer
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -66,6 +70,7 @@ SPEC REPOS:
     - SnapKit
     - Toaster
     - YYCache
+    - ZFPlayer
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -81,7 +86,8 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: 8a32b4acf983b3620364b3056236654dd6682b25
+PODFILE CHECKSUM: 7fb2f097801037ec2c1f201e7f0729f4f039630e
 
 COCOAPODS: 1.10.0

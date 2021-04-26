@@ -20,6 +20,7 @@ class InsertSortController: BaseViewController {
         }
     }
     /**
+     插入排序
      实现思路：
 
      　　1. 从第一个元素开始，认为该元素已经是排好序的。
@@ -48,7 +49,6 @@ class InsertSortController: BaseViewController {
                 array[j] = array[j - 1]
                 array[j - 1] = temp
                 j -= 1
-                
             }
         }
         return array

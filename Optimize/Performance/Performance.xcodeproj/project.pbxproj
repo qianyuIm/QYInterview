@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF69076A262D1C970047B1D8 /* headImg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF690769262D1C970047B1D8 /* headImg@2x.jpg */; };
 		EFEB886F2628205E005CD74A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEB886E2628205E005CD74A /* AppDelegate.m */; };
 		EFEB88752628205E005CD74A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEB88742628205E005CD74A /* ViewController.m */; };
 		EFEB88782628205E005CD74A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEB88762628205E005CD74A /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF690769262D1C970047B1D8 /* headImg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "headImg@2x.jpg"; sourceTree = "<group>"; };
 		EFEB886A2628205E005CD74A /* Performance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Performance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEB886D2628205E005CD74A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFEB886E2628205E005CD74A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				EFEB888826282077005CD74A /* QYFPSLabel.m */,
 				EFEB888B262820E2005CD74A /* QYProxy.h */,
 				EFEB888C262820E2005CD74A /* QYProxy.m */,
+				EF690769262D1C970047B1D8 /* headImg@2x.jpg */,
 				EFEB88762628205E005CD74A /* Main.storyboard */,
 				EFEB887926282060005CD74A /* Assets.xcassets */,
 				EFEB887B26282060005CD74A /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				EFEB887D26282060005CD74A /* LaunchScreen.storyboard in Resources */,
 				EFEB887A26282060005CD74A /* Assets.xcassets in Resources */,
+				EF69076A262D1C970047B1D8 /* headImg@2x.jpg in Resources */,
 				EFEB88782628205E005CD74A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

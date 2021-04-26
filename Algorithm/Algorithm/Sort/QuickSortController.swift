@@ -14,7 +14,7 @@ class QuickSortController: BaseViewController {
 
         // Do any additional setup after loading the view.
         logDebug(def)
-        var array = [2,10,9,3,20,4,8]
+        var array = [7,10,9,3,20,4,8]
         touchesBeganBlock = { [weak self] in
             self?.quickSort(&array,low: 0,high: array.count - 1)
             logDebug(array)
@@ -36,25 +36,28 @@ class QuickSortController: BaseViewController {
         var j = high
         // 基准数字
         let midKey = array[i]
-        while i < j {
+        while i != j {
             // 从右向左遍历
             while i < j && array[j] >= midKey {
                 j -= 1
             }
-            // 只要出现一个比key小的数，将这个数放入左边i的位置
-            array[i] = array[j]
+            
             // 从左边开始比较，比key小的数位置不变
             while i < j && array[i] <= midKey{
                 i += 1
             }
-            // 只要出现一个比key大的数，将这个数放入右边j的位置
-            array[j] = array[i]
+            if i < j {
+                let temp = array[i]
+                array[i] = array[j]
+                array[j] = temp
+            }
+            
         }
-        // 将key放入i的位置，则左侧数都比key小，右侧数都比key大
+        array[low] = array[i]//此时i和j相等，处于中间位置，替换midKey值
         array[i] = midKey
         // 左递归
-        quickSort(&array, low: low, high: high - 1)
-        quickSort(&array, low: low + 1, high: high)
+        quickSort(&array, low: low, high: i - 1)
+        quickSort(&array, low: i + 1, high: high)
     }
     
 

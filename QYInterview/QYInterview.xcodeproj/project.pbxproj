@@ -16,6 +16,7 @@
 		EF08453325F76A1E003FE450 /* RuntimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08453225F76A1E003FE450 /* RuntimeTool.m */; };
 		EF08453825F76B6C003FE450 /* RuntimeStudent+QY.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08453725F76B6C003FE450 /* RuntimeStudent+QY.m */; };
 		EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E807B25F5D10C00723E4C /* CodableController.swift */; };
+		EF1A143A2631445F00489CCD /* AutoclosureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A14392631445E00489CCD /* AutoclosureController.swift */; };
 		EF3E2B2925F8C082000F5F78 /* MultithreadedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3E2B2725F8C082000F5F78 /* MultithreadedController.swift */; };
 		EF3E2B2A25F8C082000F5F78 /* MultithreadedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3E2B2825F8C082000F5F78 /* MultithreadedController.xib */; };
 		EF3E2B3025F8C0A7000F5F78 /* GCDBarrierController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E2B2E25F8C0A7000F5F78 /* GCDBarrierController.m */; };
@@ -40,6 +41,14 @@
 		EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5582DF25B02887003E1347 /* BlockChangeController.m */; };
 		EF60E06D26043FA2001D78FE /* LockController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF60E06B26043FA2001D78FE /* LockController.m */; };
 		EF60E06E26043FA2001D78FE /* LockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF60E06C26043FA2001D78FE /* LockController.xib */; };
+		EF69077E262D32780047B1D8 /* NotificationSyncController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69077D262D32780047B1D8 /* NotificationSyncController.swift */; };
+		EF690783262D584D0047B1D8 /* LoadController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF690782262D584D0047B1D8 /* LoadController.m */; };
+		EF690789262D58690047B1D8 /* LoadPersion.m in Sources */ = {isa = PBXBuildFile; fileRef = EF690788262D58690047B1D8 /* LoadPersion.m */; };
+		EF69078F262D58890047B1D8 /* LoadPersion+add.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69078E262D58890047B1D8 /* LoadPersion+add.m */; };
+		EF690796262D58AD0047B1D8 /* LoadPersion+sub.m in Sources */ = {isa = PBXBuildFile; fileRef = EF690795262D58AD0047B1D8 /* LoadPersion+sub.m */; };
+		EF69079B262D591D0047B1D8 /* LoadSon.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69079A262D591D0047B1D8 /* LoadSon.m */; };
+		EF6907AF262D59340047B1D8 /* LoadSon+add.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6907AE262D59340047B1D8 /* LoadSon+add.m */; };
+		EF6907B4262D593A0047B1D8 /* LoadSon+sub.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6907B3262D593A0047B1D8 /* LoadSon+sub.m */; };
 		EF6A5A1E25E754EA00965E1A /* RunLoopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A5A1C25E754EA00965E1A /* RunLoopController.swift */; };
 		EF6A5A1F25E754EA00965E1A /* RunLoopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6A5A1D25E754EA00965E1A /* RunLoopController.xib */; };
 		EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A5A2225E7559900965E1A /* ChildThreadLoopController.m */; };
@@ -104,6 +113,7 @@
 		EF08453625F76B6C003FE450 /* RuntimeStudent+QY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RuntimeStudent+QY.h"; sourceTree = "<group>"; };
 		EF08453725F76B6C003FE450 /* RuntimeStudent+QY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RuntimeStudent+QY.m"; sourceTree = "<group>"; };
 		EF0E807B25F5D10C00723E4C /* CodableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableController.swift; sourceTree = "<group>"; };
+		EF1A14392631445E00489CCD /* AutoclosureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoclosureController.swift; sourceTree = "<group>"; };
 		EF3E2B2725F8C082000F5F78 /* MultithreadedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultithreadedController.swift; sourceTree = "<group>"; };
 		EF3E2B2825F8C082000F5F78 /* MultithreadedController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultithreadedController.xib; sourceTree = "<group>"; };
 		EF3E2B2D25F8C0A7000F5F78 /* GCDBarrierController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDBarrierController.h; sourceTree = "<group>"; };
@@ -136,6 +146,21 @@
 		EF60E06A26043FA2001D78FE /* LockController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockController.h; sourceTree = "<group>"; };
 		EF60E06B26043FA2001D78FE /* LockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockController.m; sourceTree = "<group>"; };
 		EF60E06C26043FA2001D78FE /* LockController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockController.xib; sourceTree = "<group>"; };
+		EF69077D262D32780047B1D8 /* NotificationSyncController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSyncController.swift; sourceTree = "<group>"; };
+		EF690781262D584D0047B1D8 /* LoadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadController.h; sourceTree = "<group>"; };
+		EF690782262D584D0047B1D8 /* LoadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadController.m; sourceTree = "<group>"; };
+		EF690787262D58690047B1D8 /* LoadPersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadPersion.h; sourceTree = "<group>"; };
+		EF690788262D58690047B1D8 /* LoadPersion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadPersion.m; sourceTree = "<group>"; };
+		EF69078D262D58890047B1D8 /* LoadPersion+add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoadPersion+add.h"; sourceTree = "<group>"; };
+		EF69078E262D58890047B1D8 /* LoadPersion+add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LoadPersion+add.m"; sourceTree = "<group>"; };
+		EF690794262D58AD0047B1D8 /* LoadPersion+sub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoadPersion+sub.h"; sourceTree = "<group>"; };
+		EF690795262D58AD0047B1D8 /* LoadPersion+sub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LoadPersion+sub.m"; sourceTree = "<group>"; };
+		EF690799262D591D0047B1D8 /* LoadSon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadSon.h; sourceTree = "<group>"; };
+		EF69079A262D591D0047B1D8 /* LoadSon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadSon.m; sourceTree = "<group>"; };
+		EF6907AD262D59340047B1D8 /* LoadSon+add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoadSon+add.h"; sourceTree = "<group>"; };
+		EF6907AE262D59340047B1D8 /* LoadSon+add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LoadSon+add.m"; sourceTree = "<group>"; };
+		EF6907B2262D593A0047B1D8 /* LoadSon+sub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoadSon+sub.h"; sourceTree = "<group>"; };
+		EF6907B3262D593A0047B1D8 /* LoadSon+sub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LoadSon+sub.m"; sourceTree = "<group>"; };
 		EF6A5A1C25E754EA00965E1A /* RunLoopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopController.swift; sourceTree = "<group>"; };
 		EF6A5A1D25E754EA00965E1A /* RunLoopController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunLoopController.xib; sourceTree = "<group>"; };
 		EF6A5A2125E7559900965E1A /* ChildThreadLoopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildThreadLoopController.h; sourceTree = "<group>"; };
@@ -246,6 +271,14 @@
 			path = Obj;
 			sourceTree = "<group>";
 		};
+		EF1A14382631442500489CCD /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				EF1A14392631445E00489CCD /* AutoclosureController.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		EF3E2B2425F8C06B000F5F78 /* Multithreaded */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +315,27 @@
 				EF5582CB25B02003003E1347 /* BalancedBinaryTreeController.swift */,
 			);
 			path = BinaryTree;
+			sourceTree = "<group>";
+		};
+		EF690786262D58530047B1D8 /* Load */ = {
+			isa = PBXGroup;
+			children = (
+				EF690781262D584D0047B1D8 /* LoadController.h */,
+				EF690782262D584D0047B1D8 /* LoadController.m */,
+				EF690787262D58690047B1D8 /* LoadPersion.h */,
+				EF690788262D58690047B1D8 /* LoadPersion.m */,
+				EF69078D262D58890047B1D8 /* LoadPersion+add.h */,
+				EF69078E262D58890047B1D8 /* LoadPersion+add.m */,
+				EF690794262D58AD0047B1D8 /* LoadPersion+sub.h */,
+				EF690795262D58AD0047B1D8 /* LoadPersion+sub.m */,
+				EF690799262D591D0047B1D8 /* LoadSon.h */,
+				EF69079A262D591D0047B1D8 /* LoadSon.m */,
+				EF6907AD262D59340047B1D8 /* LoadSon+add.h */,
+				EF6907AE262D59340047B1D8 /* LoadSon+add.m */,
+				EF6907B2262D593A0047B1D8 /* LoadSon+sub.h */,
+				EF6907B3262D593A0047B1D8 /* LoadSon+sub.m */,
+			);
+			path = Load;
 			sourceTree = "<group>";
 		};
 		EF6A5A1525E7546E00965E1A /* Runloop */ = {
@@ -358,6 +412,7 @@
 				EFFC476325AE7EFB007C5AA4 /* ViewController.swift */,
 				EF6A5A2525E755DC00965E1A /* OCViewController.h */,
 				EF6A5A2625E755DC00965E1A /* OCViewController.m */,
+				EF1A14382631442500489CCD /* Swift */,
 				EFB4387225EE33520077349C /* Hook */,
 				EF96338925E52AAF0023D5C6 /* ProjectOptimize */,
 				EFEEEE0825E34E52004B3ACC /* sourceCode */,
@@ -425,6 +480,8 @@
 				EF60E06C26043FA2001D78FE /* LockController.xib */,
 				EF4B69E8261C059B00A77B47 /* TaggedPointerController.h */,
 				EF4B69E9261C059B00A77B47 /* TaggedPointerController.m */,
+				EF69077D262D32780047B1D8 /* NotificationSyncController.swift */,
+				EF690786262D58530047B1D8 /* Load */,
 			);
 			path = concept;
 			sourceTree = "<group>";
@@ -621,7 +678,9 @@
 				EF470AD525F9CB1A0053D1F6 /* AutoreleaseController.mm in Sources */,
 				EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */,
 				EF4B69EA261C059B00A77B47 /* TaggedPointerController.m in Sources */,
+				EF1A143A2631445F00489CCD /* AutoclosureController.swift in Sources */,
 				EFFC477825AE8385007C5AA4 /* NearlyFatherController.swift in Sources */,
+				EF690796262D58AD0047B1D8 /* LoadPersion+sub.m in Sources */,
 				EF3E2B3A25F8DF51000F5F78 /* KindOfController.m in Sources */,
 				EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */,
 				EF08451725F767E7003FE450 /* RuntimeController.swift in Sources */,
@@ -645,12 +704,17 @@
 				EFD27761260DC3C20083DA05 /* CopyController.m in Sources */,
 				EF6A5A1E25E754EA00965E1A /* RunLoopController.swift in Sources */,
 				EF7904F125FF72FA0055D153 /* MemoryMigrationController.m in Sources */,
+				EF69078F262D58890047B1D8 /* LoadPersion+add.m in Sources */,
 				EF3E2B2925F8C082000F5F78 /* MultithreadedController.swift in Sources */,
 				EF08453325F76A1E003FE450 /* RuntimeTool.m in Sources */,
 				EFFC476025AE7EFB007C5AA4 /* AppDelegate.swift in Sources */,
+				EF6907B4262D593A0047B1D8 /* LoadSon+sub.m in Sources */,
 				EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */,
 				EFFC478225AE879E007C5AA4 /* ClassAndStructController.swift in Sources */,
+				EF690789262D58690047B1D8 /* LoadPersion.m in Sources */,
 				EF08453825F76B6C003FE450 /* RuntimeStudent+QY.m in Sources */,
+				EF69077E262D32780047B1D8 /* NotificationSyncController.swift in Sources */,
+				EF69079B262D591D0047B1D8 /* LoadSon.m in Sources */,
 				EFEEEE5725E393CB004B3ACC /* SuperSelfController.m in Sources */,
 				EFFC479725AEC363007C5AA4 /* NumOfReverseArrayController.swift in Sources */,
 				EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */,
@@ -661,6 +725,8 @@
 				EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */,
 				EFFC478525AE888A007C5AA4 /* ReverseStringController.swift in Sources */,
 				EFFC479C25AECC4A007C5AA4 /* TCPUDPController.swift in Sources */,
+				EF6907AF262D59340047B1D8 /* LoadSon+add.m in Sources */,
+				EF690783262D584D0047B1D8 /* LoadController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,13 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+@protocol HHHH <NSObject>
+
+@property (nonatomic, copy) NSString *HHHHName;
+
+@end
+
 @interface HookBase : NSObject 
 @property (nonatomic, copy) NSString *name;
 - (void)log;
@@ -18,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface HookController : UIViewController
+@interface HookController : UIViewController<HHHH>
 
 @end
 
