@@ -82,6 +82,11 @@ cd 到当前安装flutter的安装目录eg: 我的安装到了 FlutterSDK目录�
 	flutter run
 
 
+## 创建自己的包xxx_xxx
+打开对应的目录执行
+
+> flutter create --template=package xxx_xxx
+
 ## swift与Flutter混编
 > MixedTest 文件夹下分别创建原生和flutter程序
 

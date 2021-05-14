@@ -6,6 +6,25 @@
 
 block匿名函数,也是一个OC对象，因为有isa指针
 
+## 例子
+```
+    NSMutableArray *a = [NSMutableArray array];
+    void(^blk)(void) = ^{
+        [a addObject:@1];
+    };
+    blk();
+```
+
+```
+    NSMutableArray *a = [NSMutableArray array];
+    void(^blk)(void) = ^{
+        /// 编译器报错
+        a = [NSMutableArray array];
+    };
+    blk();
+```
+ 虽然 `NSMutableArray *a` 被截获了，但是依然能对 a 数组进行添加数据操作，这是因为 Block 截获的只是 a 对象本身，不对可操作数据内部进行截获，也就是说：**对于自动变量对象只要对象指针地址不发生改变，便能正常使用；对于自动变量为值类型的只要值不发生改变，便能正常使用。**
+
 ### Block的类型
 * _NSConcreteGlobalBlock: 
 	

@@ -40,7 +40,8 @@ class ViewController: UIViewController {
                 .init(with: "选择排序", subTitle: "选择排序", controllerName: "SelectSortController"),
                 .init(with: "快速排序", subTitle: "快速排序", controllerName: "QuickSortController"),
                 .init(with: "希尔排序", subTitle: "希尔排序", controllerName: "ShellSortController"),
-                .init(with: "插入排序", subTitle: "插入排序", controllerName: "InsertSortController")]),
+                .init(with: "插入排序", subTitle: "插入排序", controllerName: "InsertSortController"),
+                .init(with: "归并排序", subTitle: "归并排序", controllerName: "MergeSortController")]),
         .init(with: "查找算法", items: [
                 .init(with: "二分查找法", subTitle: "二分查找法", controllerName: "BinarySearchController")]),
         .init(with: "找规律动态规划", items: [
