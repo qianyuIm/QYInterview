@@ -14,9 +14,9 @@ class BinarySearchController: BaseViewController {
     let undefinedIndex: Int = -1
     override func viewDidLoad() {
         super.viewDidLoad()
-
+Array
         // Do any additional setup after loading the view.
-        let target: Int = 11
+        let target: Int = 17
         let index = binarySearch(item, target: target)
         logDebug("\(target) 在数组中的下标为\(index)")
     }

@@ -68,6 +68,7 @@
 		EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */; };
 		EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE1125E36283004B3ACC /* TouchController.swift */; };
 		EFEEEE5725E393CB004B3ACC /* SuperSelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */; };
+		EFF19BC7271127AB0072A899 /* ClimbStairsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF19BC6271127AB0072A899 /* ClimbStairsController.swift */; };
 		EFFC476025AE7EFB007C5AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC475F25AE7EFB007C5AA4 /* AppDelegate.swift */; };
 		EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC476325AE7EFB007C5AA4 /* ViewController.swift */; };
 		EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFC476525AE7EFB007C5AA4 /* Main.storyboard */; };
@@ -193,6 +194,7 @@
 		EFEEEE1125E36283004B3ACC /* TouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchController.swift; sourceTree = "<group>"; };
 		EFEEEE5525E393CB004B3ACC /* SuperSelfController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperSelfController.h; sourceTree = "<group>"; };
 		EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperSelfController.m; sourceTree = "<group>"; };
+		EFF19BC6271127AB0072A899 /* ClimbStairsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbStairsController.swift; sourceTree = "<group>"; };
 		EFFC475C25AE7EFB007C5AA4 /* QYInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFC475F25AE7EFB007C5AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFFC476325AE7EFB007C5AA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				EFFC477725AE8385007C5AA4 /* NearlyFatherController.swift */,
+				EFF19BC6271127AB0072A899 /* ClimbStairsController.swift */,
 				EFFC478425AE888A007C5AA4 /* ReverseStringController.swift */,
 				EFFC478D25AE9352007C5AA4 /* ReverseSingListController.swift */,
 				EFFC479025AEBF28007C5AA4 /* OrderedArrayMergeController.swift */,
@@ -707,6 +710,7 @@
 				EF69078F262D58890047B1D8 /* LoadPersion+add.m in Sources */,
 				EF3E2B2925F8C082000F5F78 /* MultithreadedController.swift in Sources */,
 				EF08453325F76A1E003FE450 /* RuntimeTool.m in Sources */,
+				EFF19BC7271127AB0072A899 /* ClimbStairsController.swift in Sources */,
 				EFFC476025AE7EFB007C5AA4 /* AppDelegate.swift in Sources */,
 				EF6907B4262D593A0047B1D8 /* LoadSon+sub.m in Sources */,
 				EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */,

@@ -16,12 +16,17 @@ class NearlyFatherController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        logDebug("继承关系 A -> B -> D")
-        logDebug("继承关系 C -> D")
-        let aClass: AnyClass = AView.classForCoder()
-        let bClass: AnyClass = NSObject.classForCoder()
-        let result: AnyClass? = comparison(aClass, bClass: bClass)
-        logDebug("\(aClass) 与 \(bClass) 的最近公共父类为 \(String(describing: result))")
+        
+        self.touchesBeganBlock = { [weak self] in
+            guard let self = self else { return  }
+            logDebug("继承关系 A -> B -> D")
+            logDebug("继承关系 C -> D")
+            let aClass: AnyClass = AView.classForCoder()
+            let bClass: AnyClass = NSObject.classForCoder()
+            let result: AnyClass? = self.comparison(aClass, bClass: bClass)
+            logDebug("\(aClass) 与 \(bClass) 的最近公共父类为 \(String(describing: result))")
+            
+        }
         
     }
     /// 获取 aClass 的父类

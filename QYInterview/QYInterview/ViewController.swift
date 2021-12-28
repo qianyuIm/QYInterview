@@ -57,6 +57,7 @@ class ViewController: UIViewController {
 
     var dataSource: [QTTableSectionItem] = [
         .init(with: "算法", items: [
+                .init(with: "爬楼梯", subTitle: "爬楼梯", controllerName: "ClimbStairsController"),
                 .init(with: "寻找最近公共父类", subTitle: "寻找最近公共父类", controllerName: "NearlyFatherController"),
                 .init(with: "反转字符串", subTitle: "反转字符串", controllerName: "ReverseStringController"),
                 .init(with: "反转单链表", subTitle: "反转单链表", controllerName: "ReverseSingListController"),
