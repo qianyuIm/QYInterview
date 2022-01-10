@@ -65,6 +65,10 @@
 		EFD27749260D82860083DA05 /* KVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD27748260D82860083DA05 /* KVCController.m */; };
 		EFD27761260DC3C20083DA05 /* CopyController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD27760260DC3C20083DA05 /* CopyController.m */; };
 		EFDC5B3225E8A58A0073F62F /* NSOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDC5B3125E8A58A0073F62F /* NSOperationController.m */; };
+		EFE40A17278C29C600496921 /* RemoveElementsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE40A16278C29C600496921 /* RemoveElementsController.swift */; };
+		EFE40A19278C2BA100496921 /* ListNodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE40A18278C2BA100496921 /* ListNodeHelper.swift */; };
+		EFE40A1B278C322100496921 /* ReverseStringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE40A1A278C322100496921 /* ReverseStringController.swift */; };
+		EFE40A1D278C354F00496921 /* ReplaceSpaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE40A1C278C354F00496921 /* ReplaceSpaceController.swift */; };
 		EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */; };
 		EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE1125E36283004B3ACC /* TouchController.swift */; };
 		EFEEEE5725E393CB004B3ACC /* SuperSelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */; };
@@ -76,7 +80,6 @@
 		EFFC476C25AE7EFC007C5AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFC476A25AE7EFC007C5AA4 /* LaunchScreen.storyboard */; };
 		EFFC477825AE8385007C5AA4 /* NearlyFatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC477725AE8385007C5AA4 /* NearlyFatherController.swift */; };
 		EFFC478225AE879E007C5AA4 /* ClassAndStructController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC478125AE879E007C5AA4 /* ClassAndStructController.swift */; };
-		EFFC478525AE888A007C5AA4 /* ReverseStringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC478425AE888A007C5AA4 /* ReverseStringController.swift */; };
 		EFFC478E25AE9352007C5AA4 /* ReverseSingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC478D25AE9352007C5AA4 /* ReverseSingListController.swift */; };
 		EFFC479125AEBF28007C5AA4 /* OrderedArrayMergeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC479025AEBF28007C5AA4 /* OrderedArrayMergeController.swift */; };
 		EFFC479425AEC123007C5AA4 /* MedianUnorderedArrayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC479325AEC123007C5AA4 /* MedianUnorderedArrayController.swift */; };
@@ -190,6 +193,10 @@
 		EFD27760260DC3C20083DA05 /* CopyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyController.m; sourceTree = "<group>"; };
 		EFDC5B3025E8A58A0073F62F /* NSOperationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationController.h; sourceTree = "<group>"; };
 		EFDC5B3125E8A58A0073F62F /* NSOperationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationController.m; sourceTree = "<group>"; };
+		EFE40A16278C29C600496921 /* RemoveElementsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveElementsController.swift; sourceTree = "<group>"; };
+		EFE40A18278C2BA100496921 /* ListNodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNodeHelper.swift; sourceTree = "<group>"; };
+		EFE40A1A278C322100496921 /* ReverseStringController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseStringController.swift; sourceTree = "<group>"; };
+		EFE40A1C278C354F00496921 /* ReplaceSpaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceSpaceController.swift; sourceTree = "<group>"; };
 		EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDLargerImageController.swift; sourceTree = "<group>"; };
 		EFEEEE1125E36283004B3ACC /* TouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchController.swift; sourceTree = "<group>"; };
 		EFEEEE5525E393CB004B3ACC /* SuperSelfController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperSelfController.h; sourceTree = "<group>"; };
@@ -204,7 +211,6 @@
 		EFFC476D25AE7EFC007C5AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFFC477725AE8385007C5AA4 /* NearlyFatherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearlyFatherController.swift; sourceTree = "<group>"; };
 		EFFC478125AE879E007C5AA4 /* ClassAndStructController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAndStructController.swift; sourceTree = "<group>"; };
-		EFFC478425AE888A007C5AA4 /* ReverseStringController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseStringController.swift; sourceTree = "<group>"; };
 		EFFC478725AE8E38007C5AA4 /* QYInterview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QYInterview-Bridging-Header.h"; sourceTree = "<group>"; };
 		EFFC478D25AE9352007C5AA4 /* ReverseSingListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseSingListController.swift; sourceTree = "<group>"; };
 		EFFC479025AEBF28007C5AA4 /* OrderedArrayMergeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedArrayMergeController.swift; sourceTree = "<group>"; };
@@ -379,6 +385,17 @@
 			path = QYInterviewTests;
 			sourceTree = "<group>";
 		};
+		EFE40A15278C29A100496921 /* 双指针 */ = {
+			isa = PBXGroup;
+			children = (
+				EFE40A16278C29C600496921 /* RemoveElementsController.swift */,
+				EFE40A1C278C354F00496921 /* ReplaceSpaceController.swift */,
+				EFE40A1A278C322100496921 /* ReverseStringController.swift */,
+				EFE40A18278C2BA100496921 /* ListNodeHelper.swift */,
+			);
+			path = "双指针";
+			sourceTree = "<group>";
+		};
 		EFEEEE0825E34E52004B3ACC /* sourceCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,9 +450,9 @@
 		EFFC477625AE829D007C5AA4 /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				EFE40A15278C29A100496921 /* 双指针 */,
 				EFFC477725AE8385007C5AA4 /* NearlyFatherController.swift */,
 				EFF19BC6271127AB0072A899 /* ClimbStairsController.swift */,
-				EFFC478425AE888A007C5AA4 /* ReverseStringController.swift */,
 				EFFC478D25AE9352007C5AA4 /* ReverseSingListController.swift */,
 				EFFC479025AEBF28007C5AA4 /* OrderedArrayMergeController.swift */,
 				EFFC479325AEC123007C5AA4 /* MedianUnorderedArrayController.swift */,
@@ -700,11 +717,14 @@
 				EF456DAF25B5657400566946 /* MapController.swift in Sources */,
 				EF456DAC25B5345A00566946 /* AttributeController.swift in Sources */,
 				EF08452725F76956003FE450 /* RuntimePersion.m in Sources */,
+				EFE40A1B278C322100496921 /* ReverseStringController.swift in Sources */,
 				EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */,
+				EFE40A17278C29C600496921 /* RemoveElementsController.swift in Sources */,
 				EF08452E25F7696A003FE450 /* RuntimeStudent.m in Sources */,
 				EF3E2B3025F8C0A7000F5F78 /* GCDBarrierController.m in Sources */,
 				EFFC479125AEBF28007C5AA4 /* OrderedArrayMergeController.swift in Sources */,
 				EFD27761260DC3C20083DA05 /* CopyController.m in Sources */,
+				EFE40A19278C2BA100496921 /* ListNodeHelper.swift in Sources */,
 				EF6A5A1E25E754EA00965E1A /* RunLoopController.swift in Sources */,
 				EF7904F125FF72FA0055D153 /* MemoryMigrationController.m in Sources */,
 				EF69078F262D58890047B1D8 /* LoadPersion+add.m in Sources */,
@@ -726,8 +746,8 @@
 				EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */,
 				EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */,
 				EF6A5A2725E755DC00965E1A /* OCViewController.m in Sources */,
+				EFE40A1D278C354F00496921 /* ReplaceSpaceController.swift in Sources */,
 				EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */,
-				EFFC478525AE888A007C5AA4 /* ReverseStringController.swift in Sources */,
 				EFFC479C25AECC4A007C5AA4 /* TCPUDPController.swift in Sources */,
 				EF6907AF262D59340047B1D8 /* LoadSon+add.m in Sources */,
 				EF690783262D584D0047B1D8 /* LoadController.m in Sources */,

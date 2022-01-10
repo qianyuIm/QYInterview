@@ -56,10 +56,15 @@ class QTTableSectionItem {
 class ViewController: UIViewController {
 
     var dataSource: [QTTableSectionItem] = [
+        .init(with: "双指针", items: [
+            .init(with: "移除元素", subTitle: "移除元素", controllerName: "RemoveElementsController"),
+            .init(with: "反转字符串", subTitle: "反转字符串", controllerName: "ReverseStringController"),
+            .init(with: "替换空格", subTitle: "替换空格", controllerName: "ReplaceSpaceController")
+        ]),
         .init(with: "算法", items: [
                 .init(with: "爬楼梯", subTitle: "爬楼梯", controllerName: "ClimbStairsController"),
                 .init(with: "寻找最近公共父类", subTitle: "寻找最近公共父类", controllerName: "NearlyFatherController"),
-                .init(with: "反转字符串", subTitle: "反转字符串", controllerName: "ReverseStringController"),
+                
                 .init(with: "反转单链表", subTitle: "反转单链表", controllerName: "ReverseSingListController"),
                 .init(with: "有序数组合并", subTitle: "有序数组合并", controllerName: "OrderedArrayMergeController"),
                 .init(with: "求无序数组中的中位数", subTitle: "求无序数组中的中位数", controllerName: "MedianUnorderedArrayController"),

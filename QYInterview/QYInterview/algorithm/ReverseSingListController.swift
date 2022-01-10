@@ -4,7 +4,7 @@
 //
 //  Created by cyd on 2021/1/13.
 // - 反转单链表
-
+// 
 import UIKit
 
 fileprivate class SingListNode {
@@ -22,10 +22,10 @@ class ReverseSingListController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let head = creatList()
-        printList(head)
-        let reverse = recursiveReverseList(head)
-        printList(reverse)
+        let head = ListNodeHelper.creatList(6)
+        ListNodeHelper.printList(head)
+//        let reverse = recursiveReverseList(head)
+//        printList(reverse)
 
     }
     // 反转单链表

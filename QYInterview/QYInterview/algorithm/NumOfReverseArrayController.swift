@@ -15,7 +15,7 @@ class NumOfReverseArrayController: BaseViewController {
     let array = [2,6,5,9]
     override func viewDidLoad() {
         super.viewDidLoad()
-        Collection
+        
         // Do any additional setup after loading the view.
     }
 
