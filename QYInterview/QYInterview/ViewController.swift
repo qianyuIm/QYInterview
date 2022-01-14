@@ -56,10 +56,23 @@ class QTTableSectionItem {
 class ViewController: UIViewController {
 
     var dataSource: [QTTableSectionItem] = [
+        .init(with: "数组", items: [
+            .init(with: "二分查找", subTitle: "二分查找", controllerName: "BinarySearchController"),
+            .init(with: "27.移除元素", subTitle: "27.移除元素", controllerName: "RemoveElementArrayController"),
+            .init(with: "977.有序数组的平方", subTitle: "977.有序数组的平方", controllerName: "SortedSquaresArrayController")
+            
+        ]),
         .init(with: "双指针", items: [
             .init(with: "移除元素", subTitle: "移除元素", controllerName: "RemoveElementsController"),
             .init(with: "反转字符串", subTitle: "反转字符串", controllerName: "ReverseStringController"),
-            .init(with: "替换空格", subTitle: "替换空格", controllerName: "ReplaceSpaceController")
+            .init(with: "替换空格", subTitle: "替换空格", controllerName: "ReplaceSpaceController"),
+            .init(with: "翻转字符串里的单词", subTitle: "翻转字符串里的单词", controllerName: "ReverseWordsController"),
+            .init(with: "反转一个单链表", subTitle: "反转一个单链表", controllerName: "ReverseListController"),
+            .init(with: "19. 删除链表的倒数第 N 个结点", subTitle: "19. 删除链表的倒数第 N 个结点", controllerName: "RemoveNthFromEndController"),
+            .init(with: "链表相交", subTitle: "链表相交", controllerName: "IntersectionNodeController"),
+            .init(with: "142.环形链表II", subTitle: "142.环形链表II", controllerName: "DetectCycleController"),
+            .init(with: "15.三数之和", subTitle: "15.三数之和", controllerName: "ThreeSumController")
+                        
         ]),
         .init(with: "算法", items: [
                 .init(with: "爬楼梯", subTitle: "爬楼梯", controllerName: "ClimbStairsController"),
@@ -70,7 +83,7 @@ class ViewController: UIViewController {
                 .init(with: "求无序数组中的中位数", subTitle: "求无序数组中的中位数", controllerName: "MedianUnorderedArrayController"),
                 .init(with: "求数组逆序数", subTitle: "求数组逆序数", controllerName: "NumOfReverseArrayController"),
                 .init(with: "二叉树相关", subTitle: "二叉树相关", controllerName: "BinaryTreeController"),
-                .init(with: "二分查找", subTitle: "二分查找", controllerName: "BinarySearchController")]),
+                ]),
         .init(with: "Swift", items: [
                 .init(with: "自动闭包@autoclosure", subTitle: "自动闭包@autoclosure", controllerName: "AutoclosureController")]),
         .init(with: "源码相关", items: [.init(with: "SDWebImage下载大图", subTitle: "SDWebImage下载大图", controllerName: "SDLargerImageController")]),

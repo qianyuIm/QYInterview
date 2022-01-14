@@ -15,6 +15,15 @@ class ListNode {
     init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
 }
 
+extension ListNode: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(val)
+        hasher.combine(ObjectIdentifier(self))
+    }
+    static func == (lhs: ListNode, rhs: ListNode) -> Bool {
+        return lhs === rhs
+    }
+}
 
 class ListNodeHelper {
     class func printList(_ head: ListNode?) {

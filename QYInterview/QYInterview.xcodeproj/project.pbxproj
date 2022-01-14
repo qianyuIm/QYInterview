@@ -17,6 +17,8 @@
 		EF08453825F76B6C003FE450 /* RuntimeStudent+QY.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08453725F76B6C003FE450 /* RuntimeStudent+QY.m */; };
 		EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E807B25F5D10C00723E4C /* CodableController.swift */; };
 		EF1A143A2631445F00489CCD /* AutoclosureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A14392631445E00489CCD /* AutoclosureController.swift */; };
+		EF31AAB2278E67AE00EA328C /* RemoveNthFromEndController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31AAB1278E67AE00EA328C /* RemoveNthFromEndController.swift */; };
+		EF31AAB4278E7AF300EA328C /* IntersectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31AAB3278E7AF300EA328C /* IntersectionNodeController.swift */; };
 		EF3E2B2925F8C082000F5F78 /* MultithreadedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3E2B2725F8C082000F5F78 /* MultithreadedController.swift */; };
 		EF3E2B2A25F8C082000F5F78 /* MultithreadedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3E2B2825F8C082000F5F78 /* MultithreadedController.xib */; };
 		EF3E2B3025F8C0A7000F5F78 /* GCDBarrierController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E2B2E25F8C0A7000F5F78 /* GCDBarrierController.m */; };
@@ -53,11 +55,18 @@
 		EF6A5A1F25E754EA00965E1A /* RunLoopController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6A5A1D25E754EA00965E1A /* RunLoopController.xib */; };
 		EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A5A2225E7559900965E1A /* ChildThreadLoopController.m */; };
 		EF6A5A2725E755DC00965E1A /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A5A2625E755DC00965E1A /* OCViewController.m */; };
+		EF6C94B2279129FB00DCF04D /* RemoveElementArrayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C94B1279129FB00DCF04D /* RemoveElementArrayController.swift */; };
+		EF6C94B4279152A300DCF04D /* SortedSquaresArrayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C94B3279152A300DCF04D /* SortedSquaresArrayController.swift */; };
+		EF6C94B627916D9700DCF04D /* MinSubArrayLenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C94B527916D9700DCF04D /* MinSubArrayLenController.swift */; };
 		EF7904F125FF72FA0055D153 /* MemoryMigrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7904F025FF72FA0055D153 /* MemoryMigrationController.m */; };
 		EF96338125E48E200023D5C6 /* AllocInitController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338025E48E200023D5C6 /* AllocInitController.m */; };
 		EF96338725E4A4800023D5C6 /* GCDController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338625E4A4800023D5C6 /* GCDController.m */; };
 		EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338B25E52AD20023D5C6 /* IfElseController.m */; };
 		EF96338F25E532910023D5C6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF96338E25E532910023D5C6 /* JavaScriptCore.framework */; };
+		EFA1E181278D511F0051D494 /* ReverseWordsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1E180278D511F0051D494 /* ReverseWordsController.swift */; };
+		EFA1E183278D60990051D494 /* ReverseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1E182278D60990051D494 /* ReverseListController.swift */; };
+		EFAFB42C278FC36300572BAB /* DetectCycleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFB42B278FC36300572BAB /* DetectCycleController.swift */; };
+		EFAFB42E278FF75B00572BAB /* ThreeSumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFB42D278FF75B00572BAB /* ThreeSumController.swift */; };
 		EFB4387625EE336B0077349C /* HookController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB4387425EE336B0077349C /* HookController.m */; };
 		EFB4387725EE336B0077349C /* HookController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB4387525EE336B0077349C /* HookController.xib */; };
 		EFD019F825F0A8E700AC94F1 /* QYInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD019F725F0A8E700AC94F1 /* QYInterviewTests.swift */; };
@@ -118,6 +127,8 @@
 		EF08453725F76B6C003FE450 /* RuntimeStudent+QY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RuntimeStudent+QY.m"; sourceTree = "<group>"; };
 		EF0E807B25F5D10C00723E4C /* CodableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableController.swift; sourceTree = "<group>"; };
 		EF1A14392631445E00489CCD /* AutoclosureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoclosureController.swift; sourceTree = "<group>"; };
+		EF31AAB1278E67AE00EA328C /* RemoveNthFromEndController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNthFromEndController.swift; sourceTree = "<group>"; };
+		EF31AAB3278E7AF300EA328C /* IntersectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionNodeController.swift; sourceTree = "<group>"; };
 		EF3E2B2725F8C082000F5F78 /* MultithreadedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultithreadedController.swift; sourceTree = "<group>"; };
 		EF3E2B2825F8C082000F5F78 /* MultithreadedController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultithreadedController.xib; sourceTree = "<group>"; };
 		EF3E2B2D25F8C0A7000F5F78 /* GCDBarrierController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDBarrierController.h; sourceTree = "<group>"; };
@@ -171,6 +182,9 @@
 		EF6A5A2225E7559900965E1A /* ChildThreadLoopController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildThreadLoopController.m; sourceTree = "<group>"; };
 		EF6A5A2525E755DC00965E1A /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
 		EF6A5A2625E755DC00965E1A /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		EF6C94B1279129FB00DCF04D /* RemoveElementArrayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveElementArrayController.swift; sourceTree = "<group>"; };
+		EF6C94B3279152A300DCF04D /* SortedSquaresArrayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedSquaresArrayController.swift; sourceTree = "<group>"; };
+		EF6C94B527916D9700DCF04D /* MinSubArrayLenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSubArrayLenController.swift; sourceTree = "<group>"; };
 		EF7904EF25FF72FA0055D153 /* MemoryMigrationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryMigrationController.h; sourceTree = "<group>"; };
 		EF7904F025FF72FA0055D153 /* MemoryMigrationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryMigrationController.m; sourceTree = "<group>"; };
 		EF96337F25E48E200023D5C6 /* AllocInitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllocInitController.h; sourceTree = "<group>"; };
@@ -180,6 +194,10 @@
 		EF96338A25E52AD20023D5C6 /* IfElseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IfElseController.h; sourceTree = "<group>"; };
 		EF96338B25E52AD20023D5C6 /* IfElseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IfElseController.m; sourceTree = "<group>"; };
 		EF96338E25E532910023D5C6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EFA1E180278D511F0051D494 /* ReverseWordsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordsController.swift; sourceTree = "<group>"; };
+		EFA1E182278D60990051D494 /* ReverseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseListController.swift; sourceTree = "<group>"; };
+		EFAFB42B278FC36300572BAB /* DetectCycleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectCycleController.swift; sourceTree = "<group>"; };
+		EFAFB42D278FF75B00572BAB /* ThreeSumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSumController.swift; sourceTree = "<group>"; };
 		EFB4387325EE336B0077349C /* HookController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookController.h; sourceTree = "<group>"; };
 		EFB4387425EE336B0077349C /* HookController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookController.m; sourceTree = "<group>"; };
 		EFB4387525EE336B0077349C /* HookController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HookController.xib; sourceTree = "<group>"; };
@@ -357,6 +375,17 @@
 			path = Runloop;
 			sourceTree = "<group>";
 		};
+		EF6C94B0279108BA00DCF04D /* 数组 */ = {
+			isa = PBXGroup;
+			children = (
+				EF5582CE25B023B7003E1347 /* BinarySearchController.swift */,
+				EF6C94B1279129FB00DCF04D /* RemoveElementArrayController.swift */,
+				EF6C94B3279152A300DCF04D /* SortedSquaresArrayController.swift */,
+				EF6C94B527916D9700DCF04D /* MinSubArrayLenController.swift */,
+			);
+			path = "数组";
+			sourceTree = "<group>";
+		};
 		EF96338925E52AAF0023D5C6 /* ProjectOptimize */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +420,12 @@
 				EFE40A16278C29C600496921 /* RemoveElementsController.swift */,
 				EFE40A1C278C354F00496921 /* ReplaceSpaceController.swift */,
 				EFE40A1A278C322100496921 /* ReverseStringController.swift */,
+				EFA1E180278D511F0051D494 /* ReverseWordsController.swift */,
+				EFA1E182278D60990051D494 /* ReverseListController.swift */,
+				EF31AAB1278E67AE00EA328C /* RemoveNthFromEndController.swift */,
+				EF31AAB3278E7AF300EA328C /* IntersectionNodeController.swift */,
+				EFAFB42B278FC36300572BAB /* DetectCycleController.swift */,
+				EFAFB42D278FF75B00572BAB /* ThreeSumController.swift */,
 				EFE40A18278C2BA100496921 /* ListNodeHelper.swift */,
 			);
 			path = "双指针";
@@ -450,6 +485,7 @@
 		EFFC477625AE829D007C5AA4 /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				EF6C94B0279108BA00DCF04D /* 数组 */,
 				EFE40A15278C29A100496921 /* 双指针 */,
 				EFFC477725AE8385007C5AA4 /* NearlyFatherController.swift */,
 				EFF19BC6271127AB0072A899 /* ClimbStairsController.swift */,
@@ -457,7 +493,6 @@
 				EFFC479025AEBF28007C5AA4 /* OrderedArrayMergeController.swift */,
 				EFFC479325AEC123007C5AA4 /* MedianUnorderedArrayController.swift */,
 				EFFC479625AEC363007C5AA4 /* NumOfReverseArrayController.swift */,
-				EF5582CE25B023B7003E1347 /* BinarySearchController.swift */,
 				EF5582BD25AFD6C3003E1347 /* BinaryTree */,
 			);
 			path = algorithm;
@@ -694,13 +729,18 @@
 				EF08452025F76800003FE450 /* SwizzlingController.m in Sources */,
 				EF5582C625AFD9F3003E1347 /* CreatBinaryTreeController.swift in Sources */,
 				EFFC479425AEC123007C5AA4 /* MedianUnorderedArrayController.swift in Sources */,
+				EFA1E181278D511F0051D494 /* ReverseWordsController.swift in Sources */,
+				EFAFB42C278FC36300572BAB /* DetectCycleController.swift in Sources */,
 				EF5582CC25B02003003E1347 /* BalancedBinaryTreeController.swift in Sources */,
 				EF470AD525F9CB1A0053D1F6 /* AutoreleaseController.mm in Sources */,
 				EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */,
 				EF4B69EA261C059B00A77B47 /* TaggedPointerController.m in Sources */,
+				EF31AAB4278E7AF300EA328C /* IntersectionNodeController.swift in Sources */,
 				EF1A143A2631445F00489CCD /* AutoclosureController.swift in Sources */,
 				EFFC477825AE8385007C5AA4 /* NearlyFatherController.swift in Sources */,
 				EF690796262D58AD0047B1D8 /* LoadPersion+sub.m in Sources */,
+				EFAFB42E278FF75B00572BAB /* ThreeSumController.swift in Sources */,
+				EF6C94B627916D9700DCF04D /* MinSubArrayLenController.swift in Sources */,
 				EF3E2B3A25F8DF51000F5F78 /* KindOfController.m in Sources */,
 				EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */,
 				EF08451725F767E7003FE450 /* RuntimeController.swift in Sources */,
@@ -717,6 +757,7 @@
 				EF456DAF25B5657400566946 /* MapController.swift in Sources */,
 				EF456DAC25B5345A00566946 /* AttributeController.swift in Sources */,
 				EF08452725F76956003FE450 /* RuntimePersion.m in Sources */,
+				EF31AAB2278E67AE00EA328C /* RemoveNthFromEndController.swift in Sources */,
 				EFE40A1B278C322100496921 /* ReverseStringController.swift in Sources */,
 				EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */,
 				EFE40A17278C29C600496921 /* RemoveElementsController.swift in Sources */,
@@ -737,14 +778,17 @@
 				EFFC478225AE879E007C5AA4 /* ClassAndStructController.swift in Sources */,
 				EF690789262D58690047B1D8 /* LoadPersion.m in Sources */,
 				EF08453825F76B6C003FE450 /* RuntimeStudent+QY.m in Sources */,
+				EF6C94B2279129FB00DCF04D /* RemoveElementArrayController.swift in Sources */,
 				EF69077E262D32780047B1D8 /* NotificationSyncController.swift in Sources */,
 				EF69079B262D591D0047B1D8 /* LoadSon.m in Sources */,
 				EFEEEE5725E393CB004B3ACC /* SuperSelfController.m in Sources */,
 				EFFC479725AEC363007C5AA4 /* NumOfReverseArrayController.swift in Sources */,
 				EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */,
+				EF6C94B4279152A300DCF04D /* SortedSquaresArrayController.swift in Sources */,
 				EF96338725E4A4800023D5C6 /* GCDController.m in Sources */,
 				EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */,
 				EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */,
+				EFA1E183278D60990051D494 /* ReverseListController.swift in Sources */,
 				EF6A5A2725E755DC00965E1A /* OCViewController.m in Sources */,
 				EFE40A1D278C354F00496921 /* ReplaceSpaceController.swift in Sources */,
 				EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */,

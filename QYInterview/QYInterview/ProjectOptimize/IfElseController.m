@@ -8,6 +8,9 @@
 #import "IfElseController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 @interface IfElseController ()
+@property (nonatomic, strong) NSString *string1;
+@property (nonatomic, weak) NSString *string2;
+@property (nonatomic, strong) NSString *name;
 
 @end
 
@@ -19,6 +22,18 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self example1];
     [self example1Optimize];
+    self.string1 = [[NSString alloc] initWithUTF8String:"aaaaaaaaaaaa"];
+    self.string2 = self.string1;
+    self.string1 = nil;
+    NSLog(@"%@",self.string2);
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    for (int i = 0; i < 1000; i++) {
+        dispatch_async(queue, ^{
+            self.name = [NSString stringWithFormat:@"abcdefghijf"];
+        });
+    }
+    
 }
 // 例子1： 根据status的值判断对应的result的值
 - (void)example1 {
