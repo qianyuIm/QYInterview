@@ -56,10 +56,18 @@ class QTTableSectionItem {
 class ViewController: UIViewController {
 
     var dataSource: [QTTableSectionItem] = [
+        .init(with: "链表", items: [
+            .init(with: "24. 两两交换链表中的节点", subTitle: "24. 两两交换链表中的节点", controllerName: "SwapPairsController"),
+        ]),
+        .init(with: "哈希", items: [
+            .init(with: "242. 有效的字母异位词", subTitle: "242. 有效的字母异位词", controllerName: "AnagramController")
+        ]),
         .init(with: "数组", items: [
             .init(with: "二分查找", subTitle: "二分查找", controllerName: "BinarySearchController"),
             .init(with: "27.移除元素", subTitle: "27.移除元素", controllerName: "RemoveElementArrayController"),
-            .init(with: "977.有序数组的平方", subTitle: "977.有序数组的平方", controllerName: "SortedSquaresArrayController")
+            .init(with: "977.有序数组的平方", subTitle: "977.有序数组的平方", controllerName: "SortedSquaresArrayController"),
+            .init(with: "209.长度最小的子数组", subTitle: "209.长度最小的子数组", controllerName: "MinSubArrayLenController"),
+            .init(with: "59. 螺旋矩阵 II", subTitle: "59. 螺旋矩阵 II", controllerName: "GenerateMatrixController")
             
         ]),
         .init(with: "双指针", items: [

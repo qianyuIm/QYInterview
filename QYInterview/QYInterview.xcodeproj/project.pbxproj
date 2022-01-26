@@ -63,6 +63,7 @@
 		EF96338725E4A4800023D5C6 /* GCDController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338625E4A4800023D5C6 /* GCDController.m */; };
 		EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338B25E52AD20023D5C6 /* IfElseController.m */; };
 		EF96338F25E532910023D5C6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF96338E25E532910023D5C6 /* JavaScriptCore.framework */; };
+		EF9FA8722796A04B0087F5DC /* GenerateMatrixController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9FA8712796A04B0087F5DC /* GenerateMatrixController.swift */; };
 		EFA1E181278D511F0051D494 /* ReverseWordsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1E180278D511F0051D494 /* ReverseWordsController.swift */; };
 		EFA1E183278D60990051D494 /* ReverseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1E182278D60990051D494 /* ReverseListController.swift */; };
 		EFAFB42C278FC36300572BAB /* DetectCycleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFB42B278FC36300572BAB /* DetectCycleController.swift */; };
@@ -78,6 +79,9 @@
 		EFE40A19278C2BA100496921 /* ListNodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE40A18278C2BA100496921 /* ListNodeHelper.swift */; };
 		EFE40A1B278C322100496921 /* ReverseStringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE40A1A278C322100496921 /* ReverseStringController.swift */; };
 		EFE40A1D278C354F00496921 /* ReplaceSpaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE40A1C278C354F00496921 /* ReplaceSpaceController.swift */; };
+		EFE4DB26279E36DC003188D8 /* SwapPairsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4DB25279E36DC003188D8 /* SwapPairsController.swift */; };
+		EFE4DB29279E5055003188D8 /* AnagramController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4DB28279E5055003188D8 /* AnagramController.swift */; };
+		EFE4DB2B279E7D4A003188D8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4DB2A279E7D4A003188D8 /* Helper.swift */; };
 		EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */; };
 		EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE1125E36283004B3ACC /* TouchController.swift */; };
 		EFEEEE5725E393CB004B3ACC /* SuperSelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */; };
@@ -194,6 +198,7 @@
 		EF96338A25E52AD20023D5C6 /* IfElseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IfElseController.h; sourceTree = "<group>"; };
 		EF96338B25E52AD20023D5C6 /* IfElseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IfElseController.m; sourceTree = "<group>"; };
 		EF96338E25E532910023D5C6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EF9FA8712796A04B0087F5DC /* GenerateMatrixController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateMatrixController.swift; sourceTree = "<group>"; };
 		EFA1E180278D511F0051D494 /* ReverseWordsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordsController.swift; sourceTree = "<group>"; };
 		EFA1E182278D60990051D494 /* ReverseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseListController.swift; sourceTree = "<group>"; };
 		EFAFB42B278FC36300572BAB /* DetectCycleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectCycleController.swift; sourceTree = "<group>"; };
@@ -215,6 +220,9 @@
 		EFE40A18278C2BA100496921 /* ListNodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNodeHelper.swift; sourceTree = "<group>"; };
 		EFE40A1A278C322100496921 /* ReverseStringController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseStringController.swift; sourceTree = "<group>"; };
 		EFE40A1C278C354F00496921 /* ReplaceSpaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceSpaceController.swift; sourceTree = "<group>"; };
+		EFE4DB25279E36DC003188D8 /* SwapPairsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapPairsController.swift; sourceTree = "<group>"; };
+		EFE4DB28279E5055003188D8 /* AnagramController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramController.swift; sourceTree = "<group>"; };
+		EFE4DB2A279E7D4A003188D8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		EFEEEE0925E34E80004B3ACC /* SDLargerImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDLargerImageController.swift; sourceTree = "<group>"; };
 		EFEEEE1125E36283004B3ACC /* TouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchController.swift; sourceTree = "<group>"; };
 		EFEEEE5525E393CB004B3ACC /* SuperSelfController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperSelfController.h; sourceTree = "<group>"; };
@@ -382,8 +390,17 @@
 				EF6C94B1279129FB00DCF04D /* RemoveElementArrayController.swift */,
 				EF6C94B3279152A300DCF04D /* SortedSquaresArrayController.swift */,
 				EF6C94B527916D9700DCF04D /* MinSubArrayLenController.swift */,
+				EF9FA8712796A04B0087F5DC /* GenerateMatrixController.swift */,
 			);
 			path = "数组";
+			sourceTree = "<group>";
+		};
+		EF879CEA2797B346001818E9 /* 链表 */ = {
+			isa = PBXGroup;
+			children = (
+				EFE4DB25279E36DC003188D8 /* SwapPairsController.swift */,
+			);
+			path = "链表";
 			sourceTree = "<group>";
 		};
 		EF96338925E52AAF0023D5C6 /* ProjectOptimize */ = {
@@ -426,9 +443,16 @@
 				EF31AAB3278E7AF300EA328C /* IntersectionNodeController.swift */,
 				EFAFB42B278FC36300572BAB /* DetectCycleController.swift */,
 				EFAFB42D278FF75B00572BAB /* ThreeSumController.swift */,
-				EFE40A18278C2BA100496921 /* ListNodeHelper.swift */,
 			);
 			path = "双指针";
+			sourceTree = "<group>";
+		};
+		EFE4DB27279E5035003188D8 /* 哈希 */ = {
+			isa = PBXGroup;
+			children = (
+				EFE4DB28279E5055003188D8 /* AnagramController.swift */,
+			);
+			path = "哈希";
 			sourceTree = "<group>";
 		};
 		EFEEEE0825E34E52004B3ACC /* sourceCode */ = {
@@ -466,6 +490,7 @@
 				EFFC476325AE7EFB007C5AA4 /* ViewController.swift */,
 				EF6A5A2525E755DC00965E1A /* OCViewController.h */,
 				EF6A5A2625E755DC00965E1A /* OCViewController.m */,
+				EFE4DB2A279E7D4A003188D8 /* Helper.swift */,
 				EF1A14382631442500489CCD /* Swift */,
 				EFB4387225EE33520077349C /* Hook */,
 				EF96338925E52AAF0023D5C6 /* ProjectOptimize */,
@@ -485,6 +510,9 @@
 		EFFC477625AE829D007C5AA4 /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				EFE40A18278C2BA100496921 /* ListNodeHelper.swift */,
+				EFE4DB27279E5035003188D8 /* 哈希 */,
+				EF879CEA2797B346001818E9 /* 链表 */,
 				EF6C94B0279108BA00DCF04D /* 数组 */,
 				EFE40A15278C29A100496921 /* 双指针 */,
 				EFFC477725AE8385007C5AA4 /* NearlyFatherController.swift */,
@@ -750,6 +778,7 @@
 				EFDC5B3225E8A58A0073F62F /* NSOperationController.m in Sources */,
 				EF470ACE25F9CAA90053D1F6 /* MemoryController.swift in Sources */,
 				EF470AC725F9B10B0053D1F6 /* OperationController.m in Sources */,
+				EFE4DB2B279E7D4A003188D8 /* Helper.swift in Sources */,
 				EFD0BA2C25C7FB2C00B572EB /* InitController.swift in Sources */,
 				EF3F835D25E62C1F009C217D /* ResponderChainController.swift in Sources */,
 				EFFC478E25AE9352007C5AA4 /* ReverseSingListController.swift in Sources */,
@@ -770,6 +799,8 @@
 				EF7904F125FF72FA0055D153 /* MemoryMigrationController.m in Sources */,
 				EF69078F262D58890047B1D8 /* LoadPersion+add.m in Sources */,
 				EF3E2B2925F8C082000F5F78 /* MultithreadedController.swift in Sources */,
+				EF9FA8722796A04B0087F5DC /* GenerateMatrixController.swift in Sources */,
+				EFE4DB26279E36DC003188D8 /* SwapPairsController.swift in Sources */,
 				EF08453325F76A1E003FE450 /* RuntimeTool.m in Sources */,
 				EFF19BC7271127AB0072A899 /* ClimbStairsController.swift in Sources */,
 				EFFC476025AE7EFB007C5AA4 /* AppDelegate.swift in Sources */,
@@ -787,6 +818,7 @@
 				EF6C94B4279152A300DCF04D /* SortedSquaresArrayController.swift in Sources */,
 				EF96338725E4A4800023D5C6 /* GCDController.m in Sources */,
 				EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */,
+				EFE4DB29279E5055003188D8 /* AnagramController.swift in Sources */,
 				EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */,
 				EFA1E183278D60990051D494 /* ReverseListController.swift in Sources */,
 				EF6A5A2725E755DC00965E1A /* OCViewController.m in Sources */,

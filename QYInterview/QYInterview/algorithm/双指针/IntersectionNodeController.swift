@@ -22,7 +22,9 @@ class IntersectionNodeController: BaseViewController {
         let headB = headB()
         ListNodeHelper.printList(headA)
         ListNodeHelper.printList(headB)
-        
+        self.touchesBeganBlock = {
+            exit(1)
+        }
     }
     func headA() -> ListNode? {
         return ListNode(4, ListNode(1,ListNode(8,ListNode(4,ListNode(5,nil)))))
