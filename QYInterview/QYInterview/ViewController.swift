@@ -96,6 +96,7 @@ class ViewController: UIViewController {
                 .init(with: "自动闭包@autoclosure", subTitle: "自动闭包@autoclosure", controllerName: "AutoclosureController")]),
         .init(with: "源码相关", items: [.init(with: "SDWebImage下载大图", subTitle: "SDWebImage下载大图", controllerName: "SDLargerImageController")]),
         .init(with: "概念", items: [
+                .init(with: "子类为什么可以通过类方法调用NSObject 中的实例方法", subTitle: "子类为什么可以通过类方法调用NSObject 中的实例方法", controllerName: "ChildFatherNSObjectController"),
                 .init(with: "load", subTitle: "load", controllerName: "LoadController"),
                 .init(with: "通知是同步的", subTitle: "通知是同步的", controllerName: "NotificationSyncController"),
                 .init(with: "Tagged Pointer", subTitle: "Tagged Pointer", controllerName: "TaggedPointerController"),

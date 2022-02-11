@@ -59,6 +59,7 @@
 		EF6C94B4279152A300DCF04D /* SortedSquaresArrayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C94B3279152A300DCF04D /* SortedSquaresArrayController.swift */; };
 		EF6C94B627916D9700DCF04D /* MinSubArrayLenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C94B527916D9700DCF04D /* MinSubArrayLenController.swift */; };
 		EF7904F125FF72FA0055D153 /* MemoryMigrationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7904F025FF72FA0055D153 /* MemoryMigrationController.m */; };
+		EF7ABBC027B6141900DAF871 /* ChildFatherNSObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABBBF27B6141900DAF871 /* ChildFatherNSObjectController.m */; };
 		EF96338125E48E200023D5C6 /* AllocInitController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338025E48E200023D5C6 /* AllocInitController.m */; };
 		EF96338725E4A4800023D5C6 /* GCDController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338625E4A4800023D5C6 /* GCDController.m */; };
 		EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338B25E52AD20023D5C6 /* IfElseController.m */; };
@@ -191,6 +192,8 @@
 		EF6C94B527916D9700DCF04D /* MinSubArrayLenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSubArrayLenController.swift; sourceTree = "<group>"; };
 		EF7904EF25FF72FA0055D153 /* MemoryMigrationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryMigrationController.h; sourceTree = "<group>"; };
 		EF7904F025FF72FA0055D153 /* MemoryMigrationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryMigrationController.m; sourceTree = "<group>"; };
+		EF7ABBBE27B6141900DAF871 /* ChildFatherNSObjectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildFatherNSObjectController.h; sourceTree = "<group>"; };
+		EF7ABBBF27B6141900DAF871 /* ChildFatherNSObjectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildFatherNSObjectController.m; sourceTree = "<group>"; };
 		EF96337F25E48E200023D5C6 /* AllocInitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllocInitController.h; sourceTree = "<group>"; };
 		EF96338025E48E200023D5C6 /* AllocInitController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllocInitController.m; sourceTree = "<group>"; };
 		EF96338525E4A4800023D5C6 /* GCDController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDController.h; sourceTree = "<group>"; };
@@ -540,6 +543,8 @@
 				EF4B134A25B192EA0055C4D2 /* KVOController.m */,
 				EFD27747260D82860083DA05 /* KVCController.h */,
 				EFD27748260D82860083DA05 /* KVCController.m */,
+				EF7ABBBE27B6141900DAF871 /* ChildFatherNSObjectController.h */,
+				EF7ABBBF27B6141900DAF871 /* ChildFatherNSObjectController.m */,
 				EF456DAB25B5345A00566946 /* AttributeController.swift */,
 				EF456DAE25B5657400566946 /* MapController.swift */,
 				EFD0BA2B25C7FB2C00B572EB /* InitController.swift */,
@@ -794,6 +799,7 @@
 				EF3E2B3025F8C0A7000F5F78 /* GCDBarrierController.m in Sources */,
 				EFFC479125AEBF28007C5AA4 /* OrderedArrayMergeController.swift in Sources */,
 				EFD27761260DC3C20083DA05 /* CopyController.m in Sources */,
+				EF7ABBC027B6141900DAF871 /* ChildFatherNSObjectController.m in Sources */,
 				EFE40A19278C2BA100496921 /* ListNodeHelper.swift in Sources */,
 				EF6A5A1E25E754EA00965E1A /* RunLoopController.swift in Sources */,
 				EF7904F125FF72FA0055D153 /* MemoryMigrationController.m in Sources */,

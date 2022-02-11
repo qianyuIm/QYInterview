@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF6245512626BB4B00940CA7 /* MyLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6245502626BB4B00940CA7 /* MyLayer.swift */; };
+		EF37022C27B4A5B5005788B6 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37022B27B4A5B4005788B6 /* BaseTableViewCell.swift */; };
+		EF37023427B4A967005788B6 /* ShadowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37023227B4A967005788B6 /* ShadowCell.swift */; };
+		EF37023527B4A967005788B6 /* ShadowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF37023327B4A967005788B6 /* ShadowCell.xib */; };
+		EF37023827B4AA2F005788B6 /* ShadowOptimizationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37023627B4AA2F005788B6 /* ShadowOptimizationCell.swift */; };
+		EF37023927B4AA2F005788B6 /* ShadowOptimizationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF37023727B4AA2F005788B6 /* ShadowOptimizationCell.xib */; };
+		EF37023C27B4B808005788B6 /* RadiusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37023A27B4B808005788B6 /* RadiusCell.swift */; };
+		EF37023D27B4B808005788B6 /* RadiusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF37023B27B4B808005788B6 /* RadiusCell.xib */; };
 		EF8B47F326256B670090C77A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B47F226256B670090C77A /* AppDelegate.swift */; };
 		EF8B47F526256B670090C77A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B47F426256B670090C77A /* SceneDelegate.swift */; };
 		EF8B47F726256B670090C77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B47F626256B670090C77A /* ViewController.swift */; };
@@ -17,7 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EF6245502626BB4B00940CA7 /* MyLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLayer.swift; sourceTree = "<group>"; };
+		EF37022B27B4A5B4005788B6 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		EF37023227B4A967005788B6 /* ShadowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCell.swift; sourceTree = "<group>"; };
+		EF37023327B4A967005788B6 /* ShadowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShadowCell.xib; sourceTree = "<group>"; };
+		EF37023627B4AA2F005788B6 /* ShadowOptimizationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowOptimizationCell.swift; sourceTree = "<group>"; };
+		EF37023727B4AA2F005788B6 /* ShadowOptimizationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShadowOptimizationCell.xib; sourceTree = "<group>"; };
+		EF37023A27B4B808005788B6 /* RadiusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusCell.swift; sourceTree = "<group>"; };
+		EF37023B27B4B808005788B6 /* RadiusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadiusCell.xib; sourceTree = "<group>"; };
 		EF8B47EF26256B670090C77A /* OffScreenRendered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OffScreenRendered.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8B47F226256B670090C77A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8B47F426256B670090C77A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF37023127B4A959005788B6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF37023227B4A967005788B6 /* ShadowCell.swift */,
+				EF37023327B4A967005788B6 /* ShadowCell.xib */,
+				EF37023627B4AA2F005788B6 /* ShadowOptimizationCell.swift */,
+				EF37023727B4AA2F005788B6 /* ShadowOptimizationCell.xib */,
+				EF37023A27B4B808005788B6 /* RadiusCell.swift */,
+				EF37023B27B4B808005788B6 /* RadiusCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		EF8B47E626256B670090C77A = {
 			isa = PBXGroup;
 			children = (
@@ -61,7 +86,8 @@
 				EF8B47F226256B670090C77A /* AppDelegate.swift */,
 				EF8B47F426256B670090C77A /* SceneDelegate.swift */,
 				EF8B47F626256B670090C77A /* ViewController.swift */,
-				EF6245502626BB4B00940CA7 /* MyLayer.swift */,
+				EF37022B27B4A5B4005788B6 /* BaseTableViewCell.swift */,
+				EF37023127B4A959005788B6 /* Cell */,
 				EF8B47F826256B670090C77A /* Main.storyboard */,
 				EF8B47FB26256B690090C77A /* Assets.xcassets */,
 				EF8B47FD26256B690090C77A /* LaunchScreen.storyboard */,
@@ -127,7 +153,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF37023927B4AA2F005788B6 /* ShadowOptimizationCell.xib in Resources */,
 				EF8B47FF26256B690090C77A /* LaunchScreen.storyboard in Resources */,
+				EF37023527B4A967005788B6 /* ShadowCell.xib in Resources */,
+				EF37023D27B4B808005788B6 /* RadiusCell.xib in Resources */,
 				EF8B47FC26256B690090C77A /* Assets.xcassets in Resources */,
 				EF8B47FA26256B670090C77A /* Main.storyboard in Resources */,
 			);
@@ -140,10 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF37023827B4AA2F005788B6 /* ShadowOptimizationCell.swift in Sources */,
+				EF37023C27B4B808005788B6 /* RadiusCell.swift in Sources */,
+				EF37023427B4A967005788B6 /* ShadowCell.swift in Sources */,
+				EF37022C27B4A5B5005788B6 /* BaseTableViewCell.swift in Sources */,
 				EF8B47F726256B670090C77A /* ViewController.swift in Sources */,
 				EF8B47F326256B670090C77A /* AppDelegate.swift in Sources */,
 				EF8B47F526256B670090C77A /* SceneDelegate.swift in Sources */,
-				EF6245512626BB4B00940CA7 /* MyLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

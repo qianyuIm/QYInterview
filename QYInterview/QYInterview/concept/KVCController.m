@@ -8,7 +8,6 @@
 #import "KVCController.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
-
 @interface KVCPersion : NSObject{
     @public
     NSString *_name;
@@ -48,6 +47,15 @@
 //    [self log:"NSKVONotifying_KVCController"];
     
     NSLog(@"%lu",sizeof(BOOL));
+    KVCPersion *persions = [KVCPersion alloc];
+    Class aa = [persions class];
+    Class bb = [KVCPersion class];
+    NSLog(@"%@",aa);
+    NSLog(@"%@",bb);
+    Class cls = object_getClass(persions);
+    
+//    TTTTT *tt = [[TTTTT alloc] init];
+    
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
