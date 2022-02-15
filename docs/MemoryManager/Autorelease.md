@@ -65,6 +65,11 @@ struct QYTest {
 	* 当`page不存在`时，调用`autoreleaseNoPage`创建一个`hotPage`,然后调用`add方法`将`对象添加至page栈中`。		
 * 6.当执行`pop操作`时,会`传入一个值`，这个值就是`push操作的返回值`，即`POOL_BOUNDARY的内存地址token`,所以`pop内部`操作的实现就是`根据token找到哨兵对象所处的page`中，然后使用`objc_release `释放`token `之前的对象，并将`next指针到正确位置`。
 
+![autorelease](images/autorelease.png)
+
+## 为什么是双向链表
+
+
 # 子线程中的AutoreleasePool
 
 # 未开启子线程RunLoop
