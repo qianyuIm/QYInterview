@@ -51,9 +51,11 @@ http://en.wikipedia.org/wiki/Event_loop),在iOS中被称之为Runloop。这中�
 
 ## Runloop有五种开启方法	 
 <details open>
-  <summary>第一种直接使用[[NSRunLoop currentRunLoop] run],但是这种方式不能退出</summary>
+  <summary>第一种直接使用[[NSRunLoop currentRunLoop] run],但是这种方式不能退出,</summary>
+  
   ```
   [[NSRunLoop currentRunLoop] run]
+  
   ```	
   </details>	
   
