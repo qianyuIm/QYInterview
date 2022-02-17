@@ -31,6 +31,22 @@ http://en.wikipedia.org/wiki/Event_loop),在iOS中被称之为Runloop。这中�
 3. 节省CPU资源，优化程序性能: 程序运行起来时，当什么操作都没有的时候，Runloop就通知系统，现在没什么事情做，然后进行休息待命状态，这时候系统就会将其资源释放去做其他的事情。当有事情做，Runloop就会马上起来做事情。	
 
 **Runloop,最重要的作用，就是用来管理线程，当线程的Runloop一开启，Runloop便开始对线程进行管理工作: 当线程执行完任务后，线程便会进入休眠状态,并且不退出，随时等待新的任务**
+
+## Runloop运行模式
+1.```kCFRunLoopDefaultMode ```:默认的运行模式，通常主线程在这个Mode下运行。	 
+2.```UITrackingRunLoopMode ``` ：界面跟踪Mode，用于ScrollView追踪触摸滑动，保证界面滑动时不受其他Mode影响   
+3.```UIInitializationRunLoopMode ```  ： 在刚启动App时进入的第一个Mode，启动完成后不再使用   
+4.```GSEventReceiveRunLoopMode ``` ：接受系统事件的内部Mode,通常用不到  
+5.```kCFRunLoopCommonModes``` ：是一个伪模式，可以在标记为CommonModes模式下运行，Runloop会自动将_commonModeItems里面的Source,Observer,Timer同步到具有此标记的Mode里  
+
+##CFRunloopSource： 输入源/事件源，包括Source0和Source1
+* **Source1**:基于mach_port,处理来自系统内核或其他进程的事件，比如点击手机屏幕App图标
+* **Source0**:应用层事件，需要手动标记为待处理和手动唤醒Runloop  
+
+>简单举例：一个App在前台禁止，用户点击App界面，屏幕表面的事件会先包装成```Event```告诉```source1(mach_port)```,```source1```唤醒```Runloop```将事件```Event```分发给```source0```，由```source0```来处理。可以添加 ```__CFRunLoopDoSource0``` 和 ```__CFRunLoopDoSource1``` 断点查看
+
+
+
 ## Runloop与线程的关系
 1. 每一条线程都有唯一与之对应的Runloop对象。
 2. Runloop在第一次获取时创建，在线程结束时销毁
