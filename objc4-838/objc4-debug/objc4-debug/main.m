@@ -13,13 +13,19 @@ extern void _objc_autoreleasePoolPrint(void);
 void testAutoreleasePool(void);
 void testClass(void);
 void testKindAndMember(void) ;
+void testAtomic(void) ;
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        testAutoreleasePool();
 //        testClass();
-        testKindAndMember();
+//        testKindAndMember();
+        testAtomic();
     }
     return 0;
+}
+void testAtomic(void) {
+    DSPersion *persion = [[DSPersion alloc] init];
+    persion.nickName = @"123";
 }
 void testKindAndMember(void) {
     BOOL res1 = [[NSObject class] isKindOfClass:[NSObject class]];

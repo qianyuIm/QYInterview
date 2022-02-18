@@ -1,8 +1,8 @@
 //
 //  DSPersion.h
-//  objc4-debug
+//  类
 //
-//  Created by cyd on 2022/2/16.
+//  Created by cyd on 2022/2/18.
 //
 
 #import <Foundation/Foundation.h>
@@ -10,8 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DSPersion : NSObject
-@property (atomic, strong) NSString *nickName;
-+ (instancetype)persion;
+@property (nonatomic, copy) NSString *num;
+
 @end
 
 NS_ASSUME_NONNULL_END
