@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17C8064B27BE7D16007A7DE1 /* DSPersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8064A27BE7D16007A7DE1 /* DSPersion.m */; };
+		17C8064E27C1E2B3007A7DE1 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8064D27C1E2B3007A7DE1 /* MyTableViewController.m */; };
+		17C8065127C1E3C6007A7DE1 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C8065027C1E3C6007A7DE1 /* MyTableViewCell.m */; };
 		EFBFDE6B27BE29370071EF46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBFDE6A27BE29370071EF46 /* AppDelegate.m */; };
 		EFBFDE6E27BE29370071EF46 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBFDE6D27BE29370071EF46 /* SceneDelegate.m */; };
 		EFBFDE7127BE29370071EF46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBFDE7027BE29370071EF46 /* ViewController.m */; };
@@ -17,11 +20,15 @@
 		EFBFDE8427BE29530071EF46 /* MyView1.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBFDE8327BE29530071EF46 /* MyView1.m */; };
 		EFBFDE8727BE295A0071EF46 /* MyView2.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBFDE8627BE295A0071EF46 /* MyView2.m */; };
 		EFBFDE8A27BE29600071EF46 /* MyView3.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBFDE8927BE29600071EF46 /* MyView3.m */; };
-		EFBFDE8D27BE29670071EF46 /* MyView4.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBFDE8C27BE29670071EF46 /* MyView4.m */; };
-		EFBFDE9027BE296E0071EF46 /* MyView5.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBFDE8F27BE296E0071EF46 /* MyView5.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17C8064927BE7D16007A7DE1 /* DSPersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSPersion.h; sourceTree = "<group>"; };
+		17C8064A27BE7D16007A7DE1 /* DSPersion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSPersion.m; sourceTree = "<group>"; };
+		17C8064C27C1E2B3007A7DE1 /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		17C8064D27C1E2B3007A7DE1 /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		17C8064F27C1E3C6007A7DE1 /* MyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		17C8065027C1E3C6007A7DE1 /* MyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		EFBFDE6627BE29370071EF46 /* Touch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFBFDE6927BE29370071EF46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFBFDE6A27BE29370071EF46 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,10 +47,6 @@
 		EFBFDE8627BE295A0071EF46 /* MyView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView2.m; sourceTree = "<group>"; };
 		EFBFDE8827BE29600071EF46 /* MyView3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView3.h; sourceTree = "<group>"; };
 		EFBFDE8927BE29600071EF46 /* MyView3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView3.m; sourceTree = "<group>"; };
-		EFBFDE8B27BE29670071EF46 /* MyView4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView4.h; sourceTree = "<group>"; };
-		EFBFDE8C27BE29670071EF46 /* MyView4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView4.m; sourceTree = "<group>"; };
-		EFBFDE8E27BE296E0071EF46 /* MyView5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView5.h; sourceTree = "<group>"; };
-		EFBFDE8F27BE296E0071EF46 /* MyView5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView5.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,16 +85,18 @@
 				EFBFDE6D27BE29370071EF46 /* SceneDelegate.m */,
 				EFBFDE6F27BE29370071EF46 /* ViewController.h */,
 				EFBFDE7027BE29370071EF46 /* ViewController.m */,
+				17C8064C27C1E2B3007A7DE1 /* MyTableViewController.h */,
+				17C8064D27C1E2B3007A7DE1 /* MyTableViewController.m */,
+				17C8064927BE7D16007A7DE1 /* DSPersion.h */,
+				17C8064A27BE7D16007A7DE1 /* DSPersion.m */,
 				EFBFDE8227BE29530071EF46 /* MyView1.h */,
 				EFBFDE8327BE29530071EF46 /* MyView1.m */,
 				EFBFDE8527BE295A0071EF46 /* MyView2.h */,
 				EFBFDE8627BE295A0071EF46 /* MyView2.m */,
 				EFBFDE8827BE29600071EF46 /* MyView3.h */,
 				EFBFDE8927BE29600071EF46 /* MyView3.m */,
-				EFBFDE8B27BE29670071EF46 /* MyView4.h */,
-				EFBFDE8C27BE29670071EF46 /* MyView4.m */,
-				EFBFDE8E27BE296E0071EF46 /* MyView5.h */,
-				EFBFDE8F27BE296E0071EF46 /* MyView5.m */,
+				17C8064F27C1E3C6007A7DE1 /* MyTableViewCell.h */,
+				17C8065027C1E3C6007A7DE1 /* MyTableViewCell.m */,
 				EFBFDE7227BE29370071EF46 /* Main.storyboard */,
 				EFBFDE7527BE29390071EF46 /* Assets.xcassets */,
 				EFBFDE7727BE29390071EF46 /* LaunchScreen.storyboard */,
@@ -171,15 +176,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFBFDE9027BE296E0071EF46 /* MyView5.m in Sources */,
+				17C8064E27C1E2B3007A7DE1 /* MyTableViewController.m in Sources */,
 				EFBFDE8A27BE29600071EF46 /* MyView3.m in Sources */,
-				EFBFDE8D27BE29670071EF46 /* MyView4.m in Sources */,
+				17C8064B27BE7D16007A7DE1 /* DSPersion.m in Sources */,
 				EFBFDE7127BE29370071EF46 /* ViewController.m in Sources */,
 				EFBFDE6B27BE29370071EF46 /* AppDelegate.m in Sources */,
 				EFBFDE7C27BE29390071EF46 /* main.m in Sources */,
 				EFBFDE8727BE295A0071EF46 /* MyView2.m in Sources */,
 				EFBFDE8427BE29530071EF46 /* MyView1.m in Sources */,
 				EFBFDE6E27BE29370071EF46 /* SceneDelegate.m in Sources */,
+				17C8065127C1E3C6007A7DE1 /* MyTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

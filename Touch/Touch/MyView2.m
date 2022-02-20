@@ -16,10 +16,10 @@
     BOOL boo = [super pointInside:point withEvent:event];
     return boo;
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [super touchesBegan:touches withEvent:event];
-    NSLog(@"触摸 ------ MyView2");
-}
+//    NSLog(@"触摸 ------ MyView2");
+//}
 
 
 @end

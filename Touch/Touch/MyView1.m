@@ -8,7 +8,6 @@
 #import "MyView1.h"
 
 @implementation MyView1
-@synthesize name;
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     UIView *view = [super hitTest:point withEvent:event];
