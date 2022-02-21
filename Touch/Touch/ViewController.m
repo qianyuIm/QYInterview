@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "MyView1.h"
+#import "DSPersion.h"
 
 @interface ViewController ()
 
@@ -17,17 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    MyView1 *myView1 = [[MyView1 alloc] init];
-    [myView1 setValue:@"123" forKey:@"name"];
-    NSLog(@"%@",myView1.name);
-    
-    
+    DSPersion *persion = [[DSPersion alloc] init];
+//    persion.name = @"123";
+    NSLog(@"%@",persion);
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [super touchesBegan:touches withEvent:event];
+    [super touchesBegan:touches withEvent:event];
     NSLog(@"触摸 ------ ViewController -> View");
     
 }

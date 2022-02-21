@@ -6,13 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol PersonProtocol <NSObject>
-@property (nonatomic, copy) NSString *name;
-@end
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MyView1 : UIView<PersonProtocol>
+@interface MyView1 : UIView
 
 @end
 

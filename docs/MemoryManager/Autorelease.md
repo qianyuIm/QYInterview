@@ -10,6 +10,24 @@
 
 第二个`Observer`监听两个事件: `kCFRunLoopBeforeWaiting `准备进入睡眠, `kCFRunLoopExit`即将退出`RunLoop `。在`kCFRunLoopBeforeWaiting `事件时调用`_objc_autoreleasePoolPop()`和`_objc_autoreleasePoolPush()`释放旧的自动释放池并创建新的自动释放池。在`kCFRunLoopExit `事件时调用`_objc_autoreleasePoolPop()`来释放自动释放池,同时这个`Observer`的`order`为 **2147483647(2的32次方减一)**优先级最低，保证其释放自动释放池的操作发生在其他回调之后。
 
+###POOL_BOUNDARY：
+只是nil的别名。前世叫做POOL_SENTINEL，称为哨兵对象或者边界对象；
+POOL_BOUNDARY用来**区分不同的自动释放池**，**以解决自动释放池嵌套的问题**。
+
+每当创建一个自动释放池，就会调用push()方法将一个```POOL_BOUNDARY```入栈，并返回其存放的内存地址；
+
+当往自动释放池中添加autorelease对象时，将autorelease对象的内存地址入栈，它们前面至少有一个```POOL_BOUNDARY```；
+
+当销毁一个自动释放池时，会调用pop()方法并传入一个```POOL_BOUNDARY```，会从自动释放池中最后一个对象开始，依次给它们发送release消息，直到遇到这个```POOL_BOUNDARY```。
+
+
+##  AutoreleasePool底层结构
+
+* AutoreleasePoolPage是以栈为结点通过双向链表的形式组合而成；遵循先进后出规则，整个自动释放池由一系列的AutoreleasePoolPage组成的，而AutoreleasePoolPage是以双向链表的形式连接起来。
+* 自动释放池与线程一一对应；
+* 每个AutoreleasePoolPage对象占用4096字节内存，其中56个字节用来存放它内部的成员变量，剩下的空间（4040个字节）用来存放autorelease对象的地址。要注意的是第一页只有504个对象，因为在创建page的时候会在next的位置插入1个POOL_BOUNDARY。
+* POOL_BOUNDARY为边界(哨兵)对象，入栈时插入，出栈时释放对象到此传入的哨兵对象
+
 ##  AutoreleasePool在什么时候释放
 1. 在没有手动增加`AutoreleasePool `的情况下，`Autorelease `对象都是在当前`runloop`迭代结束时释放，而它能够释放的原因就是系统在`runloop`的每个迭代过程中都加入了自动释放池的`push`和`pop`操作。
 2. 手动添加的`AutoreleasePool`在其作用域{}消失时释放。因为AutoreleasePool实际就是一个`__AtAutoreleasePool`的结构体包含构造函数和析构函数，在其作用域结束后会自动调用析构函数
@@ -68,6 +86,7 @@ struct QYTest {
 ![autorelease](images/autorelease.png)
 
 ## 为什么是双向链表
+为了方便释放对象，容易向上查找释放
 
 
 # 子线程中的AutoreleasePool
