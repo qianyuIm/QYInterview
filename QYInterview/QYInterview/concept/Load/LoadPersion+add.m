@@ -14,4 +14,7 @@
 //+ (void)initialize {
 //    NSLog(@"LoadPersion add initialize");
 //}
+- (void)eat {
+    NSLog(@"LoadPersion add eat");
+}
 @end

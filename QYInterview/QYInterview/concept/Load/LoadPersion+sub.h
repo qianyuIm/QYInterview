@@ -10,6 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LoadPersion (sub)
+- (void)eat;
 
 @end
 

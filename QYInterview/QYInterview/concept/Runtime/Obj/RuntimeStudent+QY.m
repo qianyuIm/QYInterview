@@ -12,6 +12,7 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        /// 子类没有实现父类方法情况下 直接交换
 //        [RuntimeTool qy_action1MethodSwizzlingWithClass:self oriSEL:@selector(personInstanceMethod) swizzledSEL:@selector(qy_studentInstanceMethod)];
         [RuntimeTool qy_action1BetterMethodSwizzlingWithClass:self oriSEL:@selector(personInstanceMethod) swizzledSEL:@selector(qy_studentInstanceMethod)];
     });

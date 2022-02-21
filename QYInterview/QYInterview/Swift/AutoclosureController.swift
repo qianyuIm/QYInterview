@@ -7,6 +7,23 @@
 
 import UIKit
 
+ class AAA {
+     final class func add() -> Int {
+        return 10
+    }
+    class func add1() -> Int {
+        return 10
+    }
+}
+class BBB: AAA {
+//    override class func add() -> Int {
+//        return 20
+//    }
+//    override class func add1() -> Int {
+//        return 20
+//    }
+}
+
 class AutoclosureController: BaseViewController {
 
     override func viewDidLoad() {
@@ -24,6 +41,7 @@ class AutoclosureController: BaseViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             
         }
+        
     }
     
     func logIfTrue(_ predicate: () -> Bool) {

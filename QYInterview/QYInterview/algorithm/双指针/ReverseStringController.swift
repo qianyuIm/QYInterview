@@ -28,7 +28,7 @@ class ReverseStringController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var s: [Character] = ["H","a","n","n","a","h"]
+        var s: [Character] = ["A","B","C","D","c","b","a"]
         reverseString(&s)
         logDebug("反转字符串 -> \(s)")
     }

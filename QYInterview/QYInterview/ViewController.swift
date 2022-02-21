@@ -56,6 +56,16 @@ class QTTableSectionItem {
 class ViewController: UIViewController {
 
     var dataSource: [QTTableSectionItem] = [
+        .init(with: "Swift", items: [
+                .init(with: "自动闭包@autoclosure", subTitle: "自动闭包@autoclosure", controllerName: "AutoclosureController"),
+                .init(with: "Class和Struct", subTitle: "Class和Struct", controllerName: "ClassAndStructController"),
+                .init(with: "Swift KVO", subTitle: "Swift KVO", controllerName: "SwiftKVOViewController"),
+                .init(with: "defer 的作用", subTitle: "defer 的作用", controllerName: "DeferViewController"),
+                .init(with: "逃逸闭包与非逃逸闭包", subTitle: "逃逸闭包与非逃逸闭包", controllerName: "EscapingViewController")
+        ]),
+        .init(with: "Bug", items: [
+            .init(with: "UITextFieldDelegate代理不走", subTitle: "UITextFieldDelegate代理不走", controllerName: "TextFieldViewController")
+        ]),
         .init(with: "链表", items: [
             .init(with: "24. 两两交换链表中的节点", subTitle: "24. 两两交换链表中的节点", controllerName: "SwapPairsController"),
         ]),
@@ -92,8 +102,7 @@ class ViewController: UIViewController {
                 .init(with: "求数组逆序数", subTitle: "求数组逆序数", controllerName: "NumOfReverseArrayController"),
                 .init(with: "二叉树相关", subTitle: "二叉树相关", controllerName: "BinaryTreeController"),
                 ]),
-        .init(with: "Swift", items: [
-                .init(with: "自动闭包@autoclosure", subTitle: "自动闭包@autoclosure", controllerName: "AutoclosureController")]),
+        
         .init(with: "源码相关", items: [.init(with: "SDWebImage下载大图", subTitle: "SDWebImage下载大图", controllerName: "SDLargerImageController")]),
         .init(with: "概念", items: [
                 .init(with: "子类为什么可以通过类方法调用NSObject 中的实例方法", subTitle: "子类为什么可以通过类方法调用NSObject 中的实例方法", controllerName: "ChildFatherNSObjectController"),
@@ -103,7 +112,7 @@ class ViewController: UIViewController {
                 .init(with: "copy修饰", subTitle: "copy修饰", controllerName: "CopyController"),
                 .init(with: "iOS中的几种锁", subTitle: "锁的使用场景", controllerName: "LockController"),
                 .init(with: "内存偏移", subTitle: "内存偏移", controllerName: "MemoryMigrationController"),
-                .init(with: "Class和Struct", subTitle: "Class和Struct", controllerName: "ClassAndStructController"),
+                
                 .init(with: "Block修改内部值", subTitle: "Block修改内部值", controllerName: "BlockChangeController"),
                 .init(with: "KVO", subTitle: "KVO", controllerName: "KVOController"),
                 .init(with: "KVC", subTitle: "KVC", controllerName: "KVCController"),

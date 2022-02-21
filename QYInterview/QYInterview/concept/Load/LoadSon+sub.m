@@ -11,7 +11,7 @@
 + (void)load {
     NSLog(@"LoadSon sub load");
 }
-//+ (void)initialize {
-//    NSLog(@"LoadSon sub initialize");
-//}
++ (void)initialize {
+    NSLog(@"LoadSon sub initialize");
+}
 @end

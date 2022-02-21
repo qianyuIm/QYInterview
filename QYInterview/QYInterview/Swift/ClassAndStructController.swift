@@ -32,11 +32,17 @@ class ClassAndStructController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        let class1 = Class()
+        logDebug("\(change(class1: class1))")
+    }
+    fileprivate func change(class1: Class) -> Class {
+        class1.name = "10"
+        return class1
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.testStruct()
+        testClass()
+        testStruct()
     }
     
     /// Class是引用类型
@@ -61,12 +67,13 @@ class ClassAndStructController: BaseViewController {
     // Struct是值类型
     // 当值进行传递的时候，它会copy传递的值
     func testStruct() {
-        let struct1 = Struct(x: 10, y: 10)
-        var struct2 = struct1
-        struct2.x = 30
+        var struct1 = Struct(x: 10, y: 10)
+        let struct2 = struct1
+        struct1.x = 30
         logDebug("struct1 x = \(struct1.x),struct1 y = \(struct1.y)")
         logDebug("struct2 x = \(struct2.x),struct2 y = \(struct2.y)")
 
         
     }
+    
 }

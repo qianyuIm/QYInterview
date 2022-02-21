@@ -141,5 +141,14 @@ typedef void (^ChangeValueBlock) (void);
 //    TestBlock();
 //    NSLog(@"testArr :%@", array1);
     
+    NSMutableArray *arr = [NSMutableArray array];
+    __block BlockPersion *p1 = [[BlockPersion alloc] init];
+    void (^MyBlock)(void) = ^{
+//        NSMutableArray *arr1 = [NSMutableArray array];
+        [arr addObject:@""];
+        p1 = [[BlockPersion alloc] init];
+    };
+    MyBlock();
+    
 }
 @end

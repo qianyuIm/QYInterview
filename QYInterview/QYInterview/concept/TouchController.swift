@@ -11,7 +11,9 @@ fileprivate class RedView: UIView {
         super.init(frame: frame)
         backgroundColor = .red
     }
-    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -63,11 +65,17 @@ class TouchController: BaseViewController {
         // Do any additional setup after loading the view.
         view.addSubview(imageView)
         imageView.addSubview(sender)
+        view.addSubview(redView)
+        redView.layoutIfNeeded()
         imageView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.size.equalTo(100)
         }
         sender.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.size.equalTo(200)
+        }
+        redView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.size.equalTo(200)
         }

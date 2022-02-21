@@ -16,6 +16,13 @@
 		EF08453325F76A1E003FE450 /* RuntimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08453225F76A1E003FE450 /* RuntimeTool.m */; };
 		EF08453825F76B6C003FE450 /* RuntimeStudent+QY.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08453725F76B6C003FE450 /* RuntimeStudent+QY.m */; };
 		EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E807B25F5D10C00723E4C /* CodableController.swift */; };
+		EF0EC93627C380CB000F8933 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0EC93427C380CB000F8933 /* TextFieldViewController.m */; };
+		EF0EC93727C380CB000F8933 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0EC93527C380CB000F8933 /* TextFieldViewController.xib */; };
+		EF0EC93C27C381B4000F8933 /* TextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0EC93A27C381B4000F8933 /* TextFieldTableViewCell.m */; };
+		EF0EC93D27C381B4000F8933 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0EC93B27C381B4000F8933 /* TextFieldTableViewCell.xib */; };
+		EF0EC94227C39166000F8933 /* SwiftKVOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0EC94127C39166000F8933 /* SwiftKVOViewController.swift */; };
+		EF0EC94427C3981F000F8933 /* DeferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0EC94327C3981F000F8933 /* DeferViewController.swift */; };
+		EF0EC94627C39ABE000F8933 /* EscapingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0EC94527C39ABE000F8933 /* EscapingViewController.swift */; };
 		EF1A143A2631445F00489CCD /* AutoclosureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A14392631445E00489CCD /* AutoclosureController.swift */; };
 		EF31AAB2278E67AE00EA328C /* RemoveNthFromEndController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31AAB1278E67AE00EA328C /* RemoveNthFromEndController.swift */; };
 		EF31AAB4278E7AF300EA328C /* IntersectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31AAB3278E7AF300EA328C /* IntersectionNodeController.swift */; };
@@ -131,6 +138,15 @@
 		EF08453625F76B6C003FE450 /* RuntimeStudent+QY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RuntimeStudent+QY.h"; sourceTree = "<group>"; };
 		EF08453725F76B6C003FE450 /* RuntimeStudent+QY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RuntimeStudent+QY.m"; sourceTree = "<group>"; };
 		EF0E807B25F5D10C00723E4C /* CodableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableController.swift; sourceTree = "<group>"; };
+		EF0EC93327C380CB000F8933 /* TextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
+		EF0EC93427C380CB000F8933 /* TextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
+		EF0EC93527C380CB000F8933 /* TextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
+		EF0EC93927C381B4000F8933 /* TextFieldTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFieldTableViewCell.h; sourceTree = "<group>"; };
+		EF0EC93A27C381B4000F8933 /* TextFieldTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFieldTableViewCell.m; sourceTree = "<group>"; };
+		EF0EC93B27C381B4000F8933 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		EF0EC94127C39166000F8933 /* SwiftKVOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKVOViewController.swift; sourceTree = "<group>"; };
+		EF0EC94327C3981F000F8933 /* DeferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferViewController.swift; sourceTree = "<group>"; };
+		EF0EC94527C39ABE000F8933 /* EscapingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingViewController.swift; sourceTree = "<group>"; };
 		EF1A14392631445E00489CCD /* AutoclosureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoclosureController.swift; sourceTree = "<group>"; };
 		EF31AAB1278E67AE00EA328C /* RemoveNthFromEndController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNthFromEndController.swift; sourceTree = "<group>"; };
 		EF31AAB3278E7AF300EA328C /* IntersectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionNodeController.swift; sourceTree = "<group>"; };
@@ -308,10 +324,35 @@
 			path = Obj;
 			sourceTree = "<group>";
 		};
+		EF0EC93227C380BC000F8933 /* Bug */ = {
+			isa = PBXGroup;
+			children = (
+				EF0EC93827C38192000F8933 /* TextField */,
+			);
+			path = Bug;
+			sourceTree = "<group>";
+		};
+		EF0EC93827C38192000F8933 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				EF0EC93327C380CB000F8933 /* TextFieldViewController.h */,
+				EF0EC93427C380CB000F8933 /* TextFieldViewController.m */,
+				EF0EC93527C380CB000F8933 /* TextFieldViewController.xib */,
+				EF0EC93927C381B4000F8933 /* TextFieldTableViewCell.h */,
+				EF0EC93A27C381B4000F8933 /* TextFieldTableViewCell.m */,
+				EF0EC93B27C381B4000F8933 /* TextFieldTableViewCell.xib */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		EF1A14382631442500489CCD /* Swift */ = {
 			isa = PBXGroup;
 			children = (
 				EF1A14392631445E00489CCD /* AutoclosureController.swift */,
+				EFFC478125AE879E007C5AA4 /* ClassAndStructController.swift */,
+				EF0EC94127C39166000F8933 /* SwiftKVOViewController.swift */,
+				EF0EC94327C3981F000F8933 /* DeferViewController.swift */,
+				EF0EC94527C39ABE000F8933 /* EscapingViewController.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -494,6 +535,7 @@
 				EF6A5A2525E755DC00965E1A /* OCViewController.h */,
 				EF6A5A2625E755DC00965E1A /* OCViewController.m */,
 				EFE4DB2A279E7D4A003188D8 /* Helper.swift */,
+				EF0EC93227C380BC000F8933 /* Bug */,
 				EF1A14382631442500489CCD /* Swift */,
 				EFB4387225EE33520077349C /* Hook */,
 				EF96338925E52AAF0023D5C6 /* ProjectOptimize */,
@@ -536,7 +578,6 @@
 				EF3E2B2425F8C06B000F5F78 /* Multithreaded */,
 				EF08451425F767CE003FE450 /* Runtime */,
 				EF6A5A1525E7546E00965E1A /* Runloop */,
-				EFFC478125AE879E007C5AA4 /* ClassAndStructController.swift */,
 				EF5582DE25B02887003E1347 /* BlockChangeController.h */,
 				EF5582DF25B02887003E1347 /* BlockChangeController.m */,
 				EF4B134925B192EA0055C4D2 /* KVOController.h */,
@@ -689,6 +730,7 @@
 				EF470AD625F9CB1A0053D1F6 /* AutoreleaseController.xib in Resources */,
 				EFB4387725EE336B0077349C /* HookController.xib in Resources */,
 				EF08451825F767E7003FE450 /* RuntimeController.xib in Resources */,
+				EF0EC93D27C381B4000F8933 /* TextFieldTableViewCell.xib in Resources */,
 				EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */,
 				EF470AC825F9B10B0053D1F6 /* OperationController.xib in Resources */,
 				EF08452125F76800003FE450 /* SwizzlingController.xib in Resources */,
@@ -696,6 +738,7 @@
 				EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */,
 				EF3E2B3125F8C0A7000F5F78 /* GCDBarrierController.xib in Resources */,
 				EF6A5A1F25E754EA00965E1A /* RunLoopController.xib in Resources */,
+				EF0EC93727C380CB000F8933 /* TextFieldViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +811,7 @@
 				EF470AD525F9CB1A0053D1F6 /* AutoreleaseController.mm in Sources */,
 				EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */,
 				EF4B69EA261C059B00A77B47 /* TaggedPointerController.m in Sources */,
+				EF0EC93627C380CB000F8933 /* TextFieldViewController.m in Sources */,
 				EF31AAB4278E7AF300EA328C /* IntersectionNodeController.swift in Sources */,
 				EF1A143A2631445F00489CCD /* AutoclosureController.swift in Sources */,
 				EFFC477825AE8385007C5AA4 /* NearlyFatherController.swift in Sources */,
@@ -790,7 +834,10 @@
 				EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */,
 				EF456DAF25B5657400566946 /* MapController.swift in Sources */,
 				EF456DAC25B5345A00566946 /* AttributeController.swift in Sources */,
+				EF0EC94227C39166000F8933 /* SwiftKVOViewController.swift in Sources */,
+				EF0EC94627C39ABE000F8933 /* EscapingViewController.swift in Sources */,
 				EF08452725F76956003FE450 /* RuntimePersion.m in Sources */,
+				EF0EC93C27C381B4000F8933 /* TextFieldTableViewCell.m in Sources */,
 				EF31AAB2278E67AE00EA328C /* RemoveNthFromEndController.swift in Sources */,
 				EFE40A1B278C322100496921 /* ReverseStringController.swift in Sources */,
 				EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */,
@@ -813,6 +860,7 @@
 				EF6907B4262D593A0047B1D8 /* LoadSon+sub.m in Sources */,
 				EFEEEE1225E36283004B3ACC /* TouchController.swift in Sources */,
 				EFFC478225AE879E007C5AA4 /* ClassAndStructController.swift in Sources */,
+				EF0EC94427C3981F000F8933 /* DeferViewController.swift in Sources */,
 				EF690789262D58690047B1D8 /* LoadPersion.m in Sources */,
 				EF08453825F76B6C003FE450 /* RuntimeStudent+QY.m in Sources */,
 				EF6C94B2279129FB00DCF04D /* RemoveElementArrayController.swift in Sources */,

@@ -12,7 +12,10 @@
 #import "LoadPersion+sub.h"
 #import "LoadSon+add.h"
 #import "LoadSon+sub.h"
-
+/**
+ + load  父类 -> 子类 - 父类分类(源文件顺序) -> 子类分类(源文件顺序)
+ + initialize
+ */
 @interface LoadController ()
 
 @end
@@ -26,8 +29,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-//    LoadPersion *persion = [LoadPersion new];
-    LoadSon *son = [LoadSon new];
-
+    LoadPersion *persion = [LoadPersion new];
+//    LoadSon *son = [LoadSon new];
+    [persion eat];
 }
 @end

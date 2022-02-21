@@ -23,3 +23,24 @@ class可以继承，这样子类可以使用父类的特性和方法。
 **struct的优势:**
 
 结构较小，适用于复制操作，相比于class的实例被多次引用更加安全
+
+## immutable变量：
+swift的可变内容和不可变内容用var和let来甄别，如果初始为let的变量再去修改会发生编译错误。struct遵循这一特性；class不存在这样的问题。  
+
+```
+let class1 = Class()
+class1.name = "class1"
+class1.weight = 10
+
+var struct1 = Struct(x: 10, y: 10)
+let struct2 = struct1        
+struct1.x = 30
+
+```  
+
+## mutating function：
+struct 和 class 的差別是 struct 的 function 要去改变 property 的值的时候要加上 mutating，而 class 不用。
+
+## 说说Swift为什么将String,Array,Dictionary设计成值类型？
+值类型相比引用类型，最大的优势在于内存使用的高效，值类型是在栈上操作，引用类型是在堆上操作，栈上的操作仅仅是单个指针的上下移动，而堆上的操作则涉及合并，位移，重新链接等。也就是说swift这样设计，大幅度减少了堆上的内存分配和回收次数，同时写时复制又将值传递和复制的开销降到最低。  
+String,Array,Dictionary设计成值类型，也是为了线程安全考虑，通过swift的let设置，使得这些数据达到了真正意义上的“不变”，它从根本上解决了多线程中内存访问和操作顺序的问题，设计成值类型还可以提升API的灵活度。
