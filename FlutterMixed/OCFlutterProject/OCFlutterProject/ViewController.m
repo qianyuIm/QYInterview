@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 
-@import Flutter;
+#import <Flutter/Flutter.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;

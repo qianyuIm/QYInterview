@@ -108,6 +108,7 @@
 				EFF5279527BF68920065C353 /* Frameworks */,
 				EFF5279627BF68920065C353 /* Resources */,
 				AE35AC9B9A194F8940D7339B /* [CP] Embed Pods Frameworks */,
+				EF5B7AD227C4E9520063A67E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -212,6 +213,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		EF5B7AD227C4E9520063A67E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed ${SOURCE_ROOT}/Flutter/App.framework\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -369,6 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				FLUTTER_ROOT = /Users/lipengyuan/Documents/FlutterSDK/flutter;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OCFlutterProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -397,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				FLUTTER_ROOT = /Users/lipengyuan/Documents/FlutterSDK/flutter;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OCFlutterProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

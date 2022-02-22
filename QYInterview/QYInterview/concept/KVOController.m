@@ -196,18 +196,27 @@ static void kvo_setter(id self, SEL _cmd, id newValue)
 @end
 
 @interface KVOPersion : NSObject
-@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *sex;
 @end
 
 @implementation KVOPersion
-//- (void)setName:(NSString *)name {
-//    _name = name;
-//    NSLog(@"name = %@",name);
-//}
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    NSLog(@"keyPath = %@, change = %@ ",keyPath, change);
++ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
+    if ([key isEqualToString:@"name"]) {
+        return NO;
+    }
+    return [super automaticallyNotifiesObserversForKey:key];
 }
+
+
+- (void)setName:(NSString *)name {
+    [self willChangeValueForKey:@"name"];
+    _name = name;
+    [self didChangeValueForKey:@"name"];
+}
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+//    NSLog(@"keyPath = %@, change = %@ ",keyPath, change);
+//}
 @end
 struct ThreeFloats {
     CGFloat one;
@@ -245,13 +254,13 @@ struct ThreeFloats {
     // Do any additional setup after loading the view.
     NSLog(@"自己实现KVO");
     self.view.backgroundColor = [UIColor whiteColor];
-    [self testReadonly];
-    struct ThreeFloats flo = {1,2,3};
-    NSValue *value = [NSValue valueWithBytes:&flo objCType:@encode(struct ThreeFloats)];
-    KVOSon *son = [[KVOSon alloc] init];
-    [son setValue:value forKey:@"floats"];
-    NSLog(@"%@-%@", [son valueForKey:@"floats"], [[son valueForKey:@"floats"] class]);
-    [self testSuper];
+//    [self testReadonly];
+//    struct ThreeFloats flo = {1,2,3};
+//    NSValue *value = [NSValue valueWithBytes:&flo objCType:@encode(struct ThreeFloats)];
+//    KVOSon *son = [[KVOSon alloc] init];
+//    [son setValue:value forKey:@"floats"];
+//    NSLog(@"%@-%@", [son valueForKey:@"floats"], [[son valueForKey:@"floats"] class]);
+//    [self testSuper];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -262,8 +271,12 @@ struct ThreeFloats {
 //    _persion.sex = @"xiao ming";
 //    _son.sex = @"xiao ming";
 
-    [_son setValue:@"xiaoming" forKey:@"isSex"];
-    NSLog(@"%@",_son.sex);
+//    [_son setValue:@"xiaoming" forKey:@"isSex"];
+//    NSLog(@"%@",_son.sex);
+    _persion = [[KVOPersion alloc] init];
+    [_persion addObserver:self forKeyPath:@"name" options:(NSKeyValueObservingOptionNew) context:NULL];
+    _persion.name = @"123";
+    
 }
 - (void)testSuper {
     _son = [[KVOSon alloc] init];

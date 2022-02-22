@@ -43,7 +43,25 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    [self test];
+    [self gcdBlockPriority];
+}
+- (void)gcdBlockPriority {
+    dispatch_queue_t concurrentQuene = dispatch_queue_create("concurrentQuene", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_block_t block = dispatch_block_create(0, ^{
+        NSLog(@"normal do some thing...");
+    });
+    dispatch_async(concurrentQuene, block);
+    
+    dispatch_block_t qosBlock1 = dispatch_block_create_with_qos_class(0, QOS_CLASS_BACKGROUND, 0, ^{
+        NSLog(@"qos1 do some thing...");
+    });
+    dispatch_async(concurrentQuene, qosBlock1);
+    
+    dispatch_block_t qosBlock2 = dispatch_block_create_with_qos_class(0, QOS_CLASS_USER_INITIATED, 0, ^{
+        NSLog(@"qos2 do some thing...");
+    });
+    dispatch_async(concurrentQuene, qosBlock2);
+
 }
 - (void)test {
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);

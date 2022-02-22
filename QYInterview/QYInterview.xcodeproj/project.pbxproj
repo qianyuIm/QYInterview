@@ -368,6 +368,8 @@
 				EF470AC425F9B10B0053D1F6 /* OperationController.h */,
 				EF470AC525F9B10B0053D1F6 /* OperationController.m */,
 				EF470AC625F9B10B0053D1F6 /* OperationController.xib */,
+				EF96338525E4A4800023D5C6 /* GCDController.h */,
+				EF96338625E4A4800023D5C6 /* GCDController.m */,
 			);
 			path = Multithreaded;
 			sourceTree = "<group>";
@@ -594,8 +596,6 @@
 				EFEEEE5625E393CB004B3ACC /* SuperSelfController.m */,
 				EF96337F25E48E200023D5C6 /* AllocInitController.h */,
 				EF96338025E48E200023D5C6 /* AllocInitController.m */,
-				EF96338525E4A4800023D5C6 /* GCDController.h */,
-				EF96338625E4A4800023D5C6 /* GCDController.m */,
 				EFDC5B3025E8A58A0073F62F /* NSOperationController.h */,
 				EFDC5B3125E8A58A0073F62F /* NSOperationController.m */,
 				EF3F835C25E62C1F009C217D /* ResponderChainController.swift */,
