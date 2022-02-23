@@ -35,10 +35,5 @@ class BaseViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         touchesBeganBlock?()
-        var nums = [1,2,3,4,5]
-        let k = 3
-        var aa = nums.suffix(from: nums.count - k)
-        nums.insert(nums.last!, at: 0)
-        nums.remove(at: nums.count - 1)
     }
 }

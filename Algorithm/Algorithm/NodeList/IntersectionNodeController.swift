@@ -14,53 +14,7 @@
  https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/solution/ji-he-shuang-zhi-zhen-deng-3chong-jie-jue-fang-shi/
  */
 import UIKit
-fileprivate class ListNode: Equatable {
-    static func == (lhs: ListNode, rhs: ListNode) -> Bool {
-        return lhs.val == rhs.val
-    }
-    
-    var val: Int
-    var next: ListNode?
-    init() {
-        self.val = 0
-        self.next = nil
-    }
-    init(_ val: Int) {
-        self.val = val
-        self.next = nil
-    }
-    // 1,2,3
-    class func creat(_ array: [Int]) -> ListNode {
-        var head = ListNode()
-        var next = ListNode()
-        next = head
-        for val in array {
-            let node = ListNode(val)
-            next.next = node
-            next = node
-        }
-        if head.next != nil {
-            head = head.next!
-        }
-        return head
-    }
-    func log() {
-        var node: ListNode?  = self
-        while node != nil {
-            print(node!.val)
-            node = node?.next
-        }
-    }
-    func length() -> Int {
-        var head: ListNode? = self
-        var count = 0
-        while head != nil {
-            count += 1
-            head = head?.next
-        }
-        return count
-    }
-}
+
 class IntersectionNodeController: BaseViewController {
 
     override func viewDidLoad() {
@@ -69,10 +23,10 @@ class IntersectionNodeController: BaseViewController {
 
         // Do any additional setup after loading the view.
         
-        let headA = ListNode.creat([0,9,1,2,4])
+        let headA = ListNodeHelper.creat([0,9,1,2,4])
 //        let headA = ListNode.creat([1,5,6])
 
-        let headB = ListNode.creat([3,2,4])
+        let headB = ListNodeHelper.creat([3,2,4])
 
         // Do any additional setup after loading the view.
         self.touchesBeganBlock = { [weak self] in
@@ -83,7 +37,7 @@ class IntersectionNodeController: BaseViewController {
     // 第一种方法： 判断两个链表长度是否一致，不一致的话长链表先走
     // 一直走到与短链表长度先等的位置，
     // 相交位置之后的链表数据相同
-    fileprivate func getIntersectionNode(_ headA: ListNode,
+    func getIntersectionNode(_ headA: ListNode,
                                          _ headB: ListNode) -> ListNode? {
         
         var headALength = headA.length()
@@ -120,7 +74,7 @@ class IntersectionNodeController: BaseViewController {
     // 如果 headA 与 headB 长度不同的话 同时走是不会相交的
     // 可以走完自己的再走别人的  这样长度就一致了
     // (a - c) + b = (b - c) + a
-    fileprivate func getIntersectionNode1(_ headA: ListNode,
+    func getIntersectionNode1(_ headA: ListNode,
                                          _ headB: ListNode) -> ListNode? {
         var tempA: ListNode? = headA
         var tempB: ListNode? = headB

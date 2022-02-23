@@ -13,6 +13,8 @@ extern void _objc_autoreleasePoolPrint(void);
 void testAutoreleasePool(void);
 void testClass(void);
 void testKindAndMember(void) ;
+//void testKindAndMember1(void) ;
+
 void testAtomic(void) ;
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -20,9 +22,14 @@ int main(int argc, const char * argv[]) {
 //        testClass();
 //        testKindAndMember();
         testAtomic();
+//        testKindAndMember1();
     }
     return 0;
 }
+//void testKindAndMember1(void) {
+//
+//}
+
 void testAtomic(void) {
     DSPersion *persion = [[DSPersion alloc] init];
     persion.nickName = @"123";

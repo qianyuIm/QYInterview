@@ -23,21 +23,7 @@
  */
 import UIKit
 
-fileprivate class ListNode {
-    var val: Int
-    var next: ListNode?
-    init(_ val: Int) {
-        self.val = val
-        self.next = nil
-    }
-    func log() {
-        var node: ListNode?  = self
-        while node != nil {
-            print(node!.val)
-            node = node?.next
-        }
-    }
-}
+
 class ReverseListController: BaseViewController {
 
     override func viewDidLoad() {
@@ -54,16 +40,15 @@ class ReverseListController: BaseViewController {
         node4.next = node5
         node5.next = node6
         logDebug("原始链表")
-        node1.log()
         // Do any additional setup after loading the view.
         self.touchesBeganBlock = { [weak self] in
             guard let self = self else { return }
             logDebug("反转后链表")
-            self.reverseList1(node1)?.log()
+            self.reverseList1(node1)
         }
     }
     // 双指针法 或者叫 迭代法
-    fileprivate func reverseList(_ head: ListNode?) -> ListNode? {
+    func reverseList(_ head: ListNode?) -> ListNode? {
         var pre: ListNode? = nil
         var cur = head
         // 临时变量
@@ -77,7 +62,7 @@ class ReverseListController: BaseViewController {
     }
     // 递归解法
     // https://leetcode-cn.com/problems/reverse-linked-list/solution/yi-bu-yi-bu-jiao-ni-ru-he-yong-di-gui-si-67c3/
-    fileprivate func reverseList1(_ head: ListNode?) -> ListNode? {
+    func reverseList1(_ head: ListNode?) -> ListNode? {
         if head == nil {
             return nil
         }

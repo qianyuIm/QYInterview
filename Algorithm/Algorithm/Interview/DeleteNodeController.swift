@@ -28,21 +28,7 @@
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 import UIKit
-fileprivate class ListNode {
-    var val: Int
-    var next: ListNode?
-    init(_ val: Int) {
-        self.val = val
-        self.next = nil
-    }
-    func log() {
-        var node: ListNode?  = self
-        while node != nil {
-            print(node!.val)
-            node = node?.next
-        }
-    }
-}
+
 class DeleteNodeController: BaseViewController {
 
     override func viewDidLoad() {
@@ -50,26 +36,14 @@ class DeleteNodeController: BaseViewController {
 
         // Do any additional setup after loading the view.
         // Do any additional setup after loading the view.
-        let node1 = ListNode(1)
-        let node2 = ListNode(2)
-        let node3 = ListNode(3)
-        let node4 = ListNode(4)
-        let node5 = ListNode(5)
-        let node6 = ListNode(6)
-
-        node1.next = node2
-        node2.next = node3
-        node3.next = node4
-        node4.next = node5
-        node5.next = node6
-
-        logDebug("原始链表")
-        node1.log()
+        let head = ListNodeHelper.creatList(6)
+        
+        
         // Do any additional setup after loading the view.
         self.touchesBeganBlock = { [weak self] in
             guard let self = self else { return }
             logDebug("删除之后的链表")
-            self.deleteNode(node1, 4)?.log()
+            self.deleteNode(head, 4)
         }
     }
     

@@ -11,7 +11,8 @@ class MultithreadedController: UIViewController {
     var dataSource: [QTTableSectionItem] = [
         .init(with: "GCD", items: [
                 .init(with: "栅栏函数", subTitle: "栅栏函数", controllerName: "GCDBarrierController"),
-                .init(with: "GCD优先级", subTitle: "GCD优先级", controllerName: "GCDController")
+                .init(with: "GCD优先级", subTitle: "GCD优先级", controllerName: "GCDController"),
+                .init(with: "GCD网络异步转同步", subTitle: "GCD网络异步转同步", controllerName: "GCDSynNetController")
         ]),
         .init(with: "NSOperationQueue", items: [
                 .init(with: "Operation", subTitle: "Operation", controllerName: "OperationController")])]

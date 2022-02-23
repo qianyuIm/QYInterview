@@ -23,40 +23,22 @@
 
 import UIKit
 
-fileprivate class ListNode {
-    var val: Int
-    var next: ListNode?
-    init(_ val: Int) {
-        self.val = val
-        self.next = nil
-    }
-  
-}
 class KthFromEndController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let node1 = ListNode(1)
-        let node2 = ListNode(2)
-        let node3 = ListNode(3)
-        let node4 = ListNode(4)
-        let node5 = ListNode(5)
-        let node6 = ListNode(6)
-        node1.next = node2
-        node2.next = node3
-        node3.next = node4
-        node4.next = node5
-        node5.next = node6
+        let head = ListNodeHelper.creatList(6)
+        
         self.touchesBeganBlock = { [weak self] in
             guard let self = self else { return }
-            let first = self.getKthFromEnd1(node1, 2)
+            let first = self.getKthFromEnd1(head, 2)
             logDebug(first?.val)
         }
     }
     
-    fileprivate func getKthFromEnd(_ head: ListNode?,
+    func getKthFromEnd(_ head: ListNode?,
                                    _ k: Int) -> ListNode? {
         guard let head = head else { return nil }
         // 将node 放入数组中
@@ -68,7 +50,7 @@ class KthFromEndController: BaseViewController {
         }
         return list[list.count - k]
     }
-    fileprivate func getKthFromEnd1(_ head: ListNode?,
+    func getKthFromEnd1(_ head: ListNode?,
                                    _ k: Int) -> ListNode? {
         // 快慢指针，快指针先走k步，然后快慢指针同步走。
         // 当快指针为空时，当前慢指针就是想要倒数第k个节点。

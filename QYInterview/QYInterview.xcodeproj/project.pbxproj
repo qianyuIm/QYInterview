@@ -48,6 +48,8 @@
 		EF5582CC25B02003003E1347 /* BalancedBinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582CB25B02003003E1347 /* BalancedBinaryTreeController.swift */; };
 		EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582CE25B023B7003E1347 /* BinarySearchController.swift */; };
 		EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5582DF25B02887003E1347 /* BlockChangeController.m */; };
+		EF5D0D3527C60EB6007FA81E /* GCDSynNetController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5D0D3327C60EB6007FA81E /* GCDSynNetController.m */; };
+		EF5D0D3627C60EB6007FA81E /* GCDSynNetController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5D0D3427C60EB6007FA81E /* GCDSynNetController.xib */; };
 		EF60E06D26043FA2001D78FE /* LockController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF60E06B26043FA2001D78FE /* LockController.m */; };
 		EF60E06E26043FA2001D78FE /* LockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF60E06C26043FA2001D78FE /* LockController.xib */; };
 		EF69077E262D32780047B1D8 /* NotificationSyncController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69077D262D32780047B1D8 /* NotificationSyncController.swift */; };
@@ -179,6 +181,9 @@
 		EF5582CE25B023B7003E1347 /* BinarySearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchController.swift; sourceTree = "<group>"; };
 		EF5582DE25B02887003E1347 /* BlockChangeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockChangeController.h; sourceTree = "<group>"; };
 		EF5582DF25B02887003E1347 /* BlockChangeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockChangeController.m; sourceTree = "<group>"; };
+		EF5D0D3227C60EB6007FA81E /* GCDSynNetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSynNetController.h; sourceTree = "<group>"; };
+		EF5D0D3327C60EB6007FA81E /* GCDSynNetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSynNetController.m; sourceTree = "<group>"; };
+		EF5D0D3427C60EB6007FA81E /* GCDSynNetController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GCDSynNetController.xib; sourceTree = "<group>"; };
 		EF60E06A26043FA2001D78FE /* LockController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockController.h; sourceTree = "<group>"; };
 		EF60E06B26043FA2001D78FE /* LockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockController.m; sourceTree = "<group>"; };
 		EF60E06C26043FA2001D78FE /* LockController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockController.xib; sourceTree = "<group>"; };
@@ -370,6 +375,9 @@
 				EF470AC625F9B10B0053D1F6 /* OperationController.xib */,
 				EF96338525E4A4800023D5C6 /* GCDController.h */,
 				EF96338625E4A4800023D5C6 /* GCDController.m */,
+				EF5D0D3227C60EB6007FA81E /* GCDSynNetController.h */,
+				EF5D0D3327C60EB6007FA81E /* GCDSynNetController.m */,
+				EF5D0D3427C60EB6007FA81E /* GCDSynNetController.xib */,
 			);
 			path = Multithreaded;
 			sourceTree = "<group>";
@@ -733,6 +741,7 @@
 				EF0EC93D27C381B4000F8933 /* TextFieldTableViewCell.xib in Resources */,
 				EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */,
 				EF470AC825F9B10B0053D1F6 /* OperationController.xib in Resources */,
+				EF5D0D3627C60EB6007FA81E /* GCDSynNetController.xib in Resources */,
 				EF08452125F76800003FE450 /* SwizzlingController.xib in Resources */,
 				EF3E2B2A25F8C082000F5F78 /* MultithreadedController.xib in Resources */,
 				EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */,
@@ -838,6 +847,7 @@
 				EF0EC94627C39ABE000F8933 /* EscapingViewController.swift in Sources */,
 				EF08452725F76956003FE450 /* RuntimePersion.m in Sources */,
 				EF0EC93C27C381B4000F8933 /* TextFieldTableViewCell.m in Sources */,
+				EF5D0D3527C60EB6007FA81E /* GCDSynNetController.m in Sources */,
 				EF31AAB2278E67AE00EA328C /* RemoveNthFromEndController.swift in Sources */,
 				EFE40A1B278C322100496921 /* ReverseStringController.swift in Sources */,
 				EFFC476425AE7EFB007C5AA4 /* ViewController.swift in Sources */,

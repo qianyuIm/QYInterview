@@ -41,7 +41,6 @@ class QuickSortController: BaseViewController {
             while i < j && array[j] >= midKey {
                 j -= 1
             }
-            
             // 从左边开始比较，比key小的数位置不变
             while i < j && array[i] <= midKey{
                 i += 1

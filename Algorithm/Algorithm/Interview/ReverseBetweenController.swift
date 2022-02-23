@@ -24,52 +24,27 @@
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 import UIKit
-fileprivate class ListNode {
-    var val: Int
-    var next: ListNode?
-    init(_ val: Int) {
-        self.val = val
-        self.next = nil
-    }
-    func log() {
-        var node: ListNode?  = self
-        while node != nil {
-            print(node!.val)
-            node = node?.next
-        }
-    }
-}
+
 class ReverseBetweenController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let node1 = ListNode(1)
-        let node2 = ListNode(2)
-        let node3 = ListNode(3)
-        let node4 = ListNode(4)
-        let node5 = ListNode(5)
-        let node6 = ListNode(6)
-
-        node1.next = node2
-        node2.next = node3
-        node3.next = node4
-        node4.next = node5
-        node5.next = node6
+        let head = ListNodeHelper.creatList(6)
+        
 
         logDebug("原始链表")
-        node1.log()
         // Do any additional setup after loading the view.
         self.touchesBeganBlock = { [weak self] in
             guard let self = self else { return }
             logDebug("反转后链表")
-            self.reverseBetween(node1, 2, 4)?.log()
+            self.reverseBetween(head, 2, 4)
         }
     }
     // 递归
     // https://leetcode-cn.com/problems/reverse-linked-list-ii/solution/yi-bu-yi-bu-jiao-ni-ru-he-yong-di-gui-si-lowt/
-    fileprivate func reverseBetween(_ head: ListNode?,
+    func reverseBetween(_ head: ListNode?,
                                     _ left: Int,
                                     _ right: Int) -> ListNode? {
         if left == 1 {
@@ -79,8 +54,8 @@ class ReverseBetweenController: BaseViewController {
         head?.next = between
         return head
     }
-    fileprivate var topRightSuccessor: ListNode? = nil
-    fileprivate func reverseTopRight(_ head: ListNode?,
+    var topRightSuccessor: ListNode? = nil
+    func reverseTopRight(_ head: ListNode?,
                                      _ right: Int) -> ListNode? {
         if right == 1 {
             topRightSuccessor = head?.next

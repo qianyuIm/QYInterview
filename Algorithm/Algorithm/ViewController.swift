@@ -39,6 +39,7 @@ class ViewController: UIViewController {
                 .init(with: "冒泡排序", subTitle: "冒泡排序", controllerName: "BubbleSortController"),
                 .init(with: "选择排序", subTitle: "选择排序", controllerName: "SelectSortController"),
                 .init(with: "快速排序", subTitle: "快速排序", controllerName: "QuickSortController"),
+                .init(with: "双路快拍", subTitle: "双路快拍", controllerName: "DoubleQuickSortController"),
                 .init(with: "希尔排序", subTitle: "希尔排序", controllerName: "ShellSortController"),
                 .init(with: "插入排序", subTitle: "插入排序", controllerName: "InsertSortController"),
                 .init(with: "归并排序", subTitle: "归并排序", controllerName: "MergeSortController")]),
@@ -89,8 +90,6 @@ class ViewController: UIViewController {
         let b = 1
         let c = a ^ b
         logDebug(c)
-        
-        
     }
 
 

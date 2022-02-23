@@ -6,33 +6,7 @@
 //
 
 import UIKit
-fileprivate class ListNode {
-    
-    var val: Int
-    var next: ListNode?
-    init() {
-        self.val = 0;
-        self.next = nil;
-    }
-    init(_ val: Int) {
-        self.val = val;
-        self.next = nil;
-    }
-    init(_ val: Int, _ next: ListNode?) {
-        self.val = val;
-        self.next = next;
-    }
-    func log() {
-        var temp: ListNode? = self
-        while temp != nil {
-            logDebug(temp!.val)
-            if temp!.next == nil {
-                break
-            }
-            temp = temp!.next
-        }
-    }
-}
+
 class DeleteDuplicates2Controller: BaseViewController {
 
     override func viewDidLoad() {
@@ -42,17 +16,15 @@ class DeleteDuplicates2Controller: BaseViewController {
         // 创建
         let head = initListNodeFromTail([1,2,3,4,4,5,5,6])
         logDebug("去重之前")
-        head.log()
         self.touchesBeganBlock = { [weak self] in
             guard let self = self else {
                 return
             }
             let node = self.deleteDuplicates(head)
             logDebug("去重之后")
-            node?.log()
         }
     }
-    fileprivate func initListNodeFromTail(_ array: [Int]) -> ListNode {
+     func initListNodeFromTail(_ array: [Int]) -> ListNode {
         var node = ListNode()
         var tail = ListNode()
         tail = node
@@ -70,7 +42,7 @@ class DeleteDuplicates2Controller: BaseViewController {
     // 存在一个按升序排列的链表，给你这个链表的头节点 head ，请你删除链表中所有存在数字重复情况的节点，只保留原始链表中 没有重复出现 的数字。
     // 解题思路： 因为是升序链表，所以有相同数则一定连续存在
 
-    fileprivate func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+     func deleteDuplicates(_ head: ListNode?) -> ListNode? {
         var result = head
         // 判断head符合条件
         if let current = result, let next = current.next {

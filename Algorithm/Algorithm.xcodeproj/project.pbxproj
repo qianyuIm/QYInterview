@@ -27,6 +27,8 @@
 		EF1A8953260C81280037CAF5 /* RepeatedSubstringPatternController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8952260C81280037CAF5 /* RepeatedSubstringPatternController.swift */; };
 		EF1A8956260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A8955260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift */; };
 		EF3CE95A26437B530010372D /* MergeSortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CE95926437B530010372D /* MergeSortController.swift */; };
+		EF5D0D3827C632A9007FA81E /* DoubleQuickSortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D0D3727C632A9007FA81E /* DoubleQuickSortController.swift */; };
+		EF5D0D3A27C635ED007FA81E /* ListNodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D0D3927C635ED007FA81E /* ListNodeHelper.swift */; };
 		EF62454D26267EF300940CA7 /* CompressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62454C26267EF200940CA7 /* CompressController.swift */; };
 		EF6907BA262D7D970047B1D8 /* ShellSortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6907B9262D7D970047B1D8 /* ShellSortController.swift */; };
 		EF75C9EC262FC3040091A461 /* BinarySearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75C9EB262FC3040091A461 /* BinarySearchController.swift */; };
@@ -78,6 +80,8 @@
 		EF1A8952260C81280037CAF5 /* RepeatedSubstringPatternController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatedSubstringPatternController.swift; sourceTree = "<group>"; };
 		EF1A8955260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDuplicates2Controller.swift; sourceTree = "<group>"; };
 		EF3CE95926437B530010372D /* MergeSortController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortController.swift; sourceTree = "<group>"; };
+		EF5D0D3727C632A9007FA81E /* DoubleQuickSortController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleQuickSortController.swift; sourceTree = "<group>"; };
+		EF5D0D3927C635ED007FA81E /* ListNodeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListNodeHelper.swift; path = ../../../QYInterview/QYInterview/algorithm/ListNodeHelper.swift; sourceTree = "<group>"; };
 		EF62454C26267EF200940CA7 /* CompressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressController.swift; sourceTree = "<group>"; };
 		EF6907B9262D7D970047B1D8 /* ShellSortController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellSortController.swift; sourceTree = "<group>"; };
 		EF75C9EB262FC3040091A461 /* BinarySearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchController.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 				EF1824B5262924090004F417 /* InsertSortController.swift */,
 				EF6907B9262D7D970047B1D8 /* ShellSortController.swift */,
 				EF3CE95926437B530010372D /* MergeSortController.swift */,
+				EF5D0D3727C632A9007FA81E /* DoubleQuickSortController.swift */,
 			);
 			path = Sort;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 		EF8B48192625C2C90090C77A /* NodeList */ = {
 			isa = PBXGroup;
 			children = (
+				EF5D0D3927C635ED007FA81E /* ListNodeHelper.swift */,
 				EF8B481A2625C2D70090C77A /* ReversePrintController.swift */,
 				EFEB889626283D3D005CD74A /* IntersectionNodeController.swift */,
 			);
@@ -323,6 +329,7 @@
 				EFD27765260DCA2C0083DA05 /* MergesTwoOrderedArraysController.swift in Sources */,
 				EF1A893B260C64A30037CAF5 /* BubbleSortController.swift in Sources */,
 				EF7AFABA262001FE0008E2DD /* KthFromEndController.swift in Sources */,
+				EF5D0D3827C632A9007FA81E /* DoubleQuickSortController.swift in Sources */,
 				EFEB889B262856A1005CD74A /* KthGrammarController.swift in Sources */,
 				EF1A894C260C6D740037CAF5 /* FindDuplicateStringsController.swift in Sources */,
 				EFB48F13261ED6CF001379EE /* DynamicSumOfOneDimensionalArrayController.swift in Sources */,
@@ -345,6 +352,7 @@
 				EF1A8923260C63510037CAF5 /* SceneDelegate.swift in Sources */,
 				EF1A8950260C79E40037CAF5 /* FindRepeatNumberController.swift in Sources */,
 				EF8B47E12625336A0090C77A /* ReverseBetweenController.swift in Sources */,
+				EF5D0D3A27C635ED007FA81E /* ListNodeHelper.swift in Sources */,
 				EF1A8956260C8DF30037CAF5 /* DeleteDuplicates2Controller.swift in Sources */,
 				EF1824BC2629615E0004F417 /* ReplaceSpaceController.swift in Sources */,
 				EFB48F16261EDE9E001379EE /* FirstUniqCharController.swift in Sources */,
