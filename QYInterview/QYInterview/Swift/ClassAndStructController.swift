@@ -71,9 +71,7 @@ class ClassAndStructController: BaseViewController {
         let struct2 = struct1
         struct1.x = 30
         logDebug("struct1 x = \(struct1.x),struct1 y = \(struct1.y)")
-        logDebug("struct2 x = \(struct2.x),struct2 y = \(struct2.y)")
-
-        
+        logDebug("struct2 x = \(struct2.x),struct2 y = \(struct2.y)")        
     }
     
 }

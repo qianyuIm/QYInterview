@@ -17,4 +17,6 @@ target 'QYInterview' do
   pod 'HandyJSON'
   pod 'YYCache'
   pod 'ZFPlayer'
+  pod 'Alamofire'
+  pod 'RxTheme'
 end

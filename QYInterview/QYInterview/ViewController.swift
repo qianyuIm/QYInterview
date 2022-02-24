@@ -57,11 +57,13 @@ class ViewController: UIViewController {
 
     var dataSource: [QTTableSectionItem] = [
         .init(with: "Swift", items: [
-                .init(with: "自动闭包@autoclosure", subTitle: "自动闭包@autoclosure", controllerName: "AutoclosureController"),
                 .init(with: "Class和Struct", subTitle: "Class和Struct", controllerName: "ClassAndStructController"),
                 .init(with: "Swift KVO", subTitle: "Swift KVO", controllerName: "SwiftKVOViewController"),
                 .init(with: "defer 的作用", subTitle: "defer 的作用", controllerName: "DeferViewController"),
-                .init(with: "逃逸闭包与非逃逸闭包", subTitle: "逃逸闭包与非逃逸闭包", controllerName: "EscapingViewController")
+                .init(with: "闭包", subTitle: "闭包", controllerName: "ClosureController"),
+                .init(with: "计算属性和存储属性", subTitle: "计算属性和存储属性", controllerName: "PropertiesController"),
+                .init(with: "类型相关", subTitle: "类型相关", controllerName: "TypeController"),
+                .init(with: "swift weak", subTitle: "swift weak", controllerName: "SwiftWeakController")
         ]),
         .init(with: "Bug", items: [
             .init(with: "UITextFieldDelegate代理不走", subTitle: "UITextFieldDelegate代理不走", controllerName: "TextFieldViewController")
@@ -117,7 +119,6 @@ class ViewController: UIViewController {
                 .init(with: "KVO", subTitle: "KVO", controllerName: "KVOController"),
                 .init(with: "KVC", subTitle: "KVC", controllerName: "KVCController"),
                 .init(with: "性能优化", subTitle: "性能优化", controllerName: ""),
-                .init(with: "属性", subTitle: "属性", controllerName: "AttributeController"),
                 .init(with: "map,flatMap,compactMap", subTitle: "map,flatMap,compactMap", controllerName: "MapController"),
                 .init(with: "初始化方法", subTitle: "初始化方法", controllerName: "InitController"),
                 .init(with: "响应者链", subTitle: "响应者链", controllerName: "TouchController"),

@@ -33,7 +33,6 @@ class QTTableSectionItem {
     }
 }
 class ViewController: UIViewController {
-
     var dataSource: [QTTableSectionItem] = [
         .init(with: "排序算法", items: [
                 .init(with: "冒泡排序", subTitle: "冒泡排序", controllerName: "BubbleSortController"),
