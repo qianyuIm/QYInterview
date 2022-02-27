@@ -19,6 +19,24 @@ class ClosureController: BaseViewController {
             self?.test()
         }
     }
+    func test11(){
+        var age = 0
+        var height = 0.0
+        //将变量age用来初始化捕获列表中的常量age，即将0给了闭包中的age（值拷贝）
+        let clourse = { [age] in
+//            var age = age
+//            age = 100
+            print(age)
+            print(height)
+        }
+        age = 10
+        height = 1.85
+        clourse()
+    }
+
+    
+
+    // 打印结果 0   1.85
     var iStrong = {
         num1 += 1
         num2 += 1

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1728E2EE27CB66F100B53586 /* OCCallSwiftController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1728E2ED27CB66F100B53586 /* OCCallSwiftController.m */; };
+		1728E2F027CB673500B53586 /* OCCallSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728E2EF27CB673500B53586 /* OCCallSwift.swift */; };
 		EF08451725F767E7003FE450 /* RuntimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08451525F767E7003FE450 /* RuntimeController.swift */; };
 		EF08451825F767E7003FE450 /* RuntimeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF08451625F767E7003FE450 /* RuntimeController.xib */; };
 		EF08452025F76800003FE450 /* SwizzlingController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08451E25F76800003FE450 /* SwizzlingController.m */; };
@@ -125,6 +127,9 @@
 
 /* Begin PBXFileReference section */
 		0F9ADB41D06FFC2386B75876 /* Pods-QYInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYInterview.debug.xcconfig"; path = "Target Support Files/Pods-QYInterview/Pods-QYInterview.debug.xcconfig"; sourceTree = "<group>"; };
+		1728E2EC27CB66F100B53586 /* OCCallSwiftController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCCallSwiftController.h; sourceTree = "<group>"; };
+		1728E2ED27CB66F100B53586 /* OCCallSwiftController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCCallSwiftController.m; sourceTree = "<group>"; };
+		1728E2EF27CB673500B53586 /* OCCallSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCCallSwift.swift; sourceTree = "<group>"; };
 		19006688363D8793123E7230 /* Pods-QYInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYInterview.release.xcconfig"; path = "Target Support Files/Pods-QYInterview/Pods-QYInterview.release.xcconfig"; sourceTree = "<group>"; };
 		B2BE0DAC20A11569F4EF0DA2 /* Pods_QYInterview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYInterview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF08451525F767E7003FE450 /* RuntimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeController.swift; sourceTree = "<group>"; };
@@ -362,6 +367,9 @@
 				EF8FC46227C715CB005C35C3 /* PropertiesController.swift */,
 				EF8FC46427C75391005C35C3 /* TypeController.swift */,
 				EF8FC46827C78BD9005C35C3 /* SwiftWeakController.swift */,
+				1728E2EC27CB66F100B53586 /* OCCallSwiftController.h */,
+				1728E2ED27CB66F100B53586 /* OCCallSwiftController.m */,
+				1728E2EF27CB673500B53586 /* OCCallSwift.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -844,6 +852,7 @@
 				EFE4DB2B279E7D4A003188D8 /* Helper.swift in Sources */,
 				EFD0BA2C25C7FB2C00B572EB /* InitController.swift in Sources */,
 				EF3F835D25E62C1F009C217D /* ResponderChainController.swift in Sources */,
+				1728E2F027CB673500B53586 /* OCCallSwift.swift in Sources */,
 				EFFC478E25AE9352007C5AA4 /* ReverseSingListController.swift in Sources */,
 				EFEEEE0A25E34E80004B3ACC /* SDLargerImageController.swift in Sources */,
 				EF456DAF25B5657400566946 /* MapController.swift in Sources */,
@@ -889,6 +898,7 @@
 				EFE4DB29279E5055003188D8 /* AnagramController.swift in Sources */,
 				EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */,
 				EFA1E183278D60990051D494 /* ReverseListController.swift in Sources */,
+				1728E2EE27CB66F100B53586 /* OCCallSwiftController.m in Sources */,
 				EF6A5A2725E755DC00965E1A /* OCViewController.m in Sources */,
 				EFE40A1D278C354F00496921 /* ReplaceSpaceController.swift in Sources */,
 				EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */,
