@@ -47,7 +47,6 @@ class BubbleSortController: BaseViewController {
             logDebug("空数组")
             return
         }
-        
         var perArray = array
         for i in 0 ..< array.count {
             var flag = false

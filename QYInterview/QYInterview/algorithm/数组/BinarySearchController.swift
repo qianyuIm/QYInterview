@@ -19,10 +19,14 @@ class BinarySearchController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let target: Int = 17
-        let index = binarySearch(nums, target: target)
-        logDebug("\(target) 在数组中的下标为\(index)")
+        self.touchesBeganBlock = { [weak self] in
+            guard let self = self else { return }
+            let target: Int = 17
+            let index = self.binarySearch(self.nums, target: target)
+            logDebug("\(target) 在数组中的下标为\(index)")
+        }
     }
+    // https://programmercarl.com/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.html#%E6%80%9D%E8%B7%AF
     /// 左闭右闭区间
     func binarySearch(_ nums: [Int], target: Int) -> Int {
         // 1. 先定义区间。这里的区间是[left, right]
@@ -64,7 +68,21 @@ class BinarySearchController: BaseViewController {
                 return middle
             }
         }
-
+        return -1
+    }
+    func binarySearch3(_ nums: [Int], target: Int) -> Int {
+        var left = 0
+        var right = nums.count
+        while left < right {
+            let middle = left + (right - left) / 2
+            if (target > nums[middle]) {
+                left = middle + 1
+            } else if (target < nums[middle]) {
+                right = middle
+            } else {
+                return middle
+            }
+        }
         return -1
     }
 }

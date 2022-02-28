@@ -14,7 +14,7 @@ class SelectSortController: BaseViewController {
 
         // Do any additional setup after loading the view.
         touchesBeganBlock = { [weak self] in
-            self?.selectSort(self!.sortArray)
+            self?.selectSort1(self!.sortArray)
         }
     }
     // 选择排序
@@ -46,6 +46,27 @@ class SelectSortController: BaseViewController {
         }
         logDebug("\(sortArray)")
 
+    }
+    
+    func selectSort1(_ array: [Int]) {
+        if array.count < 1 {
+            return
+        }
+        var sortArray = array
+        for index in 0..<sortArray.count {
+            var min = sortArray[index]
+            for j in (index + 1)..<sortArray.count {
+                // 查找最小值
+                if (min > sortArray[j]) {
+                    let temp = sortArray[j]
+                    sortArray[j] = min
+                    min = temp
+                }
+            }
+            // 交换最小
+            sortArray[index] = min
+        }
+        logDebug("\(sortArray)")
     }
 
 }

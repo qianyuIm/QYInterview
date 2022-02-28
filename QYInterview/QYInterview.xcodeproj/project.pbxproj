@@ -74,6 +74,7 @@
 		EF8FC46327C715CB005C35C3 /* PropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FC46227C715CB005C35C3 /* PropertiesController.swift */; };
 		EF8FC46527C75391005C35C3 /* TypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FC46427C75391005C35C3 /* TypeController.swift */; };
 		EF8FC46927C78BD9005C35C3 /* SwiftWeakController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FC46827C78BD9005C35C3 /* SwiftWeakController.swift */; };
+		EF92569E27CC5B7800F43465 /* HigherOrderFunctionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92569D27CC5B7800F43465 /* HigherOrderFunctionController.swift */; };
 		EF96338125E48E200023D5C6 /* AllocInitController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338025E48E200023D5C6 /* AllocInitController.m */; };
 		EF96338725E4A4800023D5C6 /* GCDController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338625E4A4800023D5C6 /* GCDController.m */; };
 		EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338B25E52AD20023D5C6 /* IfElseController.m */; };
@@ -245,6 +246,7 @@
 		EF8FC46227C715CB005C35C3 /* PropertiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesController.swift; sourceTree = "<group>"; };
 		EF8FC46427C75391005C35C3 /* TypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeController.swift; sourceTree = "<group>"; };
 		EF8FC46827C78BD9005C35C3 /* SwiftWeakController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWeakController.swift; sourceTree = "<group>"; };
+		EF92569D27CC5B7800F43465 /* HigherOrderFunctionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HigherOrderFunctionController.swift; sourceTree = "<group>"; };
 		EF96337F25E48E200023D5C6 /* AllocInitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllocInitController.h; sourceTree = "<group>"; };
 		EF96338025E48E200023D5C6 /* AllocInitController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllocInitController.m; sourceTree = "<group>"; };
 		EF96338525E4A4800023D5C6 /* GCDController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDController.h; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				1728E2EC27CB66F100B53586 /* OCCallSwiftController.h */,
 				1728E2ED27CB66F100B53586 /* OCCallSwiftController.m */,
 				1728E2EF27CB673500B53586 /* OCCallSwift.swift */,
+				EF92569D27CC5B7800F43465 /* HigherOrderFunctionController.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -894,6 +897,7 @@
 				EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */,
 				EF60E06D26043FA2001D78FE /* LockController.m in Sources */,
 				EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */,
+				EF92569E27CC5B7800F43465 /* HigherOrderFunctionController.swift in Sources */,
 				EFDC5B3225E8A58A0073F62F /* NSOperationController.m in Sources */,
 				EF470ACE25F9CAA90053D1F6 /* MemoryController.swift in Sources */,
 				EF8FC46927C78BD9005C35C3 /* SwiftWeakController.swift in Sources */,

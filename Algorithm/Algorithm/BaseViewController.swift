@@ -9,7 +9,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    let sortArray: [Int] = [2,10,9,3,20,4,8]
+    let sortArray: [Int] = [40,2,10,9,3,20,4,8]
 //    let sortArray: [Int] = [1,3,4,6,7,8]
 
     let repeatString = "abcdddacbs"

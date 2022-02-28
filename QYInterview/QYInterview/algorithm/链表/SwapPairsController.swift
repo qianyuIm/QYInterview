@@ -25,14 +25,19 @@ class SwapPairsController: BaseViewController {
         // Do any additional setup after loading the view.
         let head = ListNodeHelper.creatList(4)
         ListNodeHelper.printList(head)
-        let new = swapPairs(head)
-        ListNodeHelper.printList(new)
+        self.touchesBeganBlock = { [weak self] in
+            let new = self?.swapPairs(head)
+            ListNodeHelper.printList(new)
+        }
+        
         
     }
+    // https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/dai-ma-sui-xiang-lu-dai-ni-xue-tou-lian-r063e/
     func swapPairs(_ head: ListNode?) -> ListNode? {
         if head == nil || head?.next == nil {
                 return head
         }
+        // 创建虚拟头结点指向头结点
         let dummyHead: ListNode = ListNode(-1, head)
         var current: ListNode? = dummyHead
         while current?.next != nil && current?.next?.next != nil {

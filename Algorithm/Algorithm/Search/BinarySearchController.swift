@@ -3,7 +3,7 @@
 //  Algorithm
 //
 //  Created by cyd on 2021/4/21.
-//
+// https://programmercarl.com/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.html#%E6%80%9D%E8%B7%AF
 
 import UIKit
 
@@ -23,7 +23,7 @@ class BinarySearchController: BaseViewController {
         }
     }
     
-
+    // 左闭右闭
     func binarySearch(_ nums: [Int], _ target: Int) -> Int {
         if nums.isEmpty {
             return -1
@@ -45,5 +45,23 @@ class BinarySearchController: BaseViewController {
         }
         return -1
     }
-
+    //左闭右开
+    func binarySearch1(_ nums: [Int], _ target: Int) -> Int {
+        if (nums.isEmpty) {
+            return -1
+        }
+        var left = 0
+        var right = nums.count
+        while left < right {
+            let middle = left + (right - left)/2
+            if (target < nums[middle]) {
+                right = middle
+            } else if (target > nums[middle]) {
+                left = middle + 1
+            } else {
+                return middle
+            }
+        }
+        return -1
+    }
 }

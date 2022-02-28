@@ -38,10 +38,10 @@
     BOOL res4 = [[RuntimePersion class] isMemberOfClass:[RuntimePersion class]];
     // 1 0 0 0
     NSLog(@"%d %d %d %d", res1, res2, res3, res4);
-    // NSObject 实例对象的 class 指向 NSObject元类 isKindOfClass NSObject类对象
+    // NSObject 实例对象的 class 指向 isa ,isa指向 NSObject类对象,元类 isKindOfClass NSObject类对象
     // NSObject 类对象 isKindOfClass NSObject 类对象 == 1
     BOOL res5 = [[[NSObject new] class] isKindOfClass:[NSObject class]];
-    // NSObject 实例对象的 class 指向 NSObject元类 isMemberOfClass NSObject 类对象 == 0
+    // NSObject 实例对象的 class 指向isa,isa指向 NSObject，元类 isMemberOfClass NSObject 类对象 == 0
     BOOL res6 = [[[NSObject new] class] isMemberOfClass:[NSObject class]];
     // RuntimePersion 实例对象的 class RuntimePersion 元类 isKindOfClass RuntimePersion类对象
     // NSObject 类对象 isKindOfClass RuntimePersion类对象 == 0

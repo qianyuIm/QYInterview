@@ -43,6 +43,8 @@ extension ClosureController {
         someFunctionThatTakesAClosure {
             logDebug("尾随闭包")
         }
+        
+    }
     func test11(){
         var age = 0
         var height = 0.0
@@ -58,14 +60,6 @@ extension ClosureController {
         clourse()
     }
 
-    
-
-    // 打印结果 0   1.85
-    var iStrong = {
-        num1 += 1
-        num2 += 1
-    }
-    
     func someFunctionThatTakesAClosure(closure: () -> Void) {
         logDebug("函数")
         closure()
