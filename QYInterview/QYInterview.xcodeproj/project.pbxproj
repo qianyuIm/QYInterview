@@ -40,6 +40,8 @@
 		EF470AD625F9CB1A0053D1F6 /* AutoreleaseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF470AD425F9CB1A0053D1F6 /* AutoreleaseController.xib */; };
 		EF4B134B25B192EA0055C4D2 /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4B134A25B192EA0055C4D2 /* KVOController.m */; };
 		EF4B69EA261C059B00A77B47 /* TaggedPointerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4B69E9261C059B00A77B47 /* TaggedPointerController.m */; };
+		EF54BB1327C8AA1E00545EA4 /* AccessControlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54BB1227C8AA1E00545EA4 /* AccessControlController.swift */; };
+		EF54BB3527C8AC6000545EA4 /* AccessControlModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF54BB3427C8AC4B00545EA4 /* AccessControlModule.framework */; };
 		EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */; };
 		EF5582C125AFD6D4003E1347 /* BinaryTreeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5582BF25AFD6D4003E1347 /* BinaryTreeController.xib */; };
 		EF5582C625AFD9F3003E1347 /* CreatBinaryTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5582C525AFD9F3003E1347 /* CreatBinaryTreeController.swift */; };
@@ -73,7 +75,6 @@
 		EF96338125E48E200023D5C6 /* AllocInitController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338025E48E200023D5C6 /* AllocInitController.m */; };
 		EF96338725E4A4800023D5C6 /* GCDController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338625E4A4800023D5C6 /* GCDController.m */; };
 		EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338B25E52AD20023D5C6 /* IfElseController.m */; };
-		EF96338F25E532910023D5C6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF96338E25E532910023D5C6 /* JavaScriptCore.framework */; };
 		EF9FA8722796A04B0087F5DC /* GenerateMatrixController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9FA8712796A04B0087F5DC /* GenerateMatrixController.swift */; };
 		EFA1E181278D511F0051D494 /* ReverseWordsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1E180278D511F0051D494 /* ReverseWordsController.swift */; };
 		EFA1E183278D60990051D494 /* ReverseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1E182278D60990051D494 /* ReverseListController.swift */; };
@@ -114,6 +115,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EF54BB3327C8AC4B00545EA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF54BB2F27C8AC4B00545EA4 /* AccessControlModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EF54BB2527C8AC4B00545EA4;
+			remoteInfo = AccessControlModule;
+		};
 		EFD019FA25F0A8E700AC94F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EFFC475425AE7EFB007C5AA4 /* Project object */;
@@ -122,6 +130,19 @@
 			remoteInfo = QYInterview;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF54BAA427C8A64A00545EA4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F9ADB41D06FFC2386B75876 /* Pods-QYInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYInterview.debug.xcconfig"; path = "Target Support Files/Pods-QYInterview/Pods-QYInterview.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +194,8 @@
 		EF4B134A25B192EA0055C4D2 /* KVOController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOController.m; sourceTree = "<group>"; };
 		EF4B69E8261C059B00A77B47 /* TaggedPointerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaggedPointerController.h; sourceTree = "<group>"; };
 		EF4B69E9261C059B00A77B47 /* TaggedPointerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaggedPointerController.m; sourceTree = "<group>"; };
+		EF54BB1227C8AA1E00545EA4 /* AccessControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlController.swift; sourceTree = "<group>"; };
+		EF54BB2F27C8AC4B00545EA4 /* AccessControlModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AccessControlModule.xcodeproj; path = ../AccessControlModule/AccessControlModule.xcodeproj; sourceTree = "<group>"; };
 		EF5582BE25AFD6D4003E1347 /* BinaryTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeController.swift; sourceTree = "<group>"; };
 		EF5582BF25AFD6D4003E1347 /* BinaryTreeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BinaryTreeController.xib; sourceTree = "<group>"; };
 		EF5582C525AFD9F3003E1347 /* CreatBinaryTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatBinaryTreeController.swift; sourceTree = "<group>"; };
@@ -223,7 +246,6 @@
 		EF96338625E4A4800023D5C6 /* GCDController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDController.m; sourceTree = "<group>"; };
 		EF96338A25E52AD20023D5C6 /* IfElseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IfElseController.h; sourceTree = "<group>"; };
 		EF96338B25E52AD20023D5C6 /* IfElseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IfElseController.m; sourceTree = "<group>"; };
-		EF96338E25E532910023D5C6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EF9FA8712796A04B0087F5DC /* GenerateMatrixController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateMatrixController.swift; sourceTree = "<group>"; };
 		EFA1E180278D511F0051D494 /* ReverseWordsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordsController.swift; sourceTree = "<group>"; };
 		EFA1E182278D60990051D494 /* ReverseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseListController.swift; sourceTree = "<group>"; };
@@ -284,7 +306,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF96338F25E532910023D5C6 /* JavaScriptCore.framework in Frameworks */,
+				EF54BB3527C8AC6000545EA4 /* AccessControlModule.framework in Frameworks */,
 				F636CFA5E1CEFE326FF0478D /* Pods_QYInterview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +384,7 @@
 				EF8FC46227C715CB005C35C3 /* PropertiesController.swift */,
 				EF8FC46427C75391005C35C3 /* TypeController.swift */,
 				EF8FC46827C78BD9005C35C3 /* SwiftWeakController.swift */,
+				EF54BB1227C8AA1E00545EA4 /* AccessControlController.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -396,6 +419,14 @@
 				EF470AD425F9CB1A0053D1F6 /* AutoreleaseController.xib */,
 			);
 			path = Memory;
+			sourceTree = "<group>";
+		};
+		EF54BB3027C8AC4B00545EA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF54BB3427C8AC4B00545EA4 /* AccessControlModule.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		EF5582BD25AFD6C3003E1347 /* BinaryTree */ = {
@@ -524,6 +555,7 @@
 		EFFC475325AE7EFB007C5AA4 = {
 			isa = PBXGroup;
 			children = (
+				EF54BB2F27C8AC4B00545EA4 /* AccessControlModule.xcodeproj */,
 				EFFC475E25AE7EFB007C5AA4 /* QYInterview */,
 				EFD019F625F0A8E700AC94F1 /* QYInterviewTests */,
 				EFFC475D25AE7EFB007C5AA4 /* Products */,
@@ -638,7 +670,6 @@
 		F97478388884EAAFBC60292C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EF96338E25E532910023D5C6 /* JavaScriptCore.framework */,
 				B2BE0DAC20A11569F4EF0DA2 /* Pods_QYInterview.framework */,
 			);
 			name = Frameworks;
@@ -674,6 +705,7 @@
 				EFFC475925AE7EFB007C5AA4 /* Frameworks */,
 				EFFC475A25AE7EFB007C5AA4 /* Resources */,
 				9DEDD904B418BC6ED2C134F5 /* [CP] Embed Pods Frameworks */,
+				EF54BAA427C8A64A00545EA4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -690,7 +722,7 @@
 		EFFC475425AE7EFB007C5AA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1210;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					EFD019F425F0A8E700AC94F1 = {
@@ -714,6 +746,12 @@
 			mainGroup = EFFC475325AE7EFB007C5AA4;
 			productRefGroup = EFFC475D25AE7EFB007C5AA4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EF54BB3027C8AC4B00545EA4 /* Products */;
+					ProjectRef = EF54BB2F27C8AC4B00545EA4 /* AccessControlModule.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EFFC475B25AE7EFB007C5AA4 /* QYInterview */,
@@ -721,6 +759,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EF54BB3427C8AC4B00545EA4 /* AccessControlModule.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AccessControlModule.framework;
+			remoteRef = EF54BB3327C8AC4B00545EA4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EFD019F325F0A8E700AC94F1 /* Resources */ = {
@@ -832,6 +880,7 @@
 				EF6C94B627916D9700DCF04D /* MinSubArrayLenController.swift in Sources */,
 				EF3E2B3A25F8DF51000F5F78 /* KindOfController.m in Sources */,
 				EF5582C025AFD6D4003E1347 /* BinaryTreeController.swift in Sources */,
+				EF54BB1327C8AA1E00545EA4 /* AccessControlController.swift in Sources */,
 				EF08451725F767E7003FE450 /* RuntimeController.swift in Sources */,
 				EF8FC46327C715CB005C35C3 /* PropertiesController.swift in Sources */,
 				EF5582CF25B023B7003E1347 /* BinarySearchController.swift in Sources */,
@@ -1089,7 +1138,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Shuai Ding (7727XWDQUK)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9W33GSKZVH;
 				INFOPLIST_FILE = QYInterview/Info.plist;
@@ -1098,9 +1147,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.QianYu123.QYInterview;
+				PRODUCT_BUNDLE_IDENTIFIER = cyd.ruidou.fmjf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = RGenericId_dev;
+				PROVISIONING_PROFILE_SPECIFIER = RDDevProfile;
 				SWIFT_OBJC_BRIDGING_HEADER = "QYInterview/QYInterview-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1115,7 +1164,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Dixon Trade Co.,ltd.";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9W33GSKZVH;
 				INFOPLIST_FILE = QYInterview/Info.plist;
@@ -1124,9 +1173,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.QianYu123.QYInterview;
+				PRODUCT_BUNDLE_IDENTIFIER = cyd.ruidou.fmjf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = RGenericId_dev;
+				PROVISIONING_PROFILE_SPECIFIER = RDDisProfile;
 				SWIFT_OBJC_BRIDGING_HEADER = "QYInterview/QYInterview-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

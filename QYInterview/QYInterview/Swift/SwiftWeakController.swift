@@ -15,7 +15,7 @@ class SwiftWeakController: BaseViewController {
 
         // Do any additional setup after loading the view.
         self.touchesBeganBlock = { [weak self] in
-            
+            guard let self = self else { return }
         }
     }
     

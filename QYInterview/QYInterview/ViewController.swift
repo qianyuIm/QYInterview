@@ -63,7 +63,8 @@ class ViewController: UIViewController {
                 .init(with: "闭包", subTitle: "闭包", controllerName: "ClosureController"),
                 .init(with: "计算属性和存储属性", subTitle: "计算属性和存储属性", controllerName: "PropertiesController"),
                 .init(with: "类型相关", subTitle: "类型相关", controllerName: "TypeController"),
-                .init(with: "swift weak", subTitle: "swift weak", controllerName: "SwiftWeakController")
+                .init(with: "swift weak", subTitle: "swift weak", controllerName: "SwiftWeakController"),
+                .init(with: "访问控制", subTitle: "访问控制", controllerName: "AccessControlController")
         ]),
         .init(with: "Bug", items: [
             .init(with: "UITextFieldDelegate代理不走", subTitle: "UITextFieldDelegate代理不走", controllerName: "TextFieldViewController")
