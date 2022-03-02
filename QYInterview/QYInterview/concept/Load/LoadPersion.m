@@ -6,8 +6,18 @@
 //
 
 #import "LoadPersion.h"
+#import "LoadPersion+LoadPersion_E.h"
+@interface LoadPersion ()
+
+@end
 
 @implementation LoadPersion
+- (instancetype)init {
+    if (self = [super init]) {
+        self.name = @"123";
+    }
+    return  self;
+}
 + (void)load {
     NSLog(@"LoadPersion load");
 }

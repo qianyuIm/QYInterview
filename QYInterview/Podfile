@@ -19,4 +19,5 @@ target 'QYInterview' do
   pod 'ZFPlayer'
   pod 'Alamofire'
   pod 'RxTheme'
+  pod 'KVOController'
 end

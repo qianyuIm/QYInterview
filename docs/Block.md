@@ -2,7 +2,8 @@
 * **[Block的类型](#block的类型)**
 
 
-> xcrun -sdk iphonesimulator clang -arch x86_64 -rewrite-objc xxx.m(xxx.c)
+> xcrun -sdk iphonesimulator clang -arch x86_64 -rewrite-objc xxx.m(xxx.c)  
+> xcrun -sdk iphonesimulator clang -rewrite-objc ViewController.m
 
 block匿名函数,也是一个OC对象，因为有isa指针
 

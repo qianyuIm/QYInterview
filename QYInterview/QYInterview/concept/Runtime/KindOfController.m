@@ -7,7 +7,8 @@
 
 #import "KindOfController.h"
 #import "RuntimePersion.h"
-
+#import <objc/runtime.h>
+#import <malloc/malloc.h>
 @interface KindOfController ()
 
 @end
@@ -18,7 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    UIView *myView = [[UIView alloc] init];
+    size_t size =  class_getInstanceSize([myView class]);
+    NSLog(@"malloc size of myView: %zd", malloc_size((__bridge const void *)(myView)));
+    NSLog(@"UIView size ===> %zu",size);
     
 }
 
@@ -62,6 +66,7 @@
     BOOL res12 = [[RuntimePersion new] isMemberOfClass:[RuntimePersion class]];
     // 1 1 1 1
     NSLog(@"%d %d %d %d", res9, res10, res11, res12);
+    
 }
 
 @end

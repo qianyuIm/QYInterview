@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,14 +40,34 @@
                         <action selector="singleReadSingleWriteAction:" destination="-1" eventType="touchUpInside" id="eVz-Xs-QwU"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOo-tR-9Sk">
+                    <rect key="frame" x="142" y="143.5" width="110" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="同步栅栏函数"/>
+                    <connections>
+                        <action selector="barrierSync:" destination="-1" eventType="touchUpInside" id="mNR-7A-3i6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXX-2q-0jz">
+                    <rect key="frame" x="112" y="193.5" width="167" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="全局并发队列栅栏函数"/>
+                    <connections>
+                        <action selector="globalBarrier:" destination="-1" eventType="touchUpInside" id="WMS-Mk-sBe"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="68N-zY-VRi" firstAttribute="top" secondItem="cMl-G0-ZMB" secondAttribute="bottom" constant="20" id="7TW-s6-Vgr"/>
+                <constraint firstItem="dOo-tR-9Sk" firstAttribute="centerY" secondItem="EQr-qV-Jwh" secondAttribute="centerY" id="7hn-Gi-WAE"/>
                 <constraint firstItem="cMl-G0-ZMB" firstAttribute="leading" secondItem="EQr-qV-Jwh" secondAttribute="leading" id="Gb5-B0-NDm"/>
+                <constraint firstItem="YXX-2q-0jz" firstAttribute="centerY" secondItem="cMl-G0-ZMB" secondAttribute="centerY" id="Rr2-Sp-CQn"/>
                 <constraint firstItem="68N-zY-VRi" firstAttribute="leading" secondItem="cMl-G0-ZMB" secondAttribute="leading" id="Ty7-j0-3Dq"/>
                 <constraint firstItem="cMl-G0-ZMB" firstAttribute="top" secondItem="EQr-qV-Jwh" secondAttribute="bottom" constant="20" id="Zc1-p5-GVi"/>
+                <constraint firstItem="dOo-tR-9Sk" firstAttribute="leading" secondItem="EQr-qV-Jwh" secondAttribute="trailing" constant="20" id="eJb-Hw-4bI"/>
+                <constraint firstItem="YXX-2q-0jz" firstAttribute="leading" secondItem="cMl-G0-ZMB" secondAttribute="trailing" constant="20" id="fHU-FT-hxz"/>
                 <constraint firstItem="EQr-qV-Jwh" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="ghn-54-zDr"/>
                 <constraint firstItem="EQr-qV-Jwh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="uRg-CP-Uny"/>
             </constraints>

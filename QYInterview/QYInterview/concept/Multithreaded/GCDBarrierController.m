@@ -71,12 +71,57 @@
     });
     dispatch_barrier_async(queue, ^{
         sleep(2);
-        NSLog(@"5");
-    });
-    dispatch_async(queue, ^{
         NSLog(@"4");
     });
+    dispatch_async(queue, ^{
+        NSLog(@"5");
+    });
+    NSLog(@"6");
 }
+// 同步栅栏函数 堵塞线程
+- (IBAction)barrierSync:(id)sender {
+    dispatch_queue_t queue = dispatch_queue_create("com.barrier.concurrent", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        NSLog(@"1");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"2");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"3");
+    });
+    dispatch_barrier_sync(queue, ^{
+        sleep(2);
+        NSLog(@"4");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"5");
+    });
+    NSLog(@"6");
+}
+- (IBAction)globalBarrier:(id)sender {
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    dispatch_async(queue, ^{
+        NSLog(@"1");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"2");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"3");
+    });
+    dispatch_barrier_async(queue, ^{
+        sleep(2);
+        NSLog(@"4");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"5");
+    });
+    NSLog(@"6");
+}
+
+
+
 // 多读单写
 - (IBAction)multiReadSingleWriteAction:(UIButton *)sender {
     dispatch_queue_t queue1 = dispatch_queue_create("com.barrier.concurrent1", DISPATCH_QUEUE_CONCURRENT);

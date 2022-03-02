@@ -101,11 +101,13 @@ struct objc_super {
 }
 - (void)test {
     SuperSelfPersion *person = [[SuperSelfPersion alloc] init];
-    __weak SuperSelfPersion *waekP = person;
+    __weak SuperSelfPersion *weakP = person;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSLog(@"person ----- %@",person);
+        __strong SuperSelfPersion *strongP = weakP;
+
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            NSLog(@"weakP ----- %@",waekP);
+            NSLog(@"strongP ----- %@",strongP);
         });
     });
     NSLog(@"touchBegin----------End");

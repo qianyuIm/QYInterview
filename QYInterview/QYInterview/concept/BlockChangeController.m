@@ -24,8 +24,9 @@ typedef void (^ChangeValueBlock) (void);
 @end
 
 @interface BlockChangeController ()
-@property (nonatomic, retain) ChangeValueBlock retainBlock;
+@property (nonatomic, copy) ChangeValueBlock retainBlock;
 @property (nonatomic, strong) NSArray *array;
+@property (nonatomic, strong) NSString *name;
 
 @end
 
@@ -140,14 +141,16 @@ typedef void (^ChangeValueBlock) (void);
 //    };
 //    TestBlock();
 //    NSLog(@"testArr :%@", array1);
-    
+    self.name = @"123";
     NSMutableArray *arr = [NSMutableArray array];
     __block BlockPersion *p1 = [[BlockPersion alloc] init];
     void (^MyBlock)(void) = ^{
 //        NSMutableArray *arr1 = [NSMutableArray array];
-        [arr addObject:@""];
-        p1 = [[BlockPersion alloc] init];
+//        [arr addObject:@""];
+//        p1 = [[BlockPersion alloc] init];
+        NSLog(@"%@",self.name);
     };
+    self.name = @"456";
     MyBlock();
     
 }

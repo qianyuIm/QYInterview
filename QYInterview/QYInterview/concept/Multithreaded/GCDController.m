@@ -43,7 +43,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    [self gcdBlockPriority];
+    [self testLog];
 }
 - (void)gcdBlockPriority {
     dispatch_queue_t concurrentQuene = dispatch_queue_create("concurrentQuene", DISPATCH_QUEUE_CONCURRENT);
@@ -152,6 +152,7 @@
         NSLog(@"我是主线程- %@",[NSThread currentThread]);
     }
 }
+//
 - (void)testGroup1 {
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_enter(group);
@@ -222,7 +223,9 @@
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_queue_t mainQueue = dispatch_get_main_queue();
     dispatch_async(queue, ^{
-        NSLog(@"%@",[NSThread currentThread]);
+        NSLog(@"第%@次执行%@",num,[NSThread currentThread]);
+        sleep(1);
+        // testGroup1 使用这里会堵塞线程
         dispatch_async(mainQueue, ^{
             block(num);
         });
@@ -301,7 +304,9 @@
 - (void)testLog {
     __block NSInteger a = 0;
     while (a < 10) {
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        dispatch_queue_t queue = dispatch_queue_create("com.ss.cn", DISPATCH_QUEUE_SERIAL);
+        queue = dispatch_get_global_queue(0, 0);
+        dispatch_async(queue, ^{
             a++;
             NSLog(@"%ld == %@",a, [NSThread currentThread]);
         });

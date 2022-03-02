@@ -78,6 +78,9 @@
 		EF96338125E48E200023D5C6 /* AllocInitController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338025E48E200023D5C6 /* AllocInitController.m */; };
 		EF96338725E4A4800023D5C6 /* GCDController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338625E4A4800023D5C6 /* GCDController.m */; };
 		EF96338C25E52AD20023D5C6 /* IfElseController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF96338B25E52AD20023D5C6 /* IfElseController.m */; };
+		EF9766AC27CEFED9008E7285 /* HTTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9766AA27CEFED9008E7285 /* HTTPViewController.m */; };
+		EF9766AD27CEFED9008E7285 /* HTTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9766AB27CEFED9008E7285 /* HTTPViewController.xib */; };
+		EF9766B027CF169B008E7285 /* GCDLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9766AF27CF169B008E7285 /* GCDLogController.m */; };
 		EF9FA8722796A04B0087F5DC /* GenerateMatrixController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9FA8712796A04B0087F5DC /* GenerateMatrixController.swift */; };
 		EFA1E181278D511F0051D494 /* ReverseWordsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1E180278D511F0051D494 /* ReverseWordsController.swift */; };
 		EFA1E183278D60990051D494 /* ReverseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1E182278D60990051D494 /* ReverseListController.swift */; };
@@ -253,6 +256,11 @@
 		EF96338625E4A4800023D5C6 /* GCDController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDController.m; sourceTree = "<group>"; };
 		EF96338A25E52AD20023D5C6 /* IfElseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IfElseController.h; sourceTree = "<group>"; };
 		EF96338B25E52AD20023D5C6 /* IfElseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IfElseController.m; sourceTree = "<group>"; };
+		EF9766A927CEFED9008E7285 /* HTTPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPViewController.h; sourceTree = "<group>"; };
+		EF9766AA27CEFED9008E7285 /* HTTPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPViewController.m; sourceTree = "<group>"; };
+		EF9766AB27CEFED9008E7285 /* HTTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HTTPViewController.xib; sourceTree = "<group>"; };
+		EF9766AE27CF169B008E7285 /* GCDLogController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDLogController.h; sourceTree = "<group>"; };
+		EF9766AF27CF169B008E7285 /* GCDLogController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDLogController.m; sourceTree = "<group>"; };
 		EF9FA8712796A04B0087F5DC /* GenerateMatrixController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateMatrixController.swift; sourceTree = "<group>"; };
 		EFA1E180278D511F0051D494 /* ReverseWordsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordsController.swift; sourceTree = "<group>"; };
 		EFA1E182278D60990051D494 /* ReverseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseListController.swift; sourceTree = "<group>"; };
@@ -261,6 +269,7 @@
 		EFB4387325EE336B0077349C /* HookController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookController.h; sourceTree = "<group>"; };
 		EFB4387425EE336B0077349C /* HookController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookController.m; sourceTree = "<group>"; };
 		EFB4387525EE336B0077349C /* HookController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HookController.xib; sourceTree = "<group>"; };
+		EFB717DA27CE22E700C8F134 /* LoadPersion+LoadPersion_E.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoadPersion+LoadPersion_E.h"; sourceTree = "<group>"; };
 		EFD019F525F0A8E700AC94F1 /* QYInterviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QYInterviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD019F725F0A8E700AC94F1 /* QYInterviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYInterviewTests.swift; sourceTree = "<group>"; };
 		EFD019F925F0A8E700AC94F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -413,6 +422,8 @@
 				EF470AC625F9B10B0053D1F6 /* OperationController.xib */,
 				EF96338525E4A4800023D5C6 /* GCDController.h */,
 				EF96338625E4A4800023D5C6 /* GCDController.m */,
+				EF9766AE27CF169B008E7285 /* GCDLogController.h */,
+				EF9766AF27CF169B008E7285 /* GCDLogController.m */,
 				EF5D0D3227C60EB6007FA81E /* GCDSynNetController.h */,
 				EF5D0D3327C60EB6007FA81E /* GCDSynNetController.m */,
 				EF5D0D3427C60EB6007FA81E /* GCDSynNetController.xib */,
@@ -458,6 +469,7 @@
 				EF690782262D584D0047B1D8 /* LoadController.m */,
 				EF690787262D58690047B1D8 /* LoadPersion.h */,
 				EF690788262D58690047B1D8 /* LoadPersion.m */,
+				EFB717DA27CE22E700C8F134 /* LoadPersion+LoadPersion_E.h */,
 				EF69078D262D58890047B1D8 /* LoadPersion+add.h */,
 				EF69078E262D58890047B1D8 /* LoadPersion+add.m */,
 				EF690794262D58AD0047B1D8 /* LoadPersion+sub.h */,
@@ -637,6 +649,9 @@
 				EF6A5A1525E7546E00965E1A /* Runloop */,
 				EF5582DE25B02887003E1347 /* BlockChangeController.h */,
 				EF5582DF25B02887003E1347 /* BlockChangeController.m */,
+				EF9766A927CEFED9008E7285 /* HTTPViewController.h */,
+				EF9766AA27CEFED9008E7285 /* HTTPViewController.m */,
+				EF9766AB27CEFED9008E7285 /* HTTPViewController.xib */,
 				EF4B134925B192EA0055C4D2 /* KVOController.h */,
 				EF4B134A25B192EA0055C4D2 /* KVOController.m */,
 				EFD27747260D82860083DA05 /* KVCController.h */,
@@ -809,6 +824,7 @@
 				EFFC476725AE7EFB007C5AA4 /* Main.storyboard in Resources */,
 				EF3E2B3125F8C0A7000F5F78 /* GCDBarrierController.xib in Resources */,
 				EF6A5A1F25E754EA00965E1A /* RunLoopController.xib in Resources */,
+				EF9766AD27CEFED9008E7285 /* HTTPViewController.xib in Resources */,
 				EF0EC93727C380CB000F8933 /* TextFieldViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -947,6 +963,7 @@
 				EFFC47A025AECCB2007C5AA4 /* HTTPSController.swift in Sources */,
 				EF6C94B4279152A300DCF04D /* SortedSquaresArrayController.swift in Sources */,
 				EF96338725E4A4800023D5C6 /* GCDController.m in Sources */,
+				EF9766B027CF169B008E7285 /* GCDLogController.m in Sources */,
 				EF5582E025B02887003E1347 /* BlockChangeController.m in Sources */,
 				EFE4DB29279E5055003188D8 /* AnagramController.swift in Sources */,
 				EF0E807C25F5D10C00723E4C /* CodableController.swift in Sources */,
@@ -957,6 +974,7 @@
 				EF6A5A2325E7559900965E1A /* ChildThreadLoopController.m in Sources */,
 				EFFC479C25AECC4A007C5AA4 /* TCPUDPController.swift in Sources */,
 				EF6907AF262D59340047B1D8 /* LoadSon+add.m in Sources */,
+				EF9766AC27CEFED9008E7285 /* HTTPViewController.m in Sources */,
 				EF690783262D584D0047B1D8 /* LoadController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@
 typedef void (^QYKVOObserverBlock) (id observedObject, NSString *observedKey, id oldValue, id newValue);
 NSString *const kQYKVOClassPrefix = @"QYKVOClassPrefix_";
 NSString *const kQYKVOAssociatedObservers = @"QYKVOAssociatedObservers";
+NSString *const kSonKVOKey = @"SonKVOKey";
 
 @interface QYKVOInfo : NSObject
 @property (nonatomic, weak) NSObject *observer;
@@ -197,32 +198,41 @@ static void kvo_setter(id self, SEL _cmd, id newValue)
 
 @interface KVOPersion : NSObject
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *sex;
+//@property (nonatomic, copy) NSString *sex;
+@property (nonatomic, readonly,copy) NSString *sex;
+
 @end
 
 @implementation KVOPersion
+- (void)setNilValueForKey:(NSString *)key {
+    NSLog(@"key ======== %@",key);
+}
 + (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
     if ([key isEqualToString:@"name"]) {
         return NO;
     }
     return [super automaticallyNotifiesObserversForKey:key];
 }
-
+// 使用 readonly 修饰的话 需要手动设置setter方法，才能使用.语法赋值
+//- (void)setSex:(NSString *)sex {
+//    _sex = sex;
+//}
 
 - (void)setName:(NSString *)name {
     [self willChangeValueForKey:@"name"];
     _name = name;
     [self didChangeValueForKey:@"name"];
 }
-//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-//    NSLog(@"keyPath = %@, change = %@ ",keyPath, change);
-//}
+
 @end
 struct ThreeFloats {
     CGFloat one;
     CGFloat two;
     CGFloat three;
 };
+
+
+
 @interface KVOSon : KVOPersion
 @property (nonatomic, assign) struct ThreeFloats floats;
 @property (nonatomic, copy) NSString *hahaah;
@@ -234,6 +244,20 @@ struct ThreeFloats {
 }
 @end
 
+@interface KVOSon (KVO)
+@property (nonatomic, copy) NSString *kvoString;
+
+@end
+
+@implementation KVOSon (KVO)
+- (void)setKvoString:(NSString *)kvoString {
+    objc_setAssociatedObject(self, (__bridge const void *)(kSonKVOKey), kvoString, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (NSString *)kvoString {
+    return objc_getAssociatedObject(self, (__bridge const void *)(kSonKVOKey));
+}
+
+@end
 @interface KVOController ()
 @property (nonatomic, strong) KVOPersion *persion;
 @property (nonatomic, strong) KVOSon *son;
@@ -247,6 +271,16 @@ struct ThreeFloats {
  *  KVO 动态生成的类，重写Setter方法的前提是：原来的类中，要有对应的setter方法,即使readonly修饰，
  * 只要在.m中手写对应的setter方法，都是可以的，
  * 但是如果readonly修饰且没有手写对应Setter方法，KVO不起作用
+ 虽然ios 9.0 之后可以不移除观察者了，
+ 但不移除观察者，存在隐患，如果观察者已经销毁了，被观察的对象没有销毁，
+ 然后又产生了KVO message，这时候就抛异常了，EXC_BAD_ACCESS
+ 
+ 比如一个单例对象在首页和二级页面同时对一个属性添加观察者，在二级页面返回时不移除观察者，导致了二级页面释放，但是被观察的单例对象没有被释放，这时候在首页再次触发KVO，就会导致EXC_BAD_ACCESS 坏内存访问
+ 所以还是应该有添加就有移除,但也不能过渡移除，否则爆错
+ Cannot remove an observer <xxx> for the key path \"xxx\" from <TCJStudent 0x6000018e8140> because it is not registered as an observer
+ 
+ 移除观察者后动态子类会被销毁吗？不会。
+ 那在什么时候移除呢？
  *
  */
 - (void)viewDidLoad {
@@ -254,6 +288,8 @@ struct ThreeFloats {
     // Do any additional setup after loading the view.
     NSLog(@"自己实现KVO");
     self.view.backgroundColor = [UIColor whiteColor];
+    _persion = [[KVOPersion alloc] init];
+    _son = [[KVOSon alloc] init];
 //    [self testReadonly];
 //    struct ThreeFloats flo = {1,2,3};
 //    NSValue *value = [NSValue valueWithBytes:&flo objCType:@encode(struct ThreeFloats)];
@@ -273,9 +309,13 @@ struct ThreeFloats {
 
 //    [_son setValue:@"xiaoming" forKey:@"isSex"];
 //    NSLog(@"%@",_son.sex);
-    _persion = [[KVOPersion alloc] init];
-    [_persion addObserver:self forKeyPath:@"name" options:(NSKeyValueObservingOptionNew) context:NULL];
-    _persion.name = @"123";
+    [_son addObserver:self forKeyPath:@"kvoString" options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:NULL];
+    // 没有实现的setter的话，只能通过kvc方式获取
+    [_son setValue:@"kvc设值" forKey:@"kvoString"];
+
+    _son.kvoString = @"属性设值";
+    NSLog(@"%@",_son.kvoString);
+    
     
 }
 - (void)testSuper {
